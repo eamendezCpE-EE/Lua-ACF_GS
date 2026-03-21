@@ -836,5 +836,15 @@
 			<Icon>ICON_UNIT_MOUNTED_WW</Icon>
 			<SortIndex>40</SortIndex>
 		</Row>
+		<Row>
+			<Domain>ACoIaF_GS_Ruleset_Players</Domain>
+			<CivilizationType>CIVILIZATION_WHITEWALKER</CivilizationType>
+			<LeaderType>LEADER_NIGHTKING</LeaderType>
+			<Type>UNIT_DRAGON_WW</Type>
+			<Name>LOC_TRAIT_CIVILIZATION_UNIT_DRAGON_WW_NAME</Name>
+			<Description>LOC_TRAIT_CIVILIZATION_UNIT_DRAGON_WW_DESCRIPTION</Description>
+			<Icon>ICON_UNIT_DRAGON_WW</Icon>
+			<SortIndex>50</SortIndex>
+		</Row>
 	</PlayerItems>
 </GameInfo>

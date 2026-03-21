@@ -6,6 +6,8 @@ include("MapEnums.lua");
 eWhiteWalkerPID=-100;
 eWhiteWalkerPlayer=nil;
 silent=false;
+oathTech=0;
+pwwTechs=nil;
 
 function Initialize()
 	local aPlayersMajor = PlayerManager.GetAlive();
@@ -17,6 +19,7 @@ function Initialize()
 			if(GameInfo.Leaders["LEADER_NIGHTKING"].Hash == config:GetLeaderTypeID()) then 
 				eWhiteWalkerPID=iPlayer;
 				eWhiteWalkerPlayer=Players[eWhiteWalkerPID];
+				pwwTechs=Players[eWhiteWalkerPID]:GetTechs();
 				if(not silent) then
 					print("White Walkers Found! WhiteWalkerID: ", eWhiteWalkerPID, "!");
 					
@@ -24,6 +27,9 @@ function Initialize()
 			end
 		end
 	end
+	oathTech=GameInfo.Technologies["TECH_OATHS"].Index;
+	-- oathTech=GameInfo.Technologies["LOC_TECH_OATHS_NAME"].Index;
+	print("Index: ", oathTech);
 end
 
 function InitializeNewGame()
@@ -98,11 +104,12 @@ end
 Events.ImprovementAddedToMap.Add(WhiteWalker_BringWinter);
 
 function IsTargetCavalry(unitType)
-	local isCavalry = {false, false};if(not silent) then
-		print("It was cavalry");
-	end
+	local isCavalry = {false, false};
 	if(unitType=="LOC_UNIT_BARBARIAN_HORSE_ARCHER_NAME" or unitType=="LOC_UNIT_BARBARIAN_HORSEMAN_NAME" or unitType=="LOC_UNIT_HORSEMAN_NAME" or unitType=="LOC_UNIT_KNIGHT_NAME" or unitType=="LOC_UNIT_KNIGHT_II_NAME" or unitType=="LOC_CIVILIZATION_UNIT_VALE_KNIGHT_NAME" or unitType=="LOC_CIVILIZATION_UNIT_VALE_KNIGHT_II_NAME" or unitType=="LOC_CIVILIZATION_UNIT_REACH_KNIGHT_NAME" or unitType=="LOC_CIVILIZATION_UNIT_REACH_KNIGHT_II_NAME" or unitType=="LOC_CIVILIZATION_UNIT_SCREAMER_NAME" or unitType=="LOC_CIVILIZATION_UNIT_SCREAMER_II_NAME" or unitType=="LOC_CIVILIZATION_UNIT_BLOOD_RIDER_NAME" or unitType=="LOC_CIVILIZATION_UNIT_BLOOD_RIDER_II_NAME") then
 		isCavalry[0] = true;
+		if(not silent) then
+			print("It was cavalry");
+		end
 		if(unitType=="LOC_UNIT_KNIGHT_II_NAME" or unitType=="LOC_UNIT_VALE_KNIGHT_II_NAME" or unitType=="LOC_UNIT_REACH_KNIGHT_II_NAME" or unitType=="LOC_UNIT_SCREAMER_II_NAME" or unitType=="LOC_UNIT_BLOOD_RIDER_II_NAME") then
 			isCavalry[1] = true;
 		end
@@ -112,11 +119,11 @@ end
 
 function IsTargetDragon(unitType)
 	local isDragon = {false, false};
-	if(unitType=="LOC_UNIT_DRAGON_NAME" or unitType=="LOC_UNIT_DRAGON_II_NAME") then
+	if(unitType=="LOC_CIVILIZATION_UNIT_DRAGON_NAME" or unitType=="LOC_CIVILIZATION_UNIT_DRAGON_II_NAME") then
 		isDragon[0] = true;if(not silent) then
 		print("It was a dragon");
 	end
-		if(unitType=="LOC_UNIT_DRAGON_II_NAME") then
+		if(unitType=="LOC_CIVILIZATION_UNIT_DRAGON_II_NAME") then
 			isDragon[1] = true;
 		end
 	end
@@ -144,6 +151,10 @@ function WhiteWalkerConvert(loserPID, loserUID, winnerPID, winnerUID)
 		local wwUnitY=-1;
 		local wwUnitType=nil;
 		local wwUnitTypeName = "";
+		if(pwwTechs:HasTech(oathTech)) then
+			print("TECH_OATHS unlocked");
+			wwPendingUnit = "UNIT_WIGHT_II";
+		end
 		for i, wwUnit in wwUnits:Members() do
 			wwUnitID=wwUnit:GetID();
 			wwUnitType=UnitManager.GetTypeName(wwUnit);
@@ -151,70 +162,67 @@ function WhiteWalkerConvert(loserPID, loserUID, winnerPID, winnerUID)
 				print("wwUnitID: ", wwUnitID);
 				print("wwUnitType: ", wwUnitType);
 			end
-			if(wwUnitID==winnerUID and (wwUnitType=="LOC_CIVILIZATION_UNIT_WHITE_WALKER_NAME" or wwUnitType=="LOC_CIVILIZATION_UNIT_WHITE_WALKER_II_NAME" or wwUnitType=="LOC_CIVILIZATION_UNIT_WHITE_WALKER_THROWER_NAME" or wwUnitType=="LOC_CIVILIZATION_UNIT_WHITE_WALKER_THROWER_II_NAME" or wwUnitType=="LOC_CIVILIZATION_UNIT_MOUNTED_WW_NAME" or wwUnitType=="LOC_CIVILIZATION_UNIT_MOUNTED_WW_II_NAME")) then
+			if(wwUnitID==winnerUID and (wwUnitType=="LOC_CIVILIZATION_UNIT_WHITE_WALKER_NAME" or wwUnitType=="LOC_CIVILIZATION_UNIT_WHITE_WALKER_II_NAME" or wwUnitType=="LOC_CIVILIZATION_UNIT_WHITE_WALKER_THROWER_NAME" or wwUnitType=="LOC_CIVILIZATION_UNIT_WHITE_WALKER_THROWER_II_NAME" or wwUnitType=="LOC_CIVILIZATION_UNIT_MOUNTED_WW_NAME" or wwUnitType=="LOC_CIVILIZATION_UNIT_MOUNTED_WW_II_NAME" or wwUnitType=="LOC_CIVILIZATION_UNIT_DRAGON_WW_NAME" or wwUnitType=="LOC_CIVILIZATION_UNIT_DRAGON_WW_II_NAME")) then
 				if(not silent) then
 					print("It was a white walker.");
 				end
 				wwUnitX=wwUnit:GetX();
 				wwUnitY=wwUnit:GetY();
-				if(wwUnitType~="LOC_CIVILIZATION_UNIT_MOUNTED_WW_NAME" and wwUnitType ~= "LOC_CIVILIZATION_UNIT_MOUNTED_WW_II_NAME") then
-					if(not silent) then
-						print("Winner doesn't have a mount.");
-					end
-					local loserPlayer = Players[loserPID];
-					local loserUnits :table = loserPlayer:GetUnits();
-					local loserUnitID=-1;
-					local loserUnitX=-1;
-					local loserUnitY=-1;
-					local loserUnitType=nil;
-					local loserUnitTypeName = "";
-					for i, loserUnit in loserUnits:Members() do
+				-- if(wwUnitType~="LOC_CIVILIZATION_UNIT_MOUNTED_WW_NAME" and wwUnitType ~= "LOC_CIVILIZATION_UNIT_MOUNTED_WW_II_NAME") then
+				-- 	if(not silent) then
+				-- 		print("Winner doesn't have a mount.");
+				-- 	end
+				local loserPlayer = Players[loserPID];
+				local loserUnits :table = loserPlayer:GetUnits();
+				local loserUnitID=-1;
+				local loserUnitX=-1;
+				local loserUnitY=-1;
+				local loserUnitType=nil;
+				local loserUnitTypeName = "";
+				for i, loserUnit in loserUnits:Members() do
+				
+					loserUnitID=loserUnit:GetID();
+					loserUnitType=UnitManager.GetTypeName(loserUnit);
 					
-						loserUnitID=loserUnit:GetID();
-						loserUnitType=UnitManager.GetTypeName(loserUnit);
+					if(loserUnitID==loserUID) then 
 						
-						if(loserUnitID==loserUID) then 
-							
+						if(not silent) then
+							print("loserUnitID: ", loserUnitID);
+							print("loserUnitType: ", loserUnitType);
+						end
+						local isDragon = IsTargetDragon(loserUnitType);
+						local isCavalry = IsTargetCavalry(loserUnitType);
+						if(isDragon[0]) then
 							if(not silent) then
-								print("loserUnitID: ", loserUnitID);
-								print("loserUnitType: ", loserUnitType);
+								print("Loser was a dragon unit.");
+								print("Spawning an undead dragon unit.");
+								wwPendingUnit = "UNIT_DRAGON_WW";
 							end
-							local isDragon = IsTargetDragon(loserUnitType);
-							local isCavalry = IsTargetCavalry(loserUnitType);
-							if(isDragon[0]) then
+							if(isDragon[1]) then
 								if(not silent) then
-									print("Loser was a dragon unit.");
-									print("Spawning an undead dragon unit.");
+									print("Level II");
 								end
-								if(isDragon[1]) then
-									if(not silent) then
-										print("Level II");
-									end
-									--wwPendingUnit = "UNIT_WIGHT_II";
-								else 
-									--wwPendingUnit = "UNIT_WIGHT";
-								end
-							elseif(isCavalry[0] and (wwUnitType=="LOC_CIVILIZATION_UNIT_WHITE_WALKER_NAME" or wwUnitType=="LOC_CIVILIZATION_UNIT_WHITE_WALKER_II_NAME")) then
+								wwPendingUnit = "UNIT_DRAGON_WW_II";
+							end
+						elseif(isCavalry[0] and (wwUnitType=="LOC_CIVILIZATION_UNIT_WHITE_WALKER_NAME" or wwUnitType=="LOC_CIVILIZATION_UNIT_WHITE_WALKER_II_NAME")) then
+							if(not silent) then
+								print("Loser was a cavalry unit.");
+								print("Deleting White Walker unit.");
+								print("Spawning a mounted white walker unit.");
+								wwPendingUnit = "UNIT_MOUNTED_WW";
+							end
+							UnitManager.Kill(wwUnit);
+							if(isCavalry[1] or wwUnitType=="LOC_CIVILIZATION_UNIT_WHITE_WALKER_II_NAME") then
 								if(not silent) then
-									print("Loser was a cavalry unit.");
-									print("Deleting White Walker unit.");
-									print("Spawning a mounted white walker unit.");
+									print("Level II");
 								end
-								UnitManager.Kill(wwUnit);
-								if(isCavalry[1]) then
-									if(not silent) then
-										print("Level II");
-									end
-									wwPendingUnit = "UNIT_MOUNTED_WW_II";
-								else 
-									wwPendingUnit = "UNIT_MOUNTED_WW";
-								end
+								wwPendingUnit = "UNIT_MOUNTED_WW_II";
 							end
 						end
 					end
 				end
-				
-				if(wwPendingUnit=="UNIT_WIGHT" and not silent) then
+				-- end
+				if((wwPendingUnit=="UNIT_WIGHT" or wwPendingUnit=="UNIT_WIGHT_II") and not silent) then
 					print("Not a special case, just summoning a wight.");
 				end
 				UnitManager.InitUnit(eWhiteWalkerPID, wwPendingUnit, wwUnitX,wwUnitY);

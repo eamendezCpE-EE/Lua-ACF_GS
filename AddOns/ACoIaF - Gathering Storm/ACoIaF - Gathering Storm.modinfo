@@ -89,6 +89,9 @@
 		<File>UI/Replacements/TopPanel_Expansion2.lua</File>
 		<File>Maps/GSWesterosEssosHuge.Civ6Map</File>
 		<File>Maps/GSWesterosStandard.Civ6Map</File>
+		<File>Maps/Westeros Huge Prepop ACIFGS Multi.Civ6Map</File>
+		<File>Maps/Westeros Huge Prepop ACIFGS Renly Multi.Civ6Map</File>
+		<File>Maps/Westeros Standard Prepop Multi.Civ6Map</File>
 		<File>Data/ACoIaF_GS_Buildings.xml</File>
 		<File>Data/ACoIaF_GS_DiplomaticActions.xml</File>
 		<File>Data/ACoIaF_GS_Districts.xml</File>

@@ -4179,6 +4179,14 @@
 			<Text>Dawn's End</Text>
 		</Row>
 
+		<Row Tag="LOC_CIVILIZATION_WHITEWALKER_CITY_2" Language="en_US">
+			<Text>Hell's Door</Text>
+		</Row>
+
+		<Row Tag="LOC_CIVILIZATION_WHITEWALKER_CITY_3" Language="en_US">
+			<Text>The Wall</Text>
+		</Row>
+
 		<!-- Leader Quotes -->
 		<Row Tag="LOC_LEADER_NIGHTKING_QUOTE" Language="en_US">
 			<Text>...</Text>
@@ -4331,14 +4339,14 @@
 			<Text>White Walker II</Text>
 		</Row>
 		<Row Tag="LOC_CIVILIZATION_UNIT_WHITE_WALKER_II_DESCRIPTION" Language="en_US">
-			<Text>Other unique Late Medieval era melee unit that replaces the Swordsman II and is considerably stronger. Reduces city's [ICON_Citizen] Population by 2 when completed.</Text>
+			<Text>Other unique Late Medieval era melee unit that replaces the Swordsman II and is considerably stronger. Reduces city's [ICON_Citizen] Population by 1 when completed.</Text>
 		</Row>
 
 		<Row Tag="LOC_CIVILIZATION_UNIT_WHITE_WALKER_THROWER_II_NAME" Language="en_US">
 			<Text>White Walker Thrower II</Text>
 		</Row>
 		<Row Tag="LOC_CIVILIZATION_UNIT_WHITE_WALKER_THROWER_II_DESCRIPTION" Language="en_US">
-			<Text>Other unique Late Medieval era ranged unit that replaces the Crossbowman II and is considerably stronger. Reduces city's [ICON_Citizen] Population by 2 when completed.</Text>
+			<Text>Other unique Late Medieval era ranged unit that replaces the Crossbowman II and is considerably stronger. Reduces city's [ICON_Citizen] Population by 1 when completed.</Text>
 		</Row>
 
 		<Row Tag="LOC_CIVILIZATION_UNIT_WIGHT_II_NAME" Language="en_US">
@@ -4360,7 +4368,22 @@
 			<Text>Mounted White Walker II</Text>
 		</Row>
 		<Row Tag="LOC_CIVILIZATION_UNIT_MOUNTED_WW_II_DESCRIPTION" Language="en_US">
-			<Text>Other unique Late Medieval era light cavalry unit that replaces the Knight II and is considerably stronger. Reduces city's [ICON_Citizen] Population by 4 when completed.</Text>
+			<Text>Other unique Late Medieval era light cavalry unit that replaces the Knight II and is considerably stronger. Reduces city's [ICON_Citizen] Population by 2 when completed.</Text>
+		</Row>
+
+
+		<Row Tag="LOC_CIVILIZATION_UNIT_DRAGON_WW_NAME" Language="en_US">
+			<Text>Dragon Wight</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_UNIT_DRAGON_WW_DESCRIPTION" Language="en_US">
+			<Text>Other unique Ancient era undead light cavarly unit that cannot be built and is acquired by slaying dragons. Stronger variant than living dragons. Can fortify and heal.</Text>
+		</Row>
+
+		<Row Tag="LOC_CIVILIZATION_UNIT_DRAGON_WW_II_NAME" Language="en_US">
+			<Text>Dragon Wight II</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_UNIT_DRAGON_WW_II_DESCRIPTION" Language="en_US">
+			<Text>Other unique Late Medieval era undead light cavarly unit that cannot be built and is acquired by slaying dragons. Stronger variant than living dragons. Can fortify and heal.</Text>
 		</Row>
 
 		<!-- Buildings -->

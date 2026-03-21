@@ -2023,5 +2023,13 @@
 		<Row Tag="LOC_TRAIT_CIVILIZATION_UNIT_MOUNTED_WW_DESCRIPTION" Language="en_US">
 			<Text>Other unique classic era light cavalry unit that replaces the Horseman and is considerably stronger. Reduces city's [ICON_Citizen] Population by 2 when completed.</Text>
 		</Row>
+
+		<Row Tag="LOC_TRAIT_CIVILIZATION_UNIT_DRAGON_WW_NAME" Language="en_US">
+			<Text>Dragon</Text>
+		</Row>
+
+		<Row Tag="LOC_TRAIT_CIVILIZATION_UNIT_DRAGON_WW_DESCRIPTION" Language="en_US">
+			<Text>Other unique Ancient era undead light cavarly unit that cannot be built and is acquired by slaying dragons. Stronger variant than living dragons. Can fortify and heal.</Text>
+		</Row>
 	</LocalizedText>
 </GameData>

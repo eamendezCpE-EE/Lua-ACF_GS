@@ -8,6 +8,7 @@
 		<Row Type="TRAIT_CIVILIZATION_UNIT_WHITE_WALKER" Kind="KIND_TRAIT" />
 		<Row Type="TRAIT_CIVILIZATION_UNIT_WHITE_WALKER_THROWER" Kind="KIND_TRAIT" />
 		<Row Type="TRAIT_CIVILIZATION_UNIT_MOUNTED_WW" Kind="KIND_TRAIT" />
+		<Row Type="TRAIT_CIVILIZATION_UNIT_DRAGON_WW" Kind="KIND_TRAIT" />
 		<Row Type="TRAIT_CIVILIZATION_UNIT_FOREIGN_UNITS" Kind="KIND_TRAIT" />
 
 		<Row Type="LEADER_NIGHTKING" Kind="KIND_LEADER" />
@@ -28,6 +29,8 @@
 		<Row Type="UNIT_WHITE_WALKER_THROWER_II" Kind="KIND_UNIT"/>
 		<Row Type="UNIT_MOUNTED_WW" Kind="KIND_UNIT"/>
 		<Row Type="UNIT_MOUNTED_WW_II" Kind="KIND_UNIT"/>
+		<Row Type="UNIT_DRAGON_WW" Kind="KIND_UNIT"/>
+		<Row Type="UNIT_DRAGON_WW_II" Kind="KIND_UNIT"/>
 
 		<Row Type="UNIT_UND_SETTLER" Kind="KIND_UNIT"/>
 		<Row Type="UNIT_UND_SPY" Kind="KIND_UNIT"/>
@@ -104,6 +107,7 @@
 		<Row CivilizationType="CIVILIZATION_WHITEWALKER" TraitType="TRAIT_CIVILIZATION_UNIT_WHITE_WALKER_THROWER" />
 		<Row CivilizationType="CIVILIZATION_WHITEWALKER" TraitType="TRAIT_CIVILIZATION_UNIT_MOUNTED_WW" />
 		<Row CivilizationType="CIVILIZATION_WHITEWALKER" TraitType="TRAIT_CIVILIZATION_UNIT_FOREIGN_UNITS" />
+		<Row CivilizationType="CIVILIZATION_WHITEWALKER" TraitType="TRAIT_CIVILIZATION_UNIT_DRAGON_WW" />
 	</CivilizationTraits>
 
 	<Traits>
@@ -113,6 +117,7 @@
 		<Row TraitType="TRAIT_CIVILIZATION_UNIT_WHITE_WALKER" Name="LOC_TRAIT_CIVILIZATION_UNIT_WHITE_WALKER_NAME" Description="LOC_TRAIT_CIVILIZATION_UNIT_WHITE_WALKER_DESCRIPTION"/>
 		<Row TraitType="TRAIT_CIVILIZATION_UNIT_WHITE_WALKER_THROWER" Name="LOC_TRAIT_CIVILIZATION_UNIT_WHITE_WALKER_THROWER_NAME" Description="LOC_TRAIT_CIVILIZATION_UNIT_WHITE_WALKER_THROWER_DESCRIPTION"/>
 		<Row TraitType="TRAIT_CIVILIZATION_UNIT_MOUNTED_WW" Name="LOC_TRAIT_CIVILIZATION_UNIT_MOUNTED_WW_NAME" Description="LOC_TRAIT_CIVILIZATION_UNIT_MOUNTED_WW_DESCRIPTION"/>
+		<Row TraitType="TRAIT_CIVILIZATION_UNIT_DRAGON_WW" Name="LOC_TRAIT_CIVILIZATION_UNIT_DRAGON_WW_NAME" Description="LOC_TRAIT_CIVILIZATION_UNIT_DRAGON_WW_DESCRIPTION"/>
 		<Row TraitType="TRAIT_CIVILIZATION_UNIT_FOREIGN_UNITS" Name="LOC_TRAIT_TRAIT_CIVILIZATION_UNIT_FOREIGN_UNITS_NAME" Description="LOC_TRAIT_CIVILIZATION_UNIT_FOREIGN_UNITS_DESCRIPTION"/>
 
 		<Row TraitType="TRAIT_LEADER_NECROMANCER" Name="LOC_TRAIT_LEADER_NECROMANCER_NAME" Description="LOC_TRAIT_LEADER_NECROMANCER_DESCRIPTION"/>
@@ -500,6 +505,12 @@
 		<Row Type="UNIT_MOUNTED_WW_II" Tag="CLASS_UNDEAD"/>
 		<Row Type="UNIT_MOUNTED_WW_II" Tag="CLASS_BUILDER"/>
 		<Row Type="UNIT_MOUNTED_WW_II" Tag="CLASS_WHITE_WALKER"/>
+		<Row Type="UNIT_DRAGON_WW" Tag="CLASS_LIGHT_CAVALRY"/>
+		<Row Type="UNIT_DRAGON_WW" Tag="CLASS_HELICOPTER"/>
+		<Row Type="UNIT_DRAGON_WW" Tag="CLASS_WHITE_WALKER"/>
+		<Row Type="UNIT_DRAGON_WW_II" Tag="CLASS_LIGHT_CAVALRY"/>
+		<Row Type="UNIT_DRAGON_WW_II" Tag="CLASS_HELICOPTER"/>
+		<Row Type="UNIT_DRAGON_WW_II" Tag="CLASS_WHITE_WALKER"/>
 
 		<Row Type="UNIT_UND_SETTLER" Tag="CLASS_LANDCIVILIAN"/>
 		<Row Type="ABILITY_SAMURAI" Tag="CLASS_WIGHT"/>
@@ -569,17 +580,28 @@
 		<Row UnitType="UNIT_MOUNTED_WW_II" AiType="UNITTYPE_MELEE"/>
 		<Row UnitType="UNIT_MOUNTED_WW_II" AiType="UNITTYPE_LAND_COMBAT"/>
 		<Row UnitType="UNIT_MOUNTED_WW_II" AiType="UNITAI_BUILD"/>
+
+		<Row UnitType="UNIT_DRAGON_WW" AiType="UNITAI_COMBAT"/>
+		<Row UnitType="UNIT_DRAGON_WW" AiType="UNITTYPE_CAVALRY"/>
+		<Row UnitType="UNIT_DRAGON_WW" AiType="UNITTYPE_MELEE"/>
+		<Row UnitType="UNIT_DRAGON_WW" AiType="UNITTYPE_LAND_COMBAT"/>
+		<Row UnitType="UNIT_DRAGON_WW_II" AiType="UNITAI_COMBAT"/>
+		<Row UnitType="UNIT_DRAGON_WW_II" AiType="UNITTYPE_CAVALRY"/>
+		<Row UnitType="UNIT_DRAGON_WW_II" AiType="UNITTYPE_MELEE"/>
+		<Row UnitType="UNIT_DRAGON_WW_II" AiType="UNITTYPE_LAND_COMBAT"/>
 	</UnitAiInfos>
 	<Units>
 		<Row UnitType="UNIT_WIGHT" BaseMoves="1" Cost="-1" AdvisorType="ADVISOR_CONQUEST" BaseSightRange="2" ZoneOfControl="true" Domain="DOMAIN_LAND" FormationClass="FORMATION_CLASS_LAND_COMBAT" Name="LOC_CIVILIZATION_UNIT_WIGHT_NAME" PrereqPopulation="99" Description="LOC_CIVILIZATION_UNIT_WIGHT_DESCRIPTION" PurchaseYield="YIELD_GOLD" PromotionClass="PROMOTION_CLASS_WIGHT" StrategicResource="RESOURCE_LIFE" Combat="25" TraitType="TRAIT_CIVILIZATION_UNIT_WIGHT"/>
-		<Row UnitType="UNIT_WIGHT_II" BaseMoves="1" Cost="-1" AdvisorType="ADVISOR_CONQUEST" BaseSightRange="2" ZoneOfControl="true" Domain="DOMAIN_LAND" FormationClass="FORMATION_CLASS_LAND_COMBAT" Name="LOC_CIVILIZATION_UNIT_WIGHT_II_NAME" PrereqPopulation="99" Description="LOC_CIVILIZATION_UNIT_WIGHT_II_DESCRIPTION" PurchaseYield="YIELD_GOLD" PromotionClass="PROMOTION_CLASS_WIGHT" StrategicResource="RESOURCE_LIFE" Combat="40" TraitType="TRAIT_CIVILIZATION_UNIT_WIGHT" PrereqTech="TECH_OATHS"/>
-		<Row UnitType="UNIT_WHITE_WALKER" Cost="40" BaseMoves="2" BaseSightRange="2" ZoneOfControl="true" Domain="DOMAIN_LAND" Combat="30" FormationClass="FORMATION_CLASS_LAND_COMBAT" PopulationCost="1" PromotionClass="PROMOTION_CLASS_MELEE" AdvisorType="ADVISOR_CONQUEST" Name="LOC_CIVILIZATION_UNIT_WHITE_WALKER_NAME" Description="LOC_CIVILIZATION_UNIT_WHITE_WALKER_DESCRIPTION" TraitType="TRAIT_CIVILIZATION_UNIT_WHITE_WALKER" BuildCharges="1"/>
-		<Row UnitType="UNIT_WHITE_WALKER_II" Cost="150" BaseMoves="2" BaseSightRange="2" ZoneOfControl="true" Domain="DOMAIN_LAND" Combat="70" FormationClass="FORMATION_CLASS_LAND_COMBAT" PopulationCost="2" PromotionClass="PROMOTION_CLASS_MELEE" AdvisorType="ADVISOR_CONQUEST" Name="LOC_CIVILIZATION_UNIT_WHITE_WALKER_II_NAME" Description="LOC_CIVILIZATION_UNIT_WHITE_WALKER_II_DESCRIPTION" TraitType="TRAIT_CIVILIZATION_UNIT_WHITE_WALKER" BuildCharges="2" PrereqTech="TECH_SWORN_SWORDS"/>
-		<Row UnitType="UNIT_WHITE_WALKER_THROWER" Cost="35" BaseMoves="2" BaseSightRange="2" ZoneOfControl="false" Domain="DOMAIN_LAND" Combat="20" RangedCombat="30" Range="1" FormationClass="FORMATION_CLASS_LAND_COMBAT" PopulationCost="1" PromotionClass="PROMOTION_CLASS_RANGED" AdvisorType="ADVISOR_CONQUEST" Name="LOC_CIVILIZATION_UNIT_WHITE_WALKER_THROWER_NAME" Description="LOC_CIVILIZATION_UNIT_WHITE_WALKER_THROWER_DESCRIPTION" TraitType="TRAIT_CIVILIZATION_UNIT_WHITE_WALKER_THROWER" BuildCharges="1"/>
-		<Row UnitType="UNIT_WHITE_WALKER_THROWER_II" Cost="150" BaseMoves="2" BaseSightRange="3" ZoneOfControl="false" Domain="DOMAIN_LAND" Combat="50" RangedCombat="75" Range="2" FormationClass="FORMATION_CLASS_LAND_COMBAT" PopulationCost="2" PromotionClass="PROMOTION_CLASS_RANGED" AdvisorType="ADVISOR_CONQUEST" Name="LOC_CIVILIZATION_UNIT_WHITE_WALKER_THROWER_II_NAME" Description="LOC_CIVILIZATION_UNIT_WHITE_WALKER_THROWER_II_DESCRIPTION" TraitType="TRAIT_CIVILIZATION_UNIT_WHITE_WALKER_THROWER" BuildCharges="2" PrereqTech="TECH_HEAVY_SIEGE_TACTICS"/>
+		<Row UnitType="UNIT_WIGHT_II" BaseMoves="1" Cost="-1" AdvisorType="ADVISOR_CONQUEST" BaseSightRange="2" ZoneOfControl="true" Domain="DOMAIN_LAND" FormationClass="FORMATION_CLASS_LAND_COMBAT" Name="LOC_CIVILIZATION_UNIT_WIGHT_II_NAME" PrereqPopulation="99" Description="LOC_CIVILIZATION_UNIT_WIGHT_II_DESCRIPTION" PurchaseYield="YIELD_GOLD" PromotionClass="PROMOTION_CLASS_WIGHT" StrategicResource="RESOURCE_LIFE" Combat="45" TraitType="TRAIT_CIVILIZATION_UNIT_WIGHT" PrereqTech="TECH_OATHS"/>
+		<Row UnitType="UNIT_WHITE_WALKER" Cost="40" BaseMoves="2" BaseSightRange="2" ZoneOfControl="true" Domain="DOMAIN_LAND" Combat="35" FormationClass="FORMATION_CLASS_LAND_COMBAT" PopulationCost="1" PromotionClass="PROMOTION_CLASS_MELEE" AdvisorType="ADVISOR_CONQUEST" Name="LOC_CIVILIZATION_UNIT_WHITE_WALKER_NAME" Description="LOC_CIVILIZATION_UNIT_WHITE_WALKER_DESCRIPTION" TraitType="TRAIT_CIVILIZATION_UNIT_WHITE_WALKER" BuildCharges="1"/>
+		<Row UnitType="UNIT_WHITE_WALKER_II" Cost="150" BaseMoves="2" BaseSightRange="2" ZoneOfControl="true" Domain="DOMAIN_LAND" Combat="70" FormationClass="FORMATION_CLASS_LAND_COMBAT" PopulationCost="1" PromotionClass="PROMOTION_CLASS_MELEE" AdvisorType="ADVISOR_CONQUEST" Name="LOC_CIVILIZATION_UNIT_WHITE_WALKER_II_NAME" Description="LOC_CIVILIZATION_UNIT_WHITE_WALKER_II_DESCRIPTION" TraitType="TRAIT_CIVILIZATION_UNIT_WHITE_WALKER" BuildCharges="2" PrereqTech="TECH_SWORN_SWORDS"/>
+		<Row UnitType="UNIT_WHITE_WALKER_THROWER" Cost="35" BaseMoves="2" BaseSightRange="2" ZoneOfControl="false" Domain="DOMAIN_LAND" Combat="25" RangedCombat="35" Range="1" FormationClass="FORMATION_CLASS_LAND_COMBAT" PopulationCost="1" PromotionClass="PROMOTION_CLASS_RANGED" AdvisorType="ADVISOR_CONQUEST" Name="LOC_CIVILIZATION_UNIT_WHITE_WALKER_THROWER_NAME" Description="LOC_CIVILIZATION_UNIT_WHITE_WALKER_THROWER_DESCRIPTION" TraitType="TRAIT_CIVILIZATION_UNIT_WHITE_WALKER_THROWER" BuildCharges="1"/>
+		<Row UnitType="UNIT_WHITE_WALKER_THROWER_II" Cost="150" BaseMoves="2" BaseSightRange="3" ZoneOfControl="false" Domain="DOMAIN_LAND" Combat="50" RangedCombat="75" Range="2" FormationClass="FORMATION_CLASS_LAND_COMBAT" PopulationCost="1" PromotionClass="PROMOTION_CLASS_RANGED" AdvisorType="ADVISOR_CONQUEST" Name="LOC_CIVILIZATION_UNIT_WHITE_WALKER_THROWER_II_NAME" Description="LOC_CIVILIZATION_UNIT_WHITE_WALKER_THROWER_II_DESCRIPTION" TraitType="TRAIT_CIVILIZATION_UNIT_WHITE_WALKER_THROWER" BuildCharges="2" PrereqTech="TECH_HEAVY_SIEGE_TACTICS"/>
 		<Row UnitType="UNIT_UND_SETTLER" BaseMoves="2" Cost="-1" AdvisorType="ADVISOR_GENERIC" BaseSightRange="3" ZoneOfControl="false" Domain="DOMAIN_LAND" FormationClass="FORMATION_CLASS_CIVILIAN" FoundCity="true" PopulationCost="1" PrereqPopulation="999" Name="LOC_CIVILIZATION_UNIT_UND_SETTLER_NAME" Description="LOC_CIVILIZATION_UND_SETTLER_DESCRIPTION" CanCapture="False" CostProgressionModel="COST_PROGRESSION_PREVIOUS_COPIES" CostProgressionParam1="20" PurchaseYield="YIELD_GOLD" PseudoYieldType="PSEUDOYIELD_UNIT_SETTLER" TraitType="TRAIT_CIVILIZATION_UNIT_FOREIGN_UNITS" ObsoleteCivic="CIVIC_CODE_OF_LAWS"/>
-		<Row UnitType="UNIT_MOUNTED_WW" BaseMoves="4" Cost="85" AdvisorType="ADVISOR_CONQUEST" BaseSightRange="2" ZoneOfControl="true" Domain="DOMAIN_LAND" Combat="42"  PopulationCost="2"  FormationClass="FORMATION_CLASS_LAND_COMBAT" Name="LOC_CIVILIZATION_UNIT_MOUNTED_WW_NAME" Description="LOC_CIVILIZATION_UNIT_MOUNTED_WW_DESCRIPTION" PurchaseYield="YIELD_GOLD" PromotionClass="PROMOTION_CLASS_HEAVY_CAVALRY" MandatoryObsoleteTech="TECH_CHIVALRY" TraitType="TRAIT_CIVILIZATION_UNIT_MOUNTED_WW" PrereqTech="TECH_HORSEBACK_RIDING"/>
-		<Row UnitType="UNIT_MOUNTED_WW_II" BaseMoves="5" Cost="220" AdvisorType="ADVISOR_CONQUEST" BaseSightRange="2" ZoneOfControl="true" Domain="DOMAIN_LAND" Combat="72"   PopulationCost="4" FormationClass="FORMATION_CLASS_LAND_COMBAT" Name="LOC_CIVILIZATION_UNIT_MOUNTED_WW_II_NAME" Description="LOC_CIVILIZATION_UNIT_MOUNTED_WW_II_DESCRIPTION" PurchaseYield="YIELD_GOLD" PromotionClass="PROMOTION_CLASS_HEAVY_CAVALRY" TraitType="TRAIT_CIVILIZATION_UNIT_MOUNTED_WW" PrereqTech="TECH_CHIVALRY"/>
+		<Row UnitType="UNIT_MOUNTED_WW" BaseMoves="4" Cost="85" AdvisorType="ADVISOR_CONQUEST" BaseSightRange="2" ZoneOfControl="true" Domain="DOMAIN_LAND" Combat="45"  PopulationCost="2"  FormationClass="FORMATION_CLASS_LAND_COMBAT" Name="LOC_CIVILIZATION_UNIT_MOUNTED_WW_NAME" Description="LOC_CIVILIZATION_UNIT_MOUNTED_WW_DESCRIPTION" PurchaseYield="YIELD_GOLD" PromotionClass="PROMOTION_CLASS_HEAVY_CAVALRY" MandatoryObsoleteTech="TECH_CHIVALRY" TraitType="TRAIT_CIVILIZATION_UNIT_MOUNTED_WW" PrereqTech="TECH_HORSEBACK_RIDING"/>
+		<Row UnitType="UNIT_MOUNTED_WW_II" BaseMoves="5" Cost="220" AdvisorType="ADVISOR_CONQUEST" BaseSightRange="2" ZoneOfControl="true" Domain="DOMAIN_LAND" Combat="80"   PopulationCost="2" FormationClass="FORMATION_CLASS_LAND_COMBAT" Name="LOC_CIVILIZATION_UNIT_MOUNTED_WW_II_NAME" Description="LOC_CIVILIZATION_UNIT_MOUNTED_WW_II_DESCRIPTION" PurchaseYield="YIELD_GOLD" PromotionClass="PROMOTION_CLASS_HEAVY_CAVALRY" TraitType="TRAIT_CIVILIZATION_UNIT_MOUNTED_WW"/>
+		<Row UnitType="UNIT_DRAGON_WW" BaseMoves="5" Cost="-1" AdvisorType="ADVISOR_CONQUEST" BaseSightRange="4" ZoneOfControl="true" Domain="DOMAIN_LAND" FormationClass="FORMATION_CLASS_LAND_COMBAT" Name="LOC_CIVILIZATION_UNIT_DRAGON_WW_NAME" PrereqPopulation="99" Description="LOC_CIVILIZATION_UNIT_DRAGON_WW_DESCRIPTION" PurchaseYield="YIELD_GOLD" PromotionClass="PROMOTION_CLASS_LIGHT_CAVALRY" Combat="80" PrereqTech="TECH_HORSEBACK_RIDING" CanTargetAir="TRUE"  TraitType="TRAIT_CIVILIZATION_UNIT_DRAGON_WW"/>
+		<Row UnitType="UNIT_DRAGON_WW_II" BaseMoves="6" Cost="-1" AdvisorType="ADVISOR_CONQUEST" BaseSightRange="5" ZoneOfControl="true" Domain="DOMAIN_LAND" FormationClass="FORMATION_CLASS_LAND_COMBAT" Name="LOC_CIVILIZATION_UNIT_DRAGON_WW_II_NAME" PrereqPopulation="99" Description="LOC_CIVILIZATION_UNIT_DRAGON_WW_II_DESCRIPTION" PurchaseYield="YIELD_GOLD" PromotionClass="PROMOTION_CLASS_LIGHT_CAVALRY" Combat="120" PrereqTech="TECH_DRACONOLOGY" CanTargetAir="TRUE"  TraitType="TRAIT_CIVILIZATION_UNIT_DRAGON_WW"/>
 		
 		<Row UnitType="UNIT_UND_SPY" BaseMoves="2" Cost="-1" AdvisorType="ADVISOR_GENERIC" BaseSightRange="3" ZoneOfControl="false" Domain="DOMAIN_LAND" FormationClass="FORMATION_CLASS_CIVILIAN" FoundCity="true" PopulationCost="1" PrereqPopulation="999" Name="LOC_CIVILIZATION_UNIT_WHITE_WALKER_CANT_BUILD_NAME" Description="LOC_CIVILIZATION_UNIT_WHITE_WALKER_CANT_BUILD_DESCRIPTION" CanCapture="False" CostProgressionModel="COST_PROGRESSION_PREVIOUS_COPIES" CostProgressionParam1="20" PurchaseYield="YIELD_GOLD" PseudoYieldType="PSEUDOYIELD_UNIT_SETTLER" TraitType="TRAIT_CIVILIZATION_UNIT_FOREIGN_UNITS" PrereqCivic="CIVIC_CODE_OF_LAWS" ObsoleteCivic="CIVIC_CODE_OF_LAWS"/>
 		<Row UnitType="UNIT_UND_ALCHEMIST" BaseMoves="2" Cost="-1" AdvisorType="ADVISOR_GENERIC" BaseSightRange="3" ZoneOfControl="false" Domain="DOMAIN_LAND" FormationClass="FORMATION_CLASS_CIVILIAN" FoundCity="true" PopulationCost="1" PrereqPopulation="999" Name="LOC_CIVILIZATION_UNIT_WHITE_WALKER_CANT_BUILD_NAME" Description="LOC_CIVILIZATION_UNIT_WHITE_WALKER_CANT_BUILD_DESCRIPTION" CanCapture="False" CostProgressionModel="COST_PROGRESSION_PREVIOUS_COPIES" CostProgressionParam1="20" PurchaseYield="YIELD_GOLD" PseudoYieldType="PSEUDOYIELD_UNIT_SETTLER" TraitType="TRAIT_CIVILIZATION_UNIT_FOREIGN_UNITS" PrereqCivic="CIVIC_CODE_OF_LAWS" ObsoleteCivic="CIVIC_CODE_OF_LAWS"/>
@@ -620,6 +642,8 @@
 		
 		<Row CivUniqueUnitType="UNIT_MOUNTED_WW" ReplacesUnitType="UNIT_HORSEMAN"/>
 		<Row CivUniqueUnitType="UNIT_MOUNTED_WW_II" ReplacesUnitType="UNIT_KNIGHT"/>
+		<Row CivUniqueUnitType="UNIT_DRAGON_WW" ReplacesUnitType="UNIT_DRAGON" />
+		<Row CivUniqueUnitType="UNIT_DRAGON_WW_II" ReplacesUnitType="UNIT_DRAGON_II" />
 		
 		<Row CivUniqueUnitType="UNIT_UND_SPY" ReplacesUnitType="UNIT_SPY" />
 		<Row CivUniqueUnitType="UNIT_UND_ALCHEMIST" ReplacesUnitType="UNIT_GEN_ALCHEMIST" />
@@ -653,6 +677,7 @@
 		<Row Unit="UNIT_WHITE_WALKER_THROWER" UpgradeUnit="UNIT_WHITE_WALKER_THROWER_II"/>
 		<Row Unit="UNIT_WIGHT" UpgradeUnit="UNIT_WIGHT_II"/>
 		<Row Unit="UNIT_MOUNTED_WW" UpgradeUnit="UNIT_MOUNTED_WW_II"/>
+		<Row Unit="UNIT_DRAGON_WW" UpgradeUnit="UNIT_DRAGON_WW_II"/>
 	</UnitUpgrades>
 
 	<DynamicModifiers>
@@ -838,7 +863,7 @@
 		<Row>
 			<ModifierId>TRAIT_WW_INCREASED_SNOW_PRODUCTION</ModifierId>
 			<Name>Amount</Name>
-			<Value>2</Value>
+			<Value>3</Value>
 		</Row>
 
 		<Row>
@@ -849,7 +874,7 @@
 		<Row>
 			<ModifierId>TRAIT_WW_INCREASED_SNOW_HILLS_PRODUCTION</ModifierId>
 			<Name>Amount</Name>
-			<Value>2</Value>
+			<Value>3</Value>
 		</Row>
 
 		<Row>
@@ -860,7 +885,7 @@
 		<Row>
 			<ModifierId>TRAIT_WW_INCREASED_SNOW_SCIENCE</ModifierId>
 			<Name>Amount</Name>
-			<Value>2</Value>
+			<Value>3</Value>
 		</Row>
 
 		<Row>
@@ -871,7 +896,7 @@
 		<Row>
 			<ModifierId>TRAIT_WW_INCREASED_SNOW_HILLS_SCIENCE</ModifierId>
 			<Name>Amount</Name>
-			<Value>2</Value>
+			<Value>3</Value>
 		</Row>
 
 		<Row>
@@ -882,7 +907,7 @@
 		<Row>
 			<ModifierId>TRAIT_WW_INCREASED_SNOW_CULTURE</ModifierId>
 			<Name>Amount</Name>
-			<Value>2</Value>
+			<Value>3</Value>
 		</Row>
 
 		<Row>
@@ -893,7 +918,7 @@
 		<Row>
 			<ModifierId>TRAIT_WW_INCREASED_SNOW_HILLS_CULTURE</ModifierId>
 			<Name>Amount</Name>
-			<Value>2</Value>
+			<Value>3</Value>
 		</Row>
 
 		<Row>
@@ -904,7 +929,7 @@
 		<Row>
 			<ModifierId>TRAIT_WW_INCREASED_SNOW_FOOD</ModifierId>
 			<Name>Amount</Name>
-			<Value>2</Value>
+			<Value>3</Value>
 		</Row>
 
 		<Row>
@@ -915,7 +940,7 @@
 		<Row>
 			<ModifierId>TRAIT_WW_INCREASED_SNOW_HILLS_FOOD</ModifierId>
 			<Name>Amount</Name>
-			<Value>2</Value>
+			<Value>3</Value>
 		</Row>
 
 		<Row>
