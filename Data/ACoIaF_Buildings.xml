@@ -158,6 +158,11 @@
 			<SubjectRequirementSetId>BARRACKS_UNIT_REQUIREMENTS</SubjectRequirementSetId>
 		</Row>
 
+		<Row>
+			<ModifierId>BROTHEL_TRADE_ROUTE</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_TRADE_ROUTE_CAPACITY</ModifierType>
+		</Row>
+
 		<!-- Wonders -->
 		<Row>
 			<ModifierId>SEPT_OF_BAELOR_GRANT_MARTYR</ModifierId>
@@ -217,6 +222,11 @@
 			<ModifierId>HALL_OF_HEROES_TRAINED_UNIT_XP_MODIFIER</ModifierId>
 			<Name>Amount</Name>
 			<Value>50</Value>
+		</Row>
+		<Row>
+			<ModifierId>BROTHEL_TRADE_ROUTE</ModifierId>
+			<Name>Amount</Name>
+			<Value>1</Value>
 		</Row>
 
 		<!-- Wonders -->
@@ -291,6 +301,7 @@
 		<!-- Civ Buildings -->
 		<Row BuildingType="BUILDING_WEIRWOOD_TREE" ModifierId="STAVE_CHURCH_FAITHWOODSADJACENCY"/>
 		<Row BuildingType="BUILDING_HALL_OF_HEROES" ModifierId="HALL_OF_HEROES_TRAINED_UNIT_XP_MODIFIER"/>
+		<Row BuildingType="BUILDING_BROTHEL" ModifierId="BROTHEL_TRADE_ROUTE"/>
 		<Row BuildingType="BUILDING_TULLY_WATER_MILL" ModifierId="WATERMILL_ADDRICEFOOD"/>
 		<Row BuildingType="BUILDING_TULLY_WATER_MILL" ModifierId="WATERMILL_ADDWHEATYIELD"/>
 

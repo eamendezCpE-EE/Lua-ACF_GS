@@ -4089,18 +4089,18 @@
 			<Text>Flayer</Text>
 		</Row>
 		<Row Tag="LOC_CIVILIZATION_UNIT_FLAYER_DESCRIPTION" Language="en-US">
-			<Text>House Bolton unique ancient era recon unit that replaces the scout. Adjacent enemy units receive -5 [ICON_STRENGTH] Combat Strength.</Text>
+			<Text>House Bolton unique ancient era recon unit that replaces the scout. Adjacent enemy units receive -3 [ICON_STRENGTH] Combat Strength per Flayer.</Text>
 		</Row>
 		<Row Tag="LOC_CIVILIZATION_UNIT_FLAYER_II_NAME" Language="en-US">
 			<Text>Flayer II</Text>
 		</Row>
 		<Row Tag="LOC_CIVILIZATION_UNIT_FLAYER_II_DESCRIPTION" Language="en-US">
-			<Text>House Bolton unique late medieval era recon unit. Adjacent enemy units receive -5 [ICON_STRENGTH] Combat Strength.</Text>
+			<Text>House Bolton unique late medieval era recon unit. Adjacent enemy units receive -3 [ICON_STRENGTH] Combat Strength per Flayer.</Text>
 		</Row>
 
 		<!-- Unit Ability Modifiers -->
 		<Row Tag="LOC_ABILITY_Flayer_NEGATIVE_COMBAT_MODIFIER_DESCRIPTION" Language="en-US">
-			<Text>- 5 Combat [ICON_Strength] when adjacent to an enemy Flayer</Text>
+			<Text>- 3 Combat [ICON_Strength] when adjacent to an enemy Flayer</Text>
 		</Row>
 
 

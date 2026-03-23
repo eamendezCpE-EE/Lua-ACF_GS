@@ -19,6 +19,7 @@
 	<FavoredReligions>
 		<Row LeaderType="LEADER_EDDARD" ReligionType="RELIGION_OLD_GODS" />
 		<Row LeaderType="LEADER_STANNIS" ReligionType="RELIGION_RED_GOD" />
+		<Row LeaderType="LEADER_RENLY" ReligionType="RELIGION_RED_GOD" />
 		<Row LeaderType="LEADER_DANY" ReligionType="RELIGION_RED_GOD" />
 		<Row LeaderType="LEADER_KING_ROBERT" ReligionType="RELIGION_SEVEN_GODS" />
 		<Row LeaderType="LEADER_TYWIN" ReligionType="RELIGION_SEVEN_GODS" />
