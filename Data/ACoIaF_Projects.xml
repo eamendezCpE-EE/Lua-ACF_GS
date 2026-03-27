@@ -17,7 +17,9 @@
 		<Row ProjectType="PROJECT_BURN_THEM_ALL" Name="LOC_PROJECT_BURN_THEM_ALL_NAME" ShortName="LOC_PROJECT_BURN_THEM_ALL_SHORT_NAME" Description="LOC_PROJECT_BURN_THEM_ALL_DESCRIPTION"  PrereqTech="TECH_APPRENTICESHIP" MaxPlayerInstances="1" PrereqResource="RESOURCE_MADNESS" Cost="600" AdvisorType="ADVISOR_CONQUEST"  />
 		<Row ProjectType="PROJECT_BUILD_M_WILDFIRE" Name="LOC_PROJECT_BUILD_M_WILDFIRE_NAME" ShortName="LOC_PROJECT_BUILD_M_WILDFIRE_SHORT_NAME" Description="LOC_PROJECT_BUILD_M_WILDFIRE_DESCRIPTION"  PrereqTech="TECH_APPRENTICESHIP" Cost="800" AdvisorType="ADVISOR_CONQUEST"/>
 		
-		<Row ProjectType="PROJECT_BRING_THEM_TO_ME" Name="LOC_PROJECT_BRING_THEM_TO_ME_NAME" ShortName="LOC_PROJECT_BRING_THEM_TO_ME_SHORT_NAME" Description="LOC_PROJECT_BRING_THEM_TO_ME_DESCRIPTION" Cost="50" AdvisorType="ADVISOR_CONQUEST" AmenitiesWhileActive="1"/>
+		<Row ProjectType="PROJECT_BRING_THEM_TO_ME" Name="LOC_PROJECT_BRING_THEM_TO_ME_NAME" ShortName="LOC_PROJECT_BRING_THEM_TO_ME_SHORT_NAME" Description="LOC_PROJECT_BRING_THEM_TO_ME_DESCRIPTION" RequiredBuilding="BUILDING_EXECUTION_GROUNDS" Cost="500" AdvisorType="ADVISOR_GENERIC" AmenitiesWhileActive="1"/>
+	
+		<!-- <Row ProjectType="PROJECT_BRING_THEM_TO_ME" Name="LOC_PROJECT_BRING_THEM_TO_ME_NAME" ShortName="LOC_PROJECT_BRING_THEM_TO_ME_SHORT_NAME" Description="LOC_PROJECT_BRING_THEM_TO_ME_DESCRIPTION" PrereqBuilding="BUILDING_EXECUTION_GROUNDS" Cost="25" AdvisorType="ADVISOR_GENERIC" CostProgressionModel="COST_PROGRESSION_GAME_PROGRESS" CostProgressionParam1="100" AmenitiesWhileActive="1"/> -->
 	</Projects>
 	<ProjectPrereqs>
 		<Row ProjectType="PROJECT_BUILD_WILDFIRE" PrereqProjectType="PROJECT_WILDFIRE_RESEARCH" MinimumPlayerInstances="1"/>
@@ -25,7 +27,7 @@
 		<Row ProjectType="PROJECT_BUILD_M_WILDFIRE" PrereqProjectType="PROJECT_BURN_THEM_ALL" MinimumPlayerInstances="1"/>
 	</ProjectPrereqs>
 	<Projects_XP2>
-		<Row ProjectType="PROJECT_BRING_THEM_TO_ME" RequiredBuilding="BUILDING_EXECUTION_GROUNDS"/>
+		<!-- <Row ProjectType="PROJECT_BRING_THEM_TO_ME" RequiredBuilding="BUILDING_EXECUTION_GROUNDS"/> -->
 	</Projects_XP2>
 	<ProjectCompletionModifiers>
 		<Row ProjectType="PROJECT_BUILD_WILDFIRE" ModifierId="PROJECT_COMPLETION_MODIFIER_CREATE_WILDFIRE"/>
@@ -34,14 +36,26 @@
 		<Row ProjectType="PROJECT_BUILD_M_WILDFIRE" ModifierId="PROJECT_COMPLETION_MODIFIER_CREATE_WILDFIRE"/>
 		<Row ProjectType="PROJECT_BUILD_M_WILDFIRE" ModifierId="PROJECT_COMPLETION_MODIFIER_GRANT_ALCHEMIST"/>
 
+		<!-- <Row ProjectType="PROJECT_BRING_THEM_TO_ME" ModifierId="PROJECT_COMPLETION_MODIFIER_REMOVE_POPULATION"/> -->
+		<!-- <Row ProjectType="PROJECT_BRING_THEM_TO_ME" ModifierId="PROJECT_COMPLETION_MODIFIER_PLAYER_CITY_ADD_JOFF_POPULATION"/> -->
 		<Row ProjectType="PROJECT_BRING_THEM_TO_ME" ModifierId="PROJECT_COMPLETION_MODIFIER_ADD_AMENITY"/>
 	</ProjectCompletionModifiers>
 	<DynamicModifiers>
-		<Row>
+		<!-- <Row>
+			<ModifierType>MODIFIER_PLAYER_CITY_REMOVE_POPULATION</ModifierType>
+			<CollectionType>COLLECTION_OWNER</CollectionType>
+			<EffectType>EFFECT_ADJUST_CITY_POPULATION</EffectType>
+		</Row> -->		
+		<!-- <Row>
+			<ModifierType>MODIFIER_PLAYER_CITY_ADD_JOFF_POPULATION</ModifierType>
+			<CollectionType>COLLECTION_OWNER</CollectionType>
+			<EffectType>EFFECT_ADJUST_CITY_POPULATION</EffectType>
+		</Row> -->
+		<!-- <Row>
 			<ModifierType>MODIFIER_PLAYER_CITY_ADD_AMENITY</ModifierType>
 			<CollectionType>COLLECTION_OWNER</CollectionType>
 			<EffectType>EFFECT_ADJUST_IMPROVEMENT_AMENITY</EffectType>
-		</Row>
+		</Row> -->
 	</DynamicModifiers>
 	<Modifiers>
 		<Row>
@@ -62,9 +76,27 @@
 			<RunOnce>true</RunOnce>
 			<Permanent>true</Permanent>
 		</Row>
-		<Row>
+		<!-- <Row>
+			<ModifierId>PROJECT_COMPLETION_MODIFIER_REMOVE_POPULATION</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITY_ADD_POPULATION</ModifierType>
+			<RunOnce>true</RunOnce>
+			<Permanent>true</Permanent>
+		</Row> -->
+		<!-- <Row>
+			<ModifierId>PROJECT_COMPLETION_MODIFIER_PLAYER_CITY_ADD_JOFF_POPULATION</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITY_ADD_JOFF_POPULATION</ModifierType>
+			<RunOnce>true</RunOnce>
+			<Permanent>true</Permanent>
+		</Row> -->
+		<!-- <Row>
 			<ModifierId>PROJECT_COMPLETION_MODIFIER_ADD_AMENITY</ModifierId>
 			<ModifierType>MODIFIER_PLAYER_CITY_ADD_AMENITY</ModifierType>
+			<RunOnce>true</RunOnce>
+			<Permanent>true</Permanent>
+		</Row> -->
+		<Row>
+			<ModifierId>PROJECT_COMPLETION_MODIFIER_ADD_AMENITY</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_TRAIT_AMENITY</ModifierType>
 			<RunOnce>true</RunOnce>
 			<Permanent>true</Permanent>
 		</Row>
@@ -100,10 +132,20 @@
 			<Name>Amount</Name>
 			<Value>1</Value>
 		</Row>
+		<!-- <Row>
+			<ModifierId>PROJECT_COMPLETION_MODIFIER_REMOVE_POPULATION</ModifierId>
+			<Name>Amount</Name>
+			<Value>-1</Value>
+		</Row> -->
+		<!-- <Row>
+			<ModifierId>PROJECT_COMPLETION_MODIFIER_PLAYER_CITY_ADD_JOFF_POPULATION</ModifierId>
+			<Name>Amount</Name>
+			<Value>-1</Value>
+		</Row> -->
 		<Row>
 			<ModifierId>PROJECT_COMPLETION_MODIFIER_ADD_AMENITY</ModifierId>
 			<Name>Amount</Name>
-			<Value>10</Value>
+			<Value>1</Value>
 		</Row>
 	</ModifierArguments>
 

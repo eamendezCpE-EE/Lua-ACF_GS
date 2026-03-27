@@ -1716,7 +1716,8 @@
 			<Text>Execution Grounds</Text>
 		</Row>
 		<Row Tag="LOC_LEADER_BUILDING_EXECUTION_GROUNDS_DESCRIPTION" Language="en-US">
-			<Text>A building unique to Joffrey Baratheon of King's Landing. Replaces the Arena and allows for city project "Bring Them To Me" where Joffrey can trade 1 [ICON_Citizen] Population for +1[ICON_Amenities] Amenity.</Text>
+			<Text>A building unique to Joffrey Baratheon of King's Landing. Replaces the Arena and allows for expensive city project "Bring Them To Me" where Joffrey can create +1[ICON_Amenities] Amenity for all cities each use.</Text>
+			<!-- <Text>A building unique to Joffrey Baratheon of King's Landing. Replaces the Arena and allows for city project "Bring Them To Me" where Joffrey can trade 1 [ICON_Citizen] Population for +1[ICON_Amenities] Amenity.</Text> -->
 		</Row>
 
 		<!-- Agenda -->
@@ -4749,7 +4750,8 @@
 			<Text>Bring Them To Me!</Text>
 		</Row>
 		<Row Tag="LOC_PROJECT_BRING_THEM_TO_ME_DESCRIPTION" Language="en_US">
-			<Text>Execute 1 ungrateful subject to grant the city +1[ICON_Amenities] Amenity.</Text>
+			<!-- <Text>Execute 1 ungrateful subject to grant the city +1[ICON_Amenities] Amenity.</Text> -->
+			<Text>Gather subjects for a reminder why they should never turn against the King. All cities gain +1[ICON_Amenities] Amenity.</Text>
 		</Row>
 
 		<Row Tag="LOC_PROJECT_CONVERSION_CEREMONY_NAME" Language="en_US">
