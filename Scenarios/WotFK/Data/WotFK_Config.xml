@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <GameInfo>
-
+	<!--
 	<RuleSets>
 		<Row>
 			<RuleSetType>RULESET_SCENARIO_WOTFK</RuleSetType>
@@ -38,35 +38,35 @@
 		<Row Ruleset="RULESET_SCENARIO_WOTFK" Domain="StandardEras" Value="ERA_MEDIEVAL"/>
 		<Row Ruleset="RULESET_SCENARIO_WOTFK" Domain="StandardGameSpeeds" Value="GAMESPEED_QUICK"/>
 
-		<!-- Slot 1 -->
+		<!- - Slot 1 - ->
 		<Row Ruleset="RULESET_SCENARIO_WOTFK" PlayerId="0" Domain="WotfkScenario_Players" Value="RANDOM"/>
 		<Row Ruleset="RULESET_SCENARIO_WOTFK" PlayerId="0" Domain="WotfkScenario_Players" Value="LEADER_BALON"/>
 		<Row Ruleset="RULESET_SCENARIO_WOTFK" PlayerId="0" Domain="WotfkScenario_Players" Value="LEADER_ROBB"/>
 		<Row Ruleset="RULESET_SCENARIO_WOTFK" PlayerId="0" Domain="WotfkScenario_Players" Value="LEADER_JOFFERY"/>
 		<Row Ruleset="RULESET_SCENARIO_WOTFK" PlayerId="0" Domain="WotfkScenario_Players" Value="LEADER_RENLY"/>
 		<Row Ruleset="RULESET_SCENARIO_WOTFK" PlayerId="0" Domain="WotfkScenario_Players" Value="LEADER_STANNIS"/>
-		<!-- Slot 2 -->
+		<!- - Slot 2 - ->
 		<Row Ruleset="RULESET_SCENARIO_WOTFK" PlayerId="1" Domain="WotfkScenario_Players" Value="RANDOM"/>
 		<Row Ruleset="RULESET_SCENARIO_WOTFK" PlayerId="1" Domain="WotfkScenario_Players" Value="LEADER_BALON"/>
 		<Row Ruleset="RULESET_SCENARIO_WOTFK" PlayerId="1" Domain="WotfkScenario_Players" Value="LEADER_ROBB"/>
 		<Row Ruleset="RULESET_SCENARIO_WOTFK" PlayerId="1" Domain="WotfkScenario_Players" Value="LEADER_JOFFERY"/>
 		<Row Ruleset="RULESET_SCENARIO_WOTFK" PlayerId="1" Domain="WotfkScenario_Players" Value="LEADER_RENLY"/>
 		<Row Ruleset="RULESET_SCENARIO_WOTFK" PlayerId="1" Domain="WotfkScenario_Players" Value="LEADER_STANNIS"/>
-		<!-- Slot 3 -->
+		<!- - Slot 3 - ->
 		<Row Ruleset="RULESET_SCENARIO_WOTFK" PlayerId="2" Domain="WotfkScenario_Players" Value="RANDOM"/>
 		<Row Ruleset="RULESET_SCENARIO_WOTFK" PlayerId="2" Domain="WotfkScenario_Players" Value="LEADER_BALON"/>
 		<Row Ruleset="RULESET_SCENARIO_WOTFK" PlayerId="2" Domain="WotfkScenario_Players" Value="LEADER_ROBB"/>
 		<Row Ruleset="RULESET_SCENARIO_WOTFK" PlayerId="2" Domain="WotfkScenario_Players" Value="LEADER_JOFFERY"/>
 		<Row Ruleset="RULESET_SCENARIO_WOTFK" PlayerId="2" Domain="WotfkScenario_Players" Value="LEADER_RENLY"/>
 		<Row Ruleset="RULESET_SCENARIO_WOTFK" PlayerId="2" Domain="WotfkScenario_Players" Value="LEADER_STANNIS"/>
-		<!-- Slot 4 -->
+		<!- - Slot 4 - ->
 		<Row Ruleset="RULESET_SCENARIO_WOTFK" PlayerId="3" Domain="WotfkScenario_Players" Value="RANDOM"/>
 		<Row Ruleset="RULESET_SCENARIO_WOTFK" PlayerId="3" Domain="WotfkScenario_Players" Value="LEADER_BALON"/>
 		<Row Ruleset="RULESET_SCENARIO_WOTFK" PlayerId="3" Domain="WotfkScenario_Players" Value="LEADER_ROBB"/>
 		<Row Ruleset="RULESET_SCENARIO_WOTFK" PlayerId="3" Domain="WotfkScenario_Players" Value="LEADER_JOFFERY"/>
 		<Row Ruleset="RULESET_SCENARIO_WOTFK" PlayerId="3" Domain="WotfkScenario_Players" Value="LEADER_RENLY"/>
 		<Row Ruleset="RULESET_SCENARIO_WOTFK" PlayerId="3" Domain="WotfkScenario_Players" Value="LEADER_STANNIS"/>
-		<!-- Slot 5 -->
+		<!- - Slot 5 - ->
 		<Row Ruleset="RULESET_SCENARIO_WOTFK" PlayerId="4" Domain="WotfkScenario_Players" Value="RANDOM"/>
 		<Row Ruleset="RULESET_SCENARIO_WOTFK" PlayerId="4" Domain="WotfkScenario_Players" Value="LEADER_BALON"/>
 		<Row Ruleset="RULESET_SCENARIO_WOTFK" PlayerId="4" Domain="WotfkScenario_Players" Value="LEADER_ROBB"/>
@@ -74,7 +74,7 @@
 		<Row Ruleset="RULESET_SCENARIO_WOTFK" PlayerId="4" Domain="WotfkScenario_Players" Value="LEADER_RENLY"/>
 		<Row Ruleset="RULESET_SCENARIO_WOTFK" PlayerId="4" Domain="WotfkScenario_Players" Value="LEADER_STANNIS"/>
 
-		<!-- NPC Slots -->
+		<!- - NPC Slots - ->
 		<Row Ruleset="RULESET_SCENARIO_WOTFK" PlayerId="5" Domain="WotfkScenario_Players" Value="LEADER_DORAN"/>
 		<Row Ruleset="RULESET_SCENARIO_WOTFK" PlayerId="6" Domain="WotfkScenario_Players" Value="LEADER_TYWIN"/>
 		<Row Ruleset="RULESET_SCENARIO_WOTFK" PlayerId="7" Domain="WotfkScenario_Players" Value="LEADER_OLENNA"/>
@@ -519,5 +519,5 @@
 			<Icon>ICON_UNIT_WILDLING</Icon>
 			<SortIndex>20</SortIndex>
 		</Row>
-	</PlayerItems>
+	</PlayerItems> -->
 </GameInfo>
