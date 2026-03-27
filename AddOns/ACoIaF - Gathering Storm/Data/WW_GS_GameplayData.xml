@@ -17,6 +17,7 @@
 		<Row Type="IMPROVEMENT_WINTERIZE" Kind="KIND_IMPROVEMENT"/>
 
 		<Row Type="PROJECT_CONVERSION_CEREMONY" Kind="KIND_PROJECT"/>
+		<!-- <Row Type="PROJECT_MINE_THE_WALL" Kind="KIND_PROJECT"/> -->
 
 		<Row Type="RESOURCE_ICE" Kind="KIND_RESOURCE"/>
 		<Row Type="RESOURCE_LIFE" Kind="KIND_RESOURCE"/>
@@ -280,6 +281,7 @@
 		<Row ListType="WhiteWalkerDiplomacy" Item="DIPLOACTION_PROPOSE_PEACE_DEAL" Favored="false"/>
 		<Row ListType="WhiteWalkerDiplomacy" Item="DIPLOACTION_PROPOSE_TRADE" Favored="false"/>
 		<Row ListType="WhiteWalkerProjects" Item="PROJECT_CONVERSION_CEREMONY" Favored="true"/>
+		<Row ListType="WhiteWalkerProjects" Item="PROJECT_MINE_THE_WALL" Favored="false"/>
 		<Row ListType="WhiteWalkerUnits" Item="UNIT_WHITE_WALKER" Favored="true" Value="2"/>
 		<Row ListType="WhiteWalkerUnits" Item="UNIT_WHITE_WALKER_THROWER" Favored="true" Value="2"/>
 	</AiFavoredItems>
@@ -454,6 +456,7 @@
 
 	<Projects>
 		<Row ProjectType="PROJECT_CONVERSION_CEREMONY"   Name="LOC_PROJECT_CONVERSION_CEREMONY_NAME" ShortName="LOC_PROJECT_CONVERSION_CEREMONY_SHORT_NAME" Description="LOC_PROJECT_CONVERSION_CEREMONY_DESCRIPTION"  Cost="100" PrereqResource="RESOURCE_ICE" AdvisorType="ADVISOR_CONQUEST" SpaceRace="true" CostProgressionModel="COST_PROGRESSION_GAME_PROGRESS" CostProgressionParam1="500" />
+		<!-- <Row ProjectType="PROJECT_MINE_THE_WALL"   Name="LOC_PROJECT_MINE_THE_WALL_NAME" ShortName="LOC_PROJECT_MINE_THE_WALL_SHORT_NAME" Description="LOC_PROJECT_MINE_THE_WALL_DESCRIPTION"  Cost="10" PrereqResource="RESOURCE_ICE" AdvisorType="ADVISOR_CONQUEST" SpaceRace="true" CostProgressionModel="COST_PROGRESSION_GAME_PROGRESS" CostProgressionParam1="100" /> -->
 	</Projects>
 
 	<ProjectCompletionModifiers>
@@ -885,7 +888,7 @@
 		<Row>
 			<ModifierId>TRAIT_WW_INCREASED_SNOW_SCIENCE</ModifierId>
 			<Name>Amount</Name>
-			<Value>3</Value>
+			<Value>1</Value>
 		</Row>
 
 		<Row>
@@ -896,7 +899,7 @@
 		<Row>
 			<ModifierId>TRAIT_WW_INCREASED_SNOW_HILLS_SCIENCE</ModifierId>
 			<Name>Amount</Name>
-			<Value>3</Value>
+			<Value>1</Value>
 		</Row>
 
 		<Row>
@@ -907,7 +910,7 @@
 		<Row>
 			<ModifierId>TRAIT_WW_INCREASED_SNOW_CULTURE</ModifierId>
 			<Name>Amount</Name>
-			<Value>3</Value>
+			<Value>1</Value>
 		</Row>
 
 		<Row>
@@ -918,7 +921,7 @@
 		<Row>
 			<ModifierId>TRAIT_WW_INCREASED_SNOW_HILLS_CULTURE</ModifierId>
 			<Name>Amount</Name>
-			<Value>3</Value>
+			<Value>1</Value>
 		</Row>
 
 		<Row>

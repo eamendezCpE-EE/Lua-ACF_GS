@@ -392,10 +392,18 @@
 		</Row>
 
 		<Row Tag="LOC_TRAIT_LEADER_JOFF_NAME" Language="en_US">
-			<Text>Spoiled Brat</Text>
+			<Text>Rule By Fear</Text>
 		</Row>
 		<Row Tag="LOC_TRAIT_LEADER_JOFF_DESCRIPTION" Language="en_US">
-			<Text>Cannot train settlers, but recieve +50% [ICON_Production] Production towards wonders, +6 Influence points per [ICON_Turn] Turn and +10% [ICON_Culture] Culture, [ICON_Faith] Faith, [ICON_Food] Food, [ICON_Gold] Gold, [ICON_Production] Production, and [ICON_Science] Science per city-state you are the Suzerain of. Gain the Kingsguard Unique Unit when they unlock the Iron Working Technology.</Text>
+			<Text>Cities are always loyal. Joffery Baratheon's ruthless leadership leaves subjects more afraid of turning against their king than standing up for themselves.</Text>
+		</Row>
+
+		<Row Tag="LOC_TRAIT_LEADER_BUILDING_EXECUTION_GROUNDS_NAME" Language="en_US">
+			<Text>Execution Grounds</Text>
+		</Row>
+
+		<Row Tag="LOC_TRAIT_LEADER_BUILDING_EXECUTION_GROUNDS_DESCRIPTION" Language="en_US">
+			<Text>A building unique to Joffrey Baratheon of King's Landing. Replaces the Arena and allows for city project "Bring Them To Me" where Joffrey can trade 1 [ICON_Citizen] Population for +1[ICON_Amenities] Amenity.</Text>
 		</Row>
 
 		<Row Tag="LOC_LEADER_RENLY_NAME" Language="en_US">
@@ -916,7 +924,7 @@
 			<Text>Flayer</Text>
 		</Row>
 		<Row Tag="LOC_TRAIT_CIVILIZATION_UNIT_FLAYER_DESCRIPTION" Language="en_US">
-			<Text>House Bolton unique ancient era recon unit that replaces the scout. Adjacent enemy units receive -5 [ICON_STRENGTH] Combat Strength.</Text>
+			<Text>House Bolton unique ancient era recon unit that replaces the scout. Adjacent enemy units receive -3 [ICON_STRENGTH] Combat Strength per Flayer.</Text>
 		</Row>
 
 		<Row Tag="LOC_LEADER_ROOSE_NAME" Language="en_US">

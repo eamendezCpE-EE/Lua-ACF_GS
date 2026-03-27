@@ -138,6 +138,22 @@
 		<Row>
 			<Domain>ACoIaFRuleset_Players</Domain>
 			<CivilizationType>CIVILIZATION_BARATHEON</CivilizationType>
+			<LeaderType>LEADER_JOFFERY</LeaderType>
+			<CivilizationName>LOC_CIVILIZATION_BARATHEON_NAME</CivilizationName>
+			<CivilizationIcon>ICON_CIVILIZATION_BARATHEON_JOFFERY</CivilizationIcon>
+			<LeaderName>LOC_LEADER_JOFFERY_NAME</LeaderName>
+			<LeaderIcon>ICON_LEADER_JOFFERY</LeaderIcon>
+			<CivilizationAbilityName>LOC_TRAIT_CIVILIZATION_BARATHEON_NAME</CivilizationAbilityName>
+			<CivilizationAbilityDescription>LOC_TRAIT_CIVILIZATION_BARATHEON_DESCRIPTION</CivilizationAbilityDescription>
+			<CivilizationAbilityIcon>ICON_CIVILIZATION_BARATHEON_JOFFERY</CivilizationAbilityIcon>
+			<LeaderAbilityName>LOC_TRAIT_LEADER_JOFF_NAME</LeaderAbilityName>
+			<LeaderAbilityDescription>LOC_TRAIT_LEADER_JOFF_DESCRIPTION</LeaderAbilityDescription>
+			<LeaderAbilityIcon>ICON_LEADER_JOFFERY</LeaderAbilityIcon>
+			<Portrait>JOFFERY_4</Portrait>
+		</Row>
+		<Row>
+			<Domain>ACoIaFRuleset_Players</Domain>
+			<CivilizationType>CIVILIZATION_BARATHEON</CivilizationType>
 			<LeaderType>LEADER_RENLY</LeaderType>
 			<CivilizationName>LOC_CIVILIZATION_BARATHEON_NAME</CivilizationName>
 			<CivilizationIcon>ICON_CIVILIZATION_BARATHEON_RENLY</CivilizationIcon>
@@ -460,6 +476,26 @@
 			<Description>LOC_TRAIT_LEADER_UNIT_ROBERT_SETTLER_DESCRIPTION</Description>
 			<Icon>ICON_UNIT_ROBERT_SETTLER</Icon>
 			<SortIndex>30</SortIndex>
+		</Row>
+		<Row>
+			<Domain>ACoIaFRuleset_Players</Domain>
+			<CivilizationType>CIVILIZATION_BARATHEON</CivilizationType>
+			<LeaderType>LEADER_JOFFERY</LeaderType>
+			<Type>BUILDING_EXECUTION_GROUNDS</Type>
+			<Name>LOC_TRAIT_LEADER_BUILDING_EXECUTION_GROUNDS_NAME</Name>
+			<Description>LOC_TRAIT_LEADER_BUILDING_EXECUTION_GROUNDS_DESCRIPTION</Description>
+			<Icon>ICON_BUILDING_EXECUTION_GROUNDS</Icon>
+			<SortIndex>10</SortIndex>
+		</Row>
+		<Row>
+			<Domain>ACoIaFRuleset_Players</Domain>
+			<CivilizationType>CIVILIZATION_BARATHEON</CivilizationType>
+			<LeaderType>LEADER_JOFFERY</LeaderType>
+			<Type>UNIT_KINGSGUARD</Type>
+			<Name>LOC_TRAIT_LEADER_UNIT_KINGSGUARD_NAME</Name>
+			<Description>LOC_TRAIT_LEADER_UNIT_KINGSGUARD_DESCRIPTION</Description>
+			<Icon>ICON_UNIT_KINGSGUARD</Icon>
+			<SortIndex>20</SortIndex>
 		</Row>
 		<Row>
 			<Domain>ACoIaFRuleset_Players</Domain>
