@@ -5,6 +5,19 @@
 		<Row Type="ABILITY_WW_ASSASSIN" Kind="KIND_ABILITY"/> <!-- <Row Type="ABILITY_ANTI_CAVALRY" Kind="KIND_ABILITY"/> X -->
 		
 		<Row Type="UNIT_WANDERING_MINSTREL" Kind="KIND_UNIT"/> <!-- <Row Type="UNIT_ROCK_BAND" Kind="KIND_UNIT"/> --> 
+		<Row Type="PROMOTION_CLASS_MINSTREL" Kind="KIND_PROMOTION_CLASS"/>
+
+		<!--Wandering Minstrels-->
+		<Row Type="PROMOTION_HOUSE_GLORIFICATION" Kind="KIND_PROMOTION"/>
+		<Row Type="PROMOTION_DRUNKEN_JESTS" Kind="KIND_PROMOTION"/>
+		<Row Type="PROMOTION_SONGS_OF_ICE_AND_FIRE" Kind="KIND_PROMOTION"/>
+		<Row Type="PROMOTION_LOCAL_FOLKLORE" Kind="KIND_PROMOTION"/>
+		<Row Type="PROMOTION_FREE_SPEECH" Kind="KIND_PROMOTION"/>
+		<Row Type="PROMOTION_STREET_PERFORMANCES" Kind="KIND_PROMOTION"/>
+		<Row Type="PROMOTION_SONGS_OF_GODS_AND_DRAGONS" Kind="KIND_PROMOTION"/>
+		<Row Type="PROMOTION_NOMADS" Kind="KIND_PROMOTION"/>
+		<Row Type="PROMOTION_ALCHEMIC_ASPIRATIONS" Kind="KIND_PROMOTION"/>
+		<Row Type="PROMOTION_SIREN_SONGS" Kind="KIND_PROMOTION"/>
 	</Types>
 	
 	<Tags>
@@ -19,6 +32,9 @@
 		
 		<Row Type="UNIT_WANDERING_MINSTREL" Tag="CLASS_LANDCIVILIAN"/> <!-- <Row Type="UNIT_ROCK_BAND" Tag="CLASS_LANDCIVILIAN"/> -->
 		<Row Type="UNIT_WANDERING_MINSTREL" Tag="CLASS_ROCK_BAND"/> <!-- <Row Type="UNIT_ROCK_BAND" Tag="CLASS_ROCK_BAND"/> -->
+
+		
+		<!-- <Row Type="ABILITY_ROCK_BAND_ENTER_FOREIGN_LANDS" Tag="CLASS_ROCK_BAND"/> -->
 	</TypeTags>
 	
 	<UnitAbilities>
@@ -38,6 +54,71 @@
 			<ModifierType>MODIFIER_UNIT_ADJUST_COMBAT_STRENGTH</ModifierType> <!-- <ModifierType>MODIFIER_UNIT_ADJUST_COMBAT_STRENGTH</ModifierType> -->
 			<SubjectRequirementSetId>ANTI_WW_OPPONENT_REQUIREMENTS</SubjectRequirementSetId> <!-- <SubjectRequirementSetId>ANTI_CAVALRY_OPPONENT_REQUIREMENTS</SubjectRequirementSetId> -->
 		</Row>
+
+		<Row>
+			<ModifierId>MINSTREL_HOUSE_GLORIFICATION</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNIT_ADJUST_ROCK_BAND_LEVEL_DISTRICT</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>MINSTREL_DRUNKEN_JESTS</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNIT_ADJUST_ROCK_BAND_LEVEL_DISTRICT</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>MINSTREL_SONGS_OF_ICE_AND_FIRE</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNIT_ADJUST_ROCK_BAND_LEVEL_DISTRICT</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>MINSTREL_LOCAL_FOLKLORE</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNIT_ADJUST_TOURISM_BOMB_RANGE</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>MINSTREL_FREE_SPEECH</ModifierId>
+			<ModifierType>MODIFIER_SINGLE_UNIT_ADJUST_POST_TOURISM_BOMB_LOYALTY</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>MINSTREL_STREET_PERFORMANCES</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNIT_ADJUST_TOURISM_BOMB_ADDITIONAL_YIELD</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>MINSTREL_SONGS_OF_GODS_AND_DRAGONS</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNIT_ADJUST_TOURISM_BOMB_CONVERT_CITY</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>MINSTREL_NOMADS</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNIT_ADJUST_MOVEMENT</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>MINSTREL_ALCHEMIC_ASPIRATIONS_CAMPUS</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNIT_ADJUST_ROCK_BAND_LEVEL_DISTRICT</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>MINSTREL_ALCHEMIC_ASPIRATIONS_CAMPUS_MODIFIER</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNIT_ADJUST_TOURISM_BOMB_DISTRICT</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>MINSTREL_SIREN_SONGS_TOURISM_BOMB</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNIT_ADJUST_TOURISM_BOMB_IMPROVEMENT</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>MINSTREL_SIREN_SONGS_LEVEL</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNIT_ADJUST_ROCK_BAND_LEVEL_IMPROVEMENT</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>MINSTREL_SIREN_SONGS_HARBOR</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNIT_ADJUST_ROCK_BAND_LEVEL_DISTRICT</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>MINSTREL_SIREN_SONGS_HARBOR_MODIFIER</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNIT_ADJUST_TOURISM_BOMB_DISTRICT</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>MINSTREL_SIREN_SONGS_IRON_HARBOR_DOCKYARD</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNIT_ADJUST_ROCK_BAND_LEVEL_DISTRICT</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>MINSTREL_SIREN_SONGS_IRON_HARBOR_DOCKYARD_MODIFIER</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNIT_ADJUST_TOURISM_BOMB_DISTRICT</ModifierType>
+		</Row>
 	</Modifiers>
 	
 	<ModifierArguments>
@@ -45,6 +126,133 @@
 			<ModifierId>ANTI_WW_COMBAT_BONUS</ModifierId> <!-- <ModifierId>ANTI_CAVALRY_COMBAT_BONUS</ModifierId> -->
 			<Name>Amount</Name> <!-- <Name>Amount</Name> --> 
 			<Value>100</Value> <!-- <Value>10</Value> -->
+		</Row>
+
+		<!-- Wandering Minstrel -->
+		<Row>
+			<ModifierId>MINSTREL_HOUSE_GLORIFICATION</ModifierId>
+			<Name>DistrictType</Name>
+			<Value>DISTRICT_WONDER</Value>
+		</Row>
+		<Row>
+			<ModifierId>MINSTREL_HOUSE_GLORIFICATION</ModifierId>
+			<Name>Amount</Name>
+			<Value>1</Value>
+		</Row>
+		<Row>
+			<ModifierId>MINSTREL_DRUNKEN_JESTS</ModifierId>
+			<Name>DistrictType</Name>
+			<Value>DISTRICT_ENTERTAINMENT_COMPLEX</Value>
+		</Row>
+		<Row>
+			<ModifierId>MINSTREL_DRUNKEN_JESTS</ModifierId>
+			<Name>Amount</Name>
+			<Value>2</Value>
+		</Row>
+		<Row>
+			<ModifierId>MINSTREL_SONGS_OF_ICE_AND_FIRE</ModifierId>
+			<Name>DistrictType</Name>
+			<Value>DISTRICT_THEATER</Value>
+		</Row>
+		<Row>
+			<ModifierId>MINSTREL_SONGS_OF_ICE_AND_FIRE</ModifierId>
+			<Name>Amount</Name>
+			<Value>2</Value>
+		</Row>
+		<Row>
+			<ModifierId>MINSTREL_LOCAL_FOLKLORE</ModifierId>
+			<Name>Modifier</Name>
+			<Value>-50</Value>
+		</Row>
+		<Row>
+			<ModifierId>MINSTREL_LOCAL_FOLKLORE</ModifierId>
+			<Name>Range</Name>
+			<Value>10</Value>
+		</Row>
+		<Row>
+			<ModifierId>MINSTREL_FREE_SPEECH</ModifierId>
+			<Name>Amount</Name>
+			<Value>-60</Value>
+		</Row>
+		<Row>
+			<ModifierId>MINSTREL_STREET_PERFORMANCES</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_GOLD</Value>
+		</Row>
+		<Row>
+			<ModifierId>MINSTREL_STREET_PERFORMANCES</ModifierId>
+			<Name>Amount</Name>
+			<Value>-75</Value>
+		</Row>
+		<Row>
+			<ModifierId>MINSTREL_SONGS_OF_GODS_AND_DRAGONS</ModifierId>
+			<Name>Convert</Name>
+			<Value>true</Value>
+		</Row>
+		<Row>
+			<ModifierId>MINSTREL_NOMADS</ModifierId>
+			<Name>Amount</Name>
+			<Value>4</Value>
+		</Row>
+		<Row>
+			<ModifierId>MINSTREL_ALCHEMIC_ASPIRATIONS_CAMPUS</ModifierId>
+			<Name>DistrictType</Name>
+			<Value>DISTRICT_CAMPUS</Value>
+		</Row>
+		<Row>
+			<ModifierId>MINSTREL_ALCHEMIC_ASPIRATIONS_CAMPUS</ModifierId>
+			<Name>Amount</Name>
+			<Value>1</Value>
+		</Row>
+		<Row>
+			<ModifierId>MINSTREL_ALCHEMIC_ASPIRATIONS_CAMPUS_MODIFIER</ModifierId>
+			<Name>DistrictType</Name>
+			<Value>DISTRICT_CAMPUS</Value>
+		</Row>
+		<Row>
+			<ModifierId>MINSTREL_ALCHEMIC_ASPIRATIONS_CAMPUS_MODIFIER</ModifierId>
+			<Name>Amount</Name>
+			<Value>500</Value>
+		</Row>
+		<Row>
+			<ModifierId>MINSTREL_SIREN_SONGS_HARBOR</ModifierId>
+			<Name>DistrictType</Name>
+			<Value>DISTRICT_HARBOR</Value>
+		</Row>
+		<Row>
+			<ModifierId>MINSTREL_SIREN_SONGS_HARBOR</ModifierId>
+			<Name>Amount</Name>
+			<Value>1</Value>
+		</Row>
+		<Row>
+			<ModifierId>MINSTREL_SIREN_SONGS_IRON_HARBOR_DOCKYARD</ModifierId>
+			<Name>DistrictType</Name>
+			<Value>DISTRICT_IRON_HARBOR</Value>
+		</Row>
+		<Row>
+			<ModifierId>MINSTREL_SIREN_SONGS_IRON_HARBOR_DOCKYARD</ModifierId>
+			<Name>Amount</Name>
+			<Value>1</Value>
+		</Row>
+		<Row>
+			<ModifierId>MINSTREL_SIREN_SONGS_HARBOR_MODIFIER</ModifierId>
+			<Name>DistrictType</Name>
+			<Value>DISTRICT_HARBOR</Value>
+		</Row>
+		<Row>
+			<ModifierId>MINSTREL_SIREN_SONGS_HARBOR_MODIFIER</ModifierId>
+			<Name>Amount</Name>
+			<Value>500</Value>
+		</Row>
+		<Row>
+			<ModifierId>MINSTREL_SIREN_SONGS_IRON_HARBOR_DOCKYARD_MODIFIER</ModifierId>
+			<Name>DistrictType</Name>
+			<Value>DISTRICT_IRON_HARBOR</Value>
+		</Row>
+		<Row>
+			<ModifierId>MINSTREL_SIREN_SONGS_IRON_HARBOR_DOCKYARD_MODIFIER</ModifierId>
+			<Name>Amount</Name>
+			<Value>500</Value>
 		</Row>
 	</ModifierArguments>
 	
@@ -92,7 +300,7 @@
 	<Units>
 		<Row UnitType="UNIT_WW_ASSASSIN" Cost="150" BaseMoves="4" BaseSightRange="3" ZoneOfControl="true" Domain="DOMAIN_LAND" Combat="20" FormationClass="FORMATION_CLASS_LAND_COMBAT" PromotionClass="PROMOTION_CLASS_RECON" AdvisorType="ADVISOR_GENERIC" Name="LOC_UNIT_WW_ASSASSIN_NAME" Description="LOC_UNIT_WW_ASSASSIN_DESCRIPTION" PurchaseYield="YIELD_GOLD" PseudoYieldType="PSEUDOYIELD_UNIT_EXPLORER" PrereqTech="TECH_DRACONOLOGY" StrategicResource="RESOURCE_DRAGONGLASS"/>
 		
-		<Row UnitType="UNIT_WANDERING_MINSTREL" Cost="300" BaseMoves="4" BaseSightRange="2" ZoneOfControl="false" Domain="DOMAIN_LAND" FormationClass="FORMATION_CLASS_CIVILIAN" Name="LOC_UNIT_WANDERING_MINSTREL_NAME" Description="LOC_UNIT_WANDERING_MINSTREL_DESCRIPTION" PurchaseYield="YIELD_FAITH" PrereqCivic="CIVIC_MEDIEVAL_FAIRES" MustPurchase="TRUE" CostProgressionModel="COST_PROGRESSION_PREVIOUS_COPIES" CostProgressionParam1="50" CanRetreatWhenCaptured="True" InitialLevel="2" NumRandomChoices="3" PromotionClass="PROMOTION_CLASS_ROCK_BAND" PseudoYieldType="PSEUDOYIELD_UNIT_RELIGIOUS"/>
+		<Row UnitType="UNIT_WANDERING_MINSTREL" Cost="300" BaseMoves="4" BaseSightRange="2" ZoneOfControl="false" Domain="DOMAIN_LAND" FormationClass="FORMATION_CLASS_CIVILIAN" Name="LOC_UNIT_WANDERING_MINSTREL_NAME" Description="LOC_UNIT_WANDERING_MINSTREL_DESCRIPTION" PurchaseYield="YIELD_FAITH" PrereqCivic="CIVIC_MEDIEVAL_FAIRES" MustPurchase="TRUE" CostProgressionModel="COST_PROGRESSION_PREVIOUS_COPIES" CostProgressionParam1="50" CanRetreatWhenCaptured="True" InitialLevel="2" NumRandomChoices="3" PromotionClass="PROMOTION_CLASS_MINSTREL" PseudoYieldType="PSEUDOYIELD_UNIT_RELIGIOUS"/>
 		<!-- <Row UnitType="UNIT_ROCK_BAND" Cost="300" BaseMoves="4" BaseSightRange="2" ZoneOfControl="false" Domain="DOMAIN_LAND" FormationClass="FORMATION_CLASS_CIVILIAN" Name="LOC_UNIT_ROCK_BAND_NAME" Description="LOC_UNIT_ROCK_BAND_DESCRIPTION" PurchaseYield="YIELD_FAITH" PrereqCivic="CIVIC_COLD_WAR" MustPurchase="TRUE" CostProgressionModel="COST_PROGRESSION_PREVIOUS_COPIES" CostProgressionParam1="50" CanRetreatWhenCaptured="True" InitialLevel="2" NumRandomChoices="3" PromotionClass="PROMOTION_CLASS_ROCK_BAND" PseudoYieldType="PSEUDOYIELD_UNIT_RELIGIOUS"/>
 		 -->
 		
@@ -279,14 +487,118 @@
 	</UnitUpgrades>
 
 	<UnitPromotionClasses>
+		<Row PromotionClassType="PROMOTION_CLASS_MINSTREL" Name="LOC_PROMOTION_CLASS_MINSTREL_NAME"/>
 	</UnitPromotionClasses>
 	
 	<UnitPromotions>
+		<Row UnitPromotionType="PROMOTION_HOUSE_GLORIFICATION" Name="LOC_PROMOTION_HOUSE_GLORIFICATION_NAME" Description="LOC_PROMOTION_HOUSE_GLORIFICATION_DESCRIPTION" Level="1" PromotionClass="PROMOTION_CLASS_MINSTREL"/> <!-- Wonders  -->
+		<Row UnitPromotionType="PROMOTION_DRUNKEN_JESTS" Name="LOC_PROMOTION_DRUNKEN_JESTS_NAME" Description="LOC_PROMOTION_DRUNKEN_JESTS_DESCRIPTION" Level="1" PromotionClass="PROMOTION_CLASS_MINSTREL"/> <!-- Entertainment District -->
+		<Row UnitPromotionType="PROMOTION_SONGS_OF_ICE_AND_FIRE" Name="LOC_PROMOTION_SONGS_OF_ICE_AND_FIRE_NAME" Description="LOC_PROMOTION_SONGS_OF_ICE_AND_FIRE_DESCRIPTION" Level="1" PromotionClass="PROMOTION_CLASS_MINSTREL"/> <!-- Theatre District -->
+		<Row UnitPromotionType="PROMOTION_LOCAL_FOLKLORE" Name="LOC_PROMOTION_LOCAL_FOLKLORE_NAME" Description="LOC_PROMOTION_LOCAL_FOLKLORE_DESCRIPTION" Level="1" PromotionClass="PROMOTION_CLASS_MINSTREL"/> <!-- Civ within 10 tiles -->
+		<Row UnitPromotionType="PROMOTION_FREE_SPEECH" Name="LOC_PROMOTION_FREE_SPEECH_NAME" Description="LOC_PROMOTION_FREE_SPEECH_DESCRIPTION" Level="1" PromotionClass="PROMOTION_CLASS_MINSTREL"/> <!-- City Loyalty -->
+		<!-- <Row UnitPromotionType="PROMOTION_INSPIRING_LEGENDS" Name="LOC_PROMOTION_INSPIRING_LEGENDS_NAME" Description="LOC_PROMOTION_INSPIRING_LEGENDS_DESCRIPTION" Level="1" PromotionClass="PROMOTION_CLASS_MINSTREL"/> --> <!-- ADD ENCAMPMENT --> <!-- WHITE_BOOK -->
+		<!-- <Row UnitPromotionType="PROMOTION_MUSIC_FESTIVAL" Name="LOC_PROMOTION_MUSIC_FESTIVAL_NAME" Description="LOC_PROMOTION_MUSIC_FESTIVAL_DESCRIPTION" Level="1" PromotionClass="PROMOTION_CLASS_MINSTREL"/> <!- National Park + Wonders -->
+		<Row UnitPromotionType="PROMOTION_STREET_PERFORMANCES" Name="LOC_PROMOTION_STREET_PERFORMANCES_NAME" Description="LOC_PROMOTION_STREET_PERFORMANCES_DESCRIPTION" Level="1" PromotionClass="PROMOTION_CLASS_MINSTREL"/> <!-- Money -->
+		<Row UnitPromotionType="PROMOTION_SONGS_OF_GODS_AND_DRAGONS" Name="LOC_PROMOTION_SONGS_OF_GODS_AND_DRAGONS_NAME" Description="LOC_PROMOTION_SONGS_OF_GODS_AND_DRAGONS_DESCRIPTION" Level="1" PromotionClass="PROMOTION_CLASS_MINSTREL"/> <!-- Religion Bonus -->
+		<Row UnitPromotionType="PROMOTION_NOMADS" Name="LOC_PROMOTION_NOMADS_NAME" Description="LOC_PROMOTION_NOMADS_DESCRIPTION" Level="1" PromotionClass="PROMOTION_CLASS_MINSTREL"/> <!-- Movement Bonus -->
+
+		<Row UnitPromotionType="PROMOTION_ALCHEMIC_ASPIRATIONS" Name="LOC_PROMOTION_ALCHEMIC_ASPIRATIONS_NAME" Description="LOC_PROMOTION_ALCHEMIC_ASPIRATIONS_DESCRIPTION" Level="1" PromotionClass="PROMOTION_CLASS_MINSTREL"/> <!-- Campus District -->
+		<Row UnitPromotionType="PROMOTION_SIREN_SONGS" Name="LOC_PROMOTION_SIREN_SONGS_NAME" Description="LOC_PROMOTION_SIREN_SONGS_DESCRIPTION" Level="1" PromotionClass="PROMOTION_CLASS_MINSTREL"/> <!-- Harbor District -->
+		
 	</UnitPromotions>
 	
 	<UnitPromotionPrereqs>
 	</UnitPromotionPrereqs>
 	
 	<UnitPromotionModifiers>
+		<!--Wandering Minstrel -->
+		<Row>
+			<UnitPromotionType>PROMOTION_HOUSE_GLORIFICATION</UnitPromotionType>
+			<ModifierId>MINSTREL_HOUSE_GLORIFICATION</ModifierId>
+		</Row>
+		<Row>
+			<UnitPromotionType>PROMOTION_DRUNKEN_JESTS</UnitPromotionType>
+			<ModifierId>MINSTREL_DRUNKEN_JESTS</ModifierId>
+		</Row>
+		<Row>
+			<UnitPromotionType>PROMOTION_SONGS_OF_ICE_AND_FIRE</UnitPromotionType>
+			<ModifierId>MINSTREL_SONGS_OF_ICE_AND_FIRE</ModifierId>
+		</Row>
+		<Row>
+			<UnitPromotionType>PROMOTION_LOCAL_FOLKLORE</UnitPromotionType>
+			<ModifierId>MINSTREL_LOCAL_FOLKLORE</ModifierId>
+		</Row>
+		<Row>
+			<UnitPromotionType>PROMOTION_FREE_SPEECH</UnitPromotionType>
+			<ModifierId>MINSTREL_FREE_SPEECH</ModifierId>
+		</Row>
+		<!-- <Row>
+			<UnitPromotionType>PROMOTION_MUSIC_FESTIVAL</UnitPromotionType>
+			<ModifierId>ROCKBAND_MUSIC_FESTIVAL_TOURISM_BOMB</ModifierId>
+		</Row>
+		<Row>
+			<UnitPromotionType>PROMOTION_MUSIC_FESTIVAL</UnitPromotionType>
+			<ModifierId>ROCKBAND_MUSIC_FESTIVAL_LEVEL</ModifierId>
+		</Row>
+		<Row>
+			<UnitPromotionType>PROMOTION_MUSIC_FESTIVAL</UnitPromotionType>
+			<ModifierId>ROCKBAND_MUSIC_FESTIVAL_TOURISM_BOMB_NATURAL_WONDER</ModifierId>
+		</Row>
+		<Row>
+			<UnitPromotionType>PROMOTION_MUSIC_FESTIVAL</UnitPromotionType>
+			<ModifierId>ROCKBAND_MUSIC_FESTIVAL_LEVEL_NATURAL_WONDER</ModifierId>
+		</Row> -->
+		<Row>
+			<UnitPromotionType>PROMOTION_STREET_PERFORMANCES</UnitPromotionType>
+			<ModifierId>MINSTREL_STREET_PERFORMANCES</ModifierId>
+		</Row>
+		<Row>
+			<UnitPromotionType>PROMOTION_SONGS_OF_GODS_AND_DRAGONS</UnitPromotionType>
+			<ModifierId>MINSTREL_SONGS_OF_GODS_AND_DRAGONS</ModifierId>
+		</Row>
+		<Row>
+			<UnitPromotionType>PROMOTION_NOMADS</UnitPromotionType>
+			<ModifierId>MINSTREL_NOMADS</ModifierId>
+		</Row>
+		<Row>
+			<UnitPromotionType>PROMOTION_ALCHEMIC_ASPIRATIONS</UnitPromotionType>
+			<ModifierId>MINSTREL_ALCHEMIC_ASPIRATIONS_TOURISM_BOMB</ModifierId>
+		</Row>
+		<Row>
+			<UnitPromotionType>PROMOTION_ALCHEMIC_ASPIRATIONS</UnitPromotionType>
+			<ModifierId>MINSTREL_ALCHEMIC_ASPIRATIONS_LEVEL</ModifierId>
+		</Row>
+		<Row>
+			<UnitPromotionType>PROMOTION_ALCHEMIC_ASPIRATIONS</UnitPromotionType>
+			<ModifierId>MINSTREL_ALCHEMIC_ASPIRATIONS_CAMPUS</ModifierId>
+		</Row>
+		<Row>
+			<UnitPromotionType>PROMOTION_ALCHEMIC_ASPIRATIONS</UnitPromotionType>
+			<ModifierId>MINSTREL_ALCHEMIC_ASPIRATIONS_CAMPUS_MODIFIER</ModifierId>
+		</Row>
+		<Row>
+			<UnitPromotionType>PROMOTION_SIREN_SONGS</UnitPromotionType>
+			<ModifierId>MINSTREL_SIREN_SONGS_TOURISM_BOMB</ModifierId>
+		</Row>
+		<Row>
+			<UnitPromotionType>PROMOTION_SIREN_SONGS</UnitPromotionType>
+			<ModifierId>MINSTREL_SIREN_SONGS_LEVEL</ModifierId>
+		</Row>
+		<Row>
+			<UnitPromotionType>PROMOTION_SIREN_SONGS</UnitPromotionType>
+			<ModifierId>MINSTREL_SIREN_SONGS_HARBOR</ModifierId>
+		</Row>
+		<Row>
+			<UnitPromotionType>PROMOTION_SIREN_SONGS</UnitPromotionType>
+			<ModifierId>MINSTREL_SIREN_SONGS_HARBOR_MODIFIER</ModifierId>
+		</Row>
+		<Row>
+			<UnitPromotionType>PROMOTION_SIREN_SONGS</UnitPromotionType>
+			<ModifierId>MINSTREL_SIREN_SONGS_IRON_HARBOR_DOCKYARD</ModifierId>
+		</Row>
+		<Row>
+			<UnitPromotionType>PROMOTION_SIREN_SONGS</UnitPromotionType>
+			<ModifierId>MINSTREL_SIREN_SONGS_IRON_HARBOR_MODIFIER</ModifierId>
+		</Row>
 	</UnitPromotionModifiers>
 </GameInfo>

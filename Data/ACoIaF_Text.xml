@@ -5812,5 +5812,74 @@
 		<Row Tag="LOC_GOVERNOR_OBERYN_DESCRIPTION" Language="en_US">
 			<Text>Doran's most trusted advisor and younger brother Oberyn, is a Military and Diplomacy focused governor. In addition to having a unique promotion tree, Oberyn is the only Governor that can be assigned to another civilization's capital as well as any domestic city. He is well suited for influencing military operations but is also a skilled diplomat, strengthening relationships with friendly civilizations and easing tensions with rivals.</Text>
 		</Row>
+
+		<!-- Wandering Minstrels -->
+		<Row Tag="LOC_PROMOTION_HOUSE_GLORIFICATION_NAME" Language="en_US">
+			<Text>House Glorification</Text>
+		</Row>
+		<Row Tag="LOC_PROMOTION_HOUSE_GLORIFICATION_DESCRIPTION" Language="en_US">
+			<Text>Performs as if 1 level more experienced on wonder tiles.</Text>
+		</Row>
+		<Row Tag="LOC_PROMOTION_DRUNKEN_JESTS_NAME" Language="en_US">
+			<Text>Drunken Jests</Text>
+		</Row>
+		<Row Tag="LOC_PROMOTION_DRUNKEN_JESTS_DESCRIPTION" Language="en_US">
+			<Text>Performs as if 2 levels more experienced on Entertainment Complex district tiles.</Text>
+		</Row>
+		<Row Tag="LOC_PROMOTION_SONGS_OF_ICE_AND_FIRE_NAME" Language="en_US">
+			<Text>Songs of Ice and Fire</Text>
+		</Row>
+		<Row Tag="LOC_PROMOTION_SONGS_OF_ICE_AND_FIRE_DESCRIPTION" Language="en_US">
+			<Text>Performs as if 2 levels more experienced on Theater Square district tiles.</Text>
+		</Row>
+		<Row Tag="LOC_PROMOTION_LOCAL_FOLKLORE_NAME" Language="en_US">
+			<Text>Local Folklore</Text>
+		</Row>
+		<Row Tag="LOC_PROMOTION_LOCAL_FOLKLORE_DESCRIPTION" Language="en_US">
+			<Text>Civilizations within 10 tiles receive 50% of the [ICON_Tourism] Tourism from this performance.</Text>
+		</Row>
+		<Row Tag="LOC_PROMOTION_FREE_SPEECH_NAME" Language="en_US">
+			<Text>Free Speech</Text>
+		</Row>
+		<Row Tag="LOC_PROMOTION_FREE_SPEECH_DESCRIPTION" Language="en_US">
+			<Text>Performances causes that city to lose 60 Loyalty.</Text>
+		</Row>
+		<Row Tag="LOC_PROMOTION_STREET_PERFORMANCES_NAME" Language="en_US">
+			<Text>Street Performances</Text>
+		</Row>
+		<Row Tag="LOC_PROMOTION_STREET_PERFORMANCES_DESCRIPTION" Language="en_US">
+			<Text>Earn [ICON_Gold] Gold equal to 25% of the [ICON_Tourism] Tourism generated.</Text>
+		</Row>
+		<Row Tag="LOC_PROMOTION_SONGS_OF_GODS_AND_DRAGONS_NAME" Language="en_US">
+			<Text>Songs of Gods and Dragons</Text>
+		</Row>
+		<Row Tag="LOC_PROMOTION_SONGS_OF_GODS_AND_DRAGONS_DESCRIPTION" Language="en_US">
+			<Text>Performances convert the majority religion of that city to the religion founded by the player.</Text>
+		</Row>
+		<Row Tag="LOC_PROMOTION_NOMADS_NAME" Language="en_US">
+			<Text>Nomads</Text>
+		</Row>
+		<Row Tag="LOC_PROMOTION_NOMADS_DESCRIPTION" Language="en_US">
+			<Text>+4[ICON_Movement] Movement</Text>
+		</Row>
+		<Row Tag="LOC_PROMOTION_ALCHEMIC_ASPIRATIONS_NAME" Language="en_US">
+			<Text>Alchemic Aspirations</Text>
+		</Row>
+		<Row Tag="LOC_PROMOTION_ALCHEMIC_ASPIRATIONS_DESCRIPTION" Language="en_US">
+			<Text>Performs at Campuses for 500 [ICON_Tourism] Tourism (1000 [ICON_Tourism] Tourism if Campus has a University) and 1 level more experienced.</Text>
+		</Row>
+		<Row Tag="LOC_PROMOTION_SIREN_SONGS_NAME" Language="en_US">
+			<Text>Siren Songs</Text>
+		</Row>
+		<Row Tag="LOC_PROMOTION_SIREN_SONGS_DESCRIPTION" Language="en_US">
+			<Text>Performs at Harbors for 500 [ICON_Tourism] Tourism (1000 [ICON_Tourism] Tourism if Harbor has a Shipyard) and 1 level more experienced.</Text>
+		</Row>
+		<Row Tag="LOC_PROMOTION_CLASS_MINSTREL_NAME" Language="en_US">
+			<Text>Promotion Minstrel</Text>
+		</Row>
+
+		<!-- <Row Tag="" Language="en_US">
+			<Text></Text>
+		</Row> -->
 	</LocalizedText>
 </GameData>
