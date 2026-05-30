@@ -10,6 +10,8 @@
 		<Row Type="BUILDING_TYRELL_GRANARY" Kind="KIND_BUILDING" />
 		<Row Type="BUILDING_BROTHEL" Kind="KIND_BUILDING"/>
 		<Row Type="BUILDING_TULLY_WATER_MILL" Kind="KIND_BUILDING"/>
+		<Row Type="BUILDING_HOUSE_LEGACY_HALL" Kind="KIND_BUILDING"/>
+		<Row Type="BUILDING_TAVERN" Kind="KIND_BUILDING"/>
 
 		<!-- City State Buildings -->
 
@@ -47,6 +49,10 @@
 			<Where BuildingType="BUILDING_SHIPYARD" />
 			<Set PrereqTech="TECH_CARTOGRAPHY" />
 		</Update>
+		<!-- <Update>
+			<Where BuildingType="BUILDING_MUSEUM_ART"/>
+			<Set PrereqCivic="CIVIC_MEDIEVAL_FAIRES"/>
+		</Update> -->
 		<!-- Civ Buildings -->
 		<Row BuildingType="BUILDING_WEIRWOOD_TREE" Name="LOC_TRAIT_CIVILIZATION_BUILDING_WEIRWOOD_TREE_NAME" Description="LOC_TRAIT_CIVILIZATION_BUILDING_WEIRWOOD_TREE_DESCRIPTION" PrereqTech="TECH_ASTROLOGY" PrereqDistrict="DISTRICT_HOLY_SITE" PurchaseYield="YIELD_GOLD" Cost="65" AdvisorType="ADVISOR_RELIGIOUS"  CitizenSlots="1" TraitType="TRAIT_CIVILIZATION_BUILDING_WEIRWOOD_TREE"/>
 		<Row BuildingType="BUILDING_HALL_OF_HEROES" Name="LOC_TRAIT_CIVILIZATION_BUILDING_HALL_OF_HEROES_NAME" Description="LOC_TRAIT_CIVILIZATION_BUILDING_HALL_OF_HEROES_DESCRIPTION" PrereqTech="TECH_BRONZE_WORKING" PrereqDistrict="DISTRICT_ENCAMPMENT" PurchaseYield="YIELD_GOLD" Cost="80" AdvisorType="ADVISOR_CONQUEST" Maintenance="1" CitizenSlots="1" Housing="1" TraitType="TRAIT_CIVILIZATION_BUILDING_HALL_OF_HEROES"/>
@@ -56,7 +62,9 @@
 		<Row BuildingType="BUILDING_TYRELL_GRANARY" Name="LOC_TRAIT_CIVILIZATION_BUILDING_TYRELL_GRANARY_NAME" Description="LOC_TRAIT_CIVILIZATION_BUILDING_TYRELL_GRANARY_DESCRIPTION" PrereqTech="TECH_POTTERY" PrereqDistrict="DISTRICT_CITY_CENTER" PurchaseYield="YIELD_GOLD" Cost="70" AdvisorType="ADVISOR_GENERIC" Housing="4" TraitType="TRAIT_CIVILIZATION_BUILDING_TYRELL_GRANARY"/>
 		<Row BuildingType="BUILDING_BROTHEL" Name="LOC_TRAIT_LEADER_BUILDING_BROTHEL_NAME" Description="LOC_TRAIT_LEADER_BUILDING_BROTHEL_DESCRIPTION" PrereqTech="TECH_CURRENCY" PrereqDistrict="DISTRICT_COMMERCIAL_HUB" PurchaseYield="YIELD_GOLD" Cost="105" AdvisorType="ADVISOR_GENERIC" Entertainment="2" CitizenSlots="1" TraitType="TRAIT_LEADER_BUILDING_BROTHEL"/>
 		<Row BuildingType="BUILDING_TULLY_WATER_MILL" Name="LOC_TRAIT_CIVILIZATION_BUILDING_TULLY_WATER_MILL_NAME" Description="LOC_TRAIT_CIVILIZATION_BUILDING_TULLY_WATER_MILL_DESCRIPTION" PrereqTech="TECH_THE_WHEEL" PrereqDistrict="DISTRICT_CITY_CENTER" PurchaseYield="YIELD_GOLD" Cost="80" AdvisorType="ADVISOR_GENERIC" RequiresAdjacentRiver="true" OuterDefenseHitPoints="25" OuterDefenseStrength="1" TraitType="TRAIT_CIVILIZATION_BUILDING_TULLY_WATER_MILL"/>
-
+		<Row BuildingType="BUILDING_HOUSE_LEGACY_HALL" Name="LOC_BUILDING_HOUSE_LEGACY_HALL_NAME" Description="LOC_BUILDING_HOUSE_LEGACY_HALL_DESCRIPTION" PrereqCivic="CIVIC_RECORDED_HISTORY" PrereqDistrict="DISTRICT_THEATER" PurchaseYield="YIELD_GOLD" Cost="130" AdvisorType="ADVISOR_CULTURE" Maintenance="2" CitizenSlots="1"/>
+		<Row BuildingType="BUILDING_TAVERN" Name="LOC_BUILDING_TAVERN_NAME" Description="LOC_BUILDING_TAVERN_DESCRIPTION" PrereqCivic="CIVIC_MEDIEVAL_FAIRES" PrereqDistrict="DISTRICT_THEATER" PurchaseYield="YIELD_GOLD" Cost="160" AdvisorType="ADVISOR_CULTURE" Maintenance="2" CitizenSlots="1"/>
+		
 
 		<!-- City State Buildings -->
 
@@ -85,6 +93,8 @@
 		<Row Building="BUILDING_BANK" PrereqBuilding="BUILDING_BROTHEL"/>
 		<Row Building="BUILDING_ZOO" PrereqBuilding="BUILDING_TOURNAMENT_GROUNDS"/>
 		<Row Building="BUILDING_ZOO" PrereqBuilding="BUILDING_EXECUTION_GROUNDS"/>
+		<Row Building="BUILDING_HOUSE_LEGACY_HALL" PrereqBuilding="BUILDING_AMPHITHEATER"/>
+		<Row Building="BUILDING_TAVERN" PrereqBuilding="BUILDING_HOUSE_LEGACY_HALL"/>
 
 		<!-- Wonders -->
 	</BuildingPrereqs>
@@ -123,6 +133,8 @@
 		<Row BuildingType="BUILDING_BROTHEL" YieldType="YIELD_GOLD" YieldChange="3"/>
 		<Row BuildingType="BUILDING_TULLY_WATER_MILL" YieldType="YIELD_FOOD" YieldChange="1"/>
 		<Row BuildingType="BUILDING_TULLY_WATER_MILL" YieldType="YIELD_PRODUCTION" YieldChange="1"/>
+		<Row BuildingType="BUILDING_HOUSE_LEGACY_HALL" YieldType="YIELD_CULTURE" YieldChange="2"/>
+		<Row BuildingType="BUILDING_TAVERN" YieldType="YIELD_CULTURE" YieldChange="2"/>
 
 		<!-- Wonders -->
 		<Row BuildingType="BUILDING_THE_HIGH_TOWER" YieldType="YIELD_FAITH" YieldChange="4"/>
@@ -145,12 +157,20 @@
 		<Row BuildingType="BUILDING_PYRE_OF_RHLLOR" GreatPersonClassType="GREAT_PERSON_CLASS_PROPHET" PointsPerTurn="1"/>
 		<Row BuildingType="BUILDING_BROTHEL" GreatPersonClassType="GREAT_PERSON_CLASS_MERCHANT" PointsPerTurn="1"/>
 		<Row BuildingType="BUILDING_TULLY_WATER_MILL" GreatPersonClassType="GREAT_PERSON_CLASS_GENERAL" PointsPerTurn="1"/>
+		<Row BuildingType="BUILDING_HOUSE_LEGACY_HALL" GreatPersonClassType="GREAT_PERSON_CLASS_WRITER" PointsPerTurn="1"/>
+		<Row BuildingType="BUILDING_HOUSE_LEGACY_HALL" GreatPersonClassType="GREAT_PERSON_CLASS_ARTIST" PointsPerTurn="2"/>
+		<Row BuildingType="BUILDING_TAVERN" GreatPersonClassType="GREAT_PERSON_CLASS_MUSICIAN" PointsPerTurn="2"/>
 
 		<!-- Wonders -->
 		<Row BuildingType="BUILDING_TITAN_OF_BRAAVOS" GreatPersonClassType="GREAT_PERSON_CLASS_ADMIRAL" PointsPerTurn="2"/>
 		<Row BuildingType="BUILDING_THE_CITADEL" GreatPersonClassType="GREAT_PERSON_CLASS_SCIENTIST" PointsPerTurn="3"/>
 		<Row BuildingType="BUILDING_THE_HIGH_TOWER" GreatPersonClassType="GREAT_PERSON_CLASS_PROPHET" PointsPerTurn="3"/>
 	</Building_GreatPersonPoints>
+	<Building_GreatWorks>
+		<Row BuildingType="BUILDING_HOUSE_LEGACY_HALL" GreatWorkSlotType="GREATWORKSLOT_ART" NumSlots="3" ThemingUniquePerson="true" ThemingSameObjectType="true" ThemingYieldMultiplier="100" ThemingTourismMultiplier="100" NonUniquePersonYield="1" NonUniquePersonTourism="1" ThemingBonusDescription="LOC_BUILDING_THEMINGBONUS_ART"/>
+		<Row BuildingType="BUILDING_TAVERN" GreatWorkSlotType="GREATWORKSLOT_MUSIC" NumSlots="2"/>
+	</Building_GreatWorks>
+
 	<DynamicModifiers>
 	</DynamicModifiers>
 	<Modifiers>

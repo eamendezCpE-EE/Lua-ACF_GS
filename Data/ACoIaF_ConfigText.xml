@@ -179,6 +179,13 @@
 			<Text>House Stark unique Ancient era melee unit that replaces the Warrior. Does not suffer combat penalties when damaged.</Text>
 		</Row>
 
+		<Row Tag="LOC_TRAIT_LEADER_UNIT_DIREWOLF_NAME" Language="en_US">
+			<Text>Direwolf</Text>
+		</Row>
+		<Row Tag="LOC_TRAIT_LEADER_UNIT_DIREWOLF_DESCRIPTION" Language="en_US">
+			<Text>House Stark unique Classical era light cavalry unit that replaces the Horseman. Does not suffer combat penalties when damaged.</Text>
+		</Row>
+
 		<Row Tag="LOC_LEADER_EDDARD_NAME" Language="en_US">
 			<Text>Eddard Stark</Text>
 		</Row>
@@ -213,7 +220,7 @@
 			<Text>Young Wolf</Text>
 		</Row>
 		<Row Tag="LOC_TRAIT_LEADER_YOUNG_WOLF_DESCRIPTION" Language="en_US">
-			<Text>All units recieve +5 [ICON_Strength] Combat Strength on foreign continents and have a bonus of +4 [ICON_Strength] Combat Strength against players following other Religions.</Text>
+			<Text>All units recieve +5 [ICON_Strength] Combat Strength on foreign continents and 2x Flanking and Support Bonuses.</Text>
 		</Row>
 
 

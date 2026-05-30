@@ -5,6 +5,8 @@
 		<!-- Base -->
 		<Row Type="UNIT_BANNERMAN" Kind="KIND_UNIT"/>
 		<Row Type="UNIT_BANNERMAN_II" Kind="KIND_UNIT"/>
+		<Row Type="UNIT_DIREWOLF" Kind="KIND_UNIT"/>
+		<Row Type="UNIT_DIREWOLF_II" Kind="KIND_UNIT"/>
 		<Row Type="UNIT_RED_CLOAK" Kind="KIND_UNIT"/>
 		<Row Type="UNIT_RED_CLOAK_II" Kind="KIND_UNIT"/>
 		<Row Type="UNIT_RED_PRIEST" Kind="KIND_UNIT"/>
@@ -104,6 +106,7 @@
 	<Tags>
 		<Row Tag="CLASS_BRUTE" Vocabulary="ABILITY_CLASS"/>
 		<Row Tag="CLASS_BANNERMAN" Vocabulary="ABILITY_CLASS"/>
+		<Row Tag="CLASS_DIREWOLF" Vocabulary="ABILITY_CLASS"/>
 		<Row Tag="CLASS_RED_PRIEST" Vocabulary="ABILITY_CLASS"/>
 		<Row Tag="CLASS_RAINBOW_GUARD" Vocabulary="ABILITY_CLASS"/>
 		<Row Tag="CLASS_SAND_SNAKE" Vocabulary="ABILITY_CLASS"/>
@@ -128,6 +131,10 @@
 		<Row Type="UNIT_BANNERMAN" Tag="CLASS_BANNERMAN"/>
 		<Row Type="UNIT_BANNERMAN_II" Tag="CLASS_MELEE"/>
 		<Row Type="UNIT_BANNERMAN_II" Tag="CLASS_BANNERMAN"/>
+		<Row Type="UNIT_DIREWOLF" Tag="CLASS_LIGHT_CAVALRY"/>
+		<Row Type="UNIT_DIREWOLF" Tag="CLASS_DIREWOLF"/>
+		<Row Type="UNIT_DIREWOLF_II" Tag="CLASS_LIGHT_CAVALRY"/>
+		<Row Type="UNIT_DIREWOLF_II" Tag="CLASS_DIREWOLF"/>
 		<Row Type="UNIT_RED_CLOAK" Tag="CLASS_MELEE"/>
 		<Row Type="UNIT_RED_CLOAK_II" Tag="CLASS_MELEE"/>
 		<Row Type="UNIT_BRUTE" Tag="CLASS_MELEE"/>
@@ -176,8 +183,10 @@
 
 
 		<Row Type="UNIT_GEN_ALCHEMIST" Tag="CLASS_ALCHEMIST"/>
+		<!-- <Row Type="UNIT_GEN_ALCHEMIST" Tag="CLASS_SIEGE_SETUP"/> -->
 		<Row Type="UNIT_SCORPION" Tag="CLASS_SIEGE"/>
 		<Row Type="UNIT_SCORPION" Tag="CLASS_ANTI_CAVALRY"/>
+		<Row Type="UNIT_SCORPION" Tag="CLASS_SIEGE_SETUP"/>
 
 		<!-- Regular Unit Upgrades-->
 		<Row Type="UNIT_SWORDSMAN_II" Tag="CLASS_MELEE"/>
@@ -196,6 +205,7 @@
 		<Row Type="UNIT_WILDLING_II" Tag="CLASS_MELEE"/>
 		<Row Type="UNIT_WILDLING_II" Tag="CLASS_MELEE_BERSERKER"/>
 		<Row Type="UNIT_ALCHEMIST" Tag="CLASS_ALCHEMIST"/>
+		<!-- <Row Type="UNIT_ALCHEMIST" Tag="CLASS_SIEGE_SETUP"/> -->
 		<Row Type="UNIT_IRON_REAVER" Tag="CLASS_NAVAL_RANGED"/>
 		<Row Type="UNIT_IRON_REAVER" Tag="CLASS_IRON_REAVER"/>
 		<Row Type="UNIT_IRON_REAVER_II" Tag="CLASS_NAVAL_RANGED"/>
@@ -233,6 +243,7 @@
 		<!-- Base -->
 		<Row Type="ABILITY_IGNORE_ZOC" Tag="CLASS_BRUTE"/>
 		<Row Type="ABILITY_SAMURAI" Tag="CLASS_BANNERMAN"/>
+		<Row Type="ABILITY_SAMURAI" Tag="CLASS_DIREWOLF"/>
 		<Row Type="ABILITY_RED_PRIEST" Tag="CLASS_RED_PRIEST"/>
 		<Row Type="ABILITY_MAMLUK" Tag="CLASS_RAINBOW_GUARD"/>
 		<Row Type="ABILITY_SAND_SNAKE" Tag="CLASS_SAND_SNAKE"/>
@@ -797,6 +808,16 @@
 		<Row UnitType="UNIT_BANNERMAN_II" AiType="UNITAI_EXPLORE"/>
 		<Row UnitType="UNIT_BANNERMAN_II" AiType="UNITTYPE_MELEE"/>
 		<Row UnitType="UNIT_BANNERMAN_II" AiType="UNITTYPE_LAND_COMBAT"/>
+		<Row UnitType="UNIT_DIREWOLF" AiType="UNITAI_COMBAT"/>
+		<Row UnitType="UNIT_DIREWOLF" AiType="UNITAI_EXPLORE"/>
+		<Row UnitType="UNIT_DIREWOLF" AiType="UNITTYPE_CAVALRY"/>
+		<Row UnitType="UNIT_DIREWOLF" AiType="UNITTYPE_MELEE"/>
+		<Row UnitType="UNIT_DIREWOLF" AiType="UNITTYPE_LAND_COMBAT"/>
+		<Row UnitType="UNIT_DIREWOLF_II" AiType="UNITAI_COMBAT"/>
+		<Row UnitType="UNIT_DIREWOLF_II" AiType="UNITAI_EXPLORE"/>
+		<Row UnitType="UNIT_DIREWOLF_II" AiType="UNITTYPE_CAVALRY"/>
+		<Row UnitType="UNIT_DIREWOLF_II" AiType="UNITTYPE_MELEE"/>
+		<Row UnitType="UNIT_DIREWOLF_II" AiType="UNITTYPE_LAND_COMBAT"/>
 		<Row UnitType="UNIT_RED_CLOAK" AiType="UNITAI_COMBAT"/>
 		<Row UnitType="UNIT_RED_CLOAK" AiType="UNITAI_EXPLORE"/>
 		<Row UnitType="UNIT_RED_CLOAK" AiType="UNITTYPE_MELEE"/>
@@ -1002,6 +1023,9 @@
 		
 		<Row UnitType="UNIT_BANNERMAN" BaseMoves="2" Cost="40" AdvisorType="ADVISOR_CONQUEST" BaseSightRange="2" ZoneOfControl="true" Domain="DOMAIN_LAND" FormationClass="FORMATION_CLASS_LAND_COMBAT" Name="LOC_CIVILIZATION_UNIT_BANNERMAN_NAME" Description="LOC_CIVILIZATION_UNIT_BANNERMAN_DESCRIPTION" PurchaseYield="YIELD_GOLD" PromotionClass="PROMOTION_CLASS_MELEE" Combat="30" MandatoryObsoleteTech="TECH_OATHS" TraitType="TRAIT_CIVILIZATION_UNIT_BANNERMAN"/>
 		<Row UnitType="UNIT_BANNERMAN_II" BaseMoves="2" Cost="90" AdvisorType="ADVISOR_CONQUEST" BaseSightRange="2" ZoneOfControl="true" Domain="DOMAIN_LAND" FormationClass="FORMATION_CLASS_LAND_COMBAT" Name="LOC_CIVILIZATION_UNIT_BANNERMAN_II_NAME" Description="LOC_CIVILIZATION_UNIT_BANNERMAN_II_DESCRIPTION" PurchaseYield="YIELD_GOLD" PromotionClass="PROMOTION_CLASS_MELEE"  Maintenance="2" Combat="45" PrereqTech="TECH_OATHS" TraitType="TRAIT_CIVILIZATION_UNIT_BANNERMAN"/>
+		<Row UnitType="UNIT_DIREWOLF" BaseMoves="4" Cost="60" AdvisorType="ADVISOR_CONQUEST" BaseSightRange="2" ZoneOfControl="true" Domain="DOMAIN_LAND" FormationClass="FORMATION_CLASS_LAND_COMBAT" Name="LOC_LEADER_UNIT_DIREWOLF_NAME" Description="LOC_LEADER_UNIT_DIREWOLF_DESCRIPTION" PurchaseYield="YIELD_GOLD" PromotionClass="PROMOTION_CLASS_LIGHT_CAVALRY" Combat="30" MandatoryObsoleteTech="TECH_CHIVALRY" PrereqTech="TECH_HORSEBACK_RIDING" TraitType="TRAIT_LEADER_UNIT_DIREWOLF"/>
+		<Row UnitType="UNIT_DIREWOLF_II" BaseMoves="4" Cost="200" AdvisorType="ADVISOR_CONQUEST" BaseSightRange="2" ZoneOfControl="true" Domain="DOMAIN_LAND" FormationClass="FORMATION_CLASS_LAND_COMBAT" Name="LOC_LEADER_UNIT_DIREWOLF_II_NAME" Description="LOC_LEADER_UNIT_DIREWOLF_II_DESCRIPTION" PurchaseYield="YIELD_GOLD" PromotionClass="PROMOTION_CLASS_LIGHT_CAVALRY"  Maintenance="2" Combat="60" PrereqTech="TECH_CHIVALRY" TraitType="TRAIT_LEADER_UNIT_DIREWOLF"/>
+		
 		<Row UnitType="UNIT_RED_CLOAK" BaseMoves="2" Cost="150" AdvisorType="ADVISOR_CONQUEST" BaseSightRange="2" ZoneOfControl="true" Domain="DOMAIN_LAND" FormationClass="FORMATION_CLASS_LAND_COMBAT" Name="LOC_CIVILIZATION_UNIT_RED_CLOAK_NAME" Description="LOC_CIVILIZATION_UNIT_RED_CLOAK_DESCRIPTION" PurchaseYield="YIELD_GOLD" PromotionClass="PROMOTION_CLASS_MELEE" Maintenance="4" Combat="38" MandatoryObsoleteTech="TECH_SWORN_SWORDS" PrereqTech="TECH_IRON_WORKING" TraitType="TRAIT_CIVILIZATION_UNIT_RED_CLOAK"/>
 		<Row UnitType="UNIT_RED_CLOAK_II" BaseMoves="3" Cost="210" AdvisorType="ADVISOR_CONQUEST" BaseSightRange="2" ZoneOfControl="true" Domain="DOMAIN_LAND" FormationClass="FORMATION_CLASS_LAND_COMBAT" Name="LOC_CIVILIZATION_UNIT_RED_CLOAK_II_NAME" Description="LOC_CIVILIZATION_UNIT_RED_CLOAK_II_DESCRIPTION" PurchaseYield="YIELD_GOLD" PromotionClass="PROMOTION_CLASS_MELEE" Maintenance="5" Combat="50"  PrereqTech="TECH_SWORN_SWORDS" TraitType="TRAIT_CIVILIZATION_UNIT_RED_CLOAK"/>
 		<Row UnitType="UNIT_RED_PRIEST" BaseMoves="2" Cost="60" AdvisorType="ADVISOR_CONQUEST" BaseSightRange="2" ZoneOfControl="false" Domain="DOMAIN_LAND" FormationClass="FORMATION_CLASS_SUPPORT" Name="LOC_LEADER_UNIT_RED_PRIEST_NAME" Description="LOC_LEADER_UNIT_RED_PRIEST_DESCRIPTION" PurchaseYield="YIELD_GOLD" PromotionClass="PROMOTION_CLASS_SUPPORT" Maintenance="2" PrereqCivic="CIVIC_THEOLOGY" TraitType="TRAIT_LEADER_UNIT_RED_PRIEST"/>
@@ -1037,7 +1061,7 @@
 
 		<Row UnitType="UNIT_WILDLING" BaseMoves="2" Cost="180" AdvisorType="ADVISOR_CONQUEST" BaseSightRange="2" ZoneOfControl="true" Domain="DOMAIN_LAND" FormationClass="FORMATION_CLASS_LAND_COMBAT" Name="LOC_LEADER_UNIT_WILDLING_NAME" Description="LOC_LEADER_UNIT_WILDLING_DESCRIPTION" PurchaseYield="YIELD_GOLD" PromotionClass="PROMOTION_CLASS_MELEE" Maintenance="3" Combat="40" MandatoryObsoleteTech="TECH_SWORN_SWORDS" TraitType="TRAIT_LEADER_UNIT_WILDLING"  PrereqCivic="CIVIC_CIVIL_SERVICE"/>
 		<Row UnitType="UNIT_WILDLING_II" BaseMoves="3" Cost="230" AdvisorType="ADVISOR_CONQUEST" BaseSightRange="2" ZoneOfControl="true" Domain="DOMAIN_LAND" FormationClass="FORMATION_CLASS_LAND_COMBAT" Name="LOC_LEADER_UNIT_WILDLING_II_NAME" Description="LOC_LEADER_UNIT_WILDLING_II_DESCRIPTION" PurchaseYield="YIELD_GOLD" PromotionClass="PROMOTION_CLASS_MELEE" Maintenance="4" Combat="60" PrereqTech="TECH_OATHS" TraitType="TRAIT_LEADER_UNIT_WILDLING"  />
-		<Row UnitType="UNIT_ALCHEMIST" BaseMoves="2" Cost="180" AdvisorType="ADVISOR_CONQUEST" BaseSightRange="2" ZoneOfControl="true" Domain="DOMAIN_LAND" FormationClass="FORMATION_CLASS_LAND_COMBAT" Name="LOC_LEADER_UNIT_ALCHEMIST_NAME" Description="LOC_LEADER_UNIT_ALCHEMIST_DESCRIPTION" PurchaseYield="YIELD_GOLD" PromotionClass="PROMOTION_CLASS_MELEE" Maintenance="1" Combat="5"  PrereqTech="TECH_APPRENTICESHIP" WMDCapable="true" TraitType="TRAIT_LEADER_UNIT_ALCHEMIST" CostProgressionModel="COST_PROGRESSION_PREVIOUS_COPIES" CostProgressionParam1="300" StrategicResource="RESOURCE_SCROLLS"/>
+		<Row UnitType="UNIT_ALCHEMIST" BaseMoves="2" Cost="180" AdvisorType="ADVISOR_CONQUEST" BaseSightRange="2" ZoneOfControl="true" Domain="DOMAIN_LAND" FormationClass="FORMATION_CLASS_LAND_COMBAT" Name="LOC_LEADER_UNIT_ALCHEMIST_NAME" Description="LOC_LEADER_UNIT_ALCHEMIST_DESCRIPTION" PurchaseYield="YIELD_GOLD" PromotionClass="PROMOTION_CLASS_MELEE" Maintenance="1" Combat="5" Range="1" PrereqTech="TECH_APPRENTICESHIP" WMDCapable="true" TraitType="TRAIT_LEADER_UNIT_ALCHEMIST" CostProgressionModel="COST_PROGRESSION_PREVIOUS_COPIES" CostProgressionParam1="300" StrategicResource="RESOURCE_SCROLLS"/>
 		<Row UnitType="UNIT_IRON_REAVER" BaseMoves="3" Cost="150" AdvisorType="ADVISOR_CONQUEST" BaseSightRange="2" ZoneOfControl="true" Domain="DOMAIN_SEA" FormationClass="FORMATION_CLASS_NAVAL" Name="LOC_LEADER_UNIT_IRON_REAVER_NAME" Description="LOC_LEADER_UNIT_IRON_REAVER_DESCRIPTION" PurchaseYield="YIELD_GOLD" PseudoYieldType="PSEUDOYIELD_UNIT_NAVAL_COMBAT" PromotionClass="PROMOTION_CLASS_NAVAL_RANGED" Maintenance="2" Combat="20" MandatoryObsoleteTech="TECH_SQUARE_RIGGING" RangedCombat="30" Range="2" PrereqTech="TECH_SHIPBUILDING" TraitType="TRAIT_LEADER_UNIT_IRON_REAVER"/>
 		<Row UnitType="UNIT_IRON_REAVER_II" BaseMoves="4" Cost="200" AdvisorType="ADVISOR_CONQUEST" BaseSightRange="3" ZoneOfControl="true" Domain="DOMAIN_SEA" FormationClass="FORMATION_CLASS_NAVAL" Name="LOC_LEADER_UNIT_IRON_REAVER_II_NAME" Description="LOC_LEADER_UNIT_IRON_REAVER_II_DESCRIPTION" PurchaseYield="YIELD_GOLD" PseudoYieldType="PSEUDOYIELD_UNIT_NAVAL_COMBAT" PromotionClass="PROMOTION_CLASS_NAVAL_RANGED" Maintenance="3" Combat="40" RangedCombat="60" Range="3" PrereqTech="TECH_SQUARE_RIGGING" TraitType="TRAIT_LEADER_UNIT_IRON_REAVER"/>
 
@@ -1057,7 +1081,7 @@
 		<Row UnitType="UNIT_CLEGANE_CORPS" BaseMoves="2" Cost="90" AdvisorType="ADVISOR_CONQUEST" BaseSightRange="2" ZoneOfControl="true" Domain="DOMAIN_LAND" FormationClass="FORMATION_CLASS_LAND_COMBAT" Name="LOC_CIVILIZATION_UNIT_CLEGANE_CORPS_NAME" Description="LOC_CIVILIZATION_UNIT_CLEGANE_CORPS_DESCRIPTION" PurchaseYield="YIELD_GOLD" PromotionClass="PROMOTION_CLASS_MELEE" Maintenance="2" Combat="45" MandatoryObsoleteTech="TECH_SWORN_SWORDS" PrereqTech="TECH_IRON_WORKING" TraitType="MINOR_CIV_CLEGANE_TRAIT"/>
 		<Row UnitType="UNIT_CLEGANE_CORPS_II" BaseMoves="3" Cost="140" AdvisorType="ADVISOR_CONQUEST" BaseSightRange="2" ZoneOfControl="true" Domain="DOMAIN_LAND" FormationClass="FORMATION_CLASS_LAND_COMBAT" Name="LOC_CIVILIZATION_UNIT_CLEGANE_CORPS_II_NAME" Description="LOC_CIVILIZATION_UNIT_CLEGANE_CORPS_II_NAME" PurchaseYield="YIELD_GOLD" PromotionClass="PROMOTION_CLASS_MELEE" Maintenance="4" Combat="65" PrereqTech="TECH_SWORN_SWORDS" TraitType="MINOR_CIV_CLEGANE_TRAIT"/>
 
-		<Row UnitType="UNIT_GEN_ALCHEMIST" BaseMoves="2" Cost="180" AdvisorType="ADVISOR_CONQUEST" BaseSightRange="2" ZoneOfControl="true" Domain="DOMAIN_LAND" FormationClass="FORMATION_CLASS_LAND_COMBAT" Name="LOC_LEADER_UNIT_GEN_ALCHEMIST_NAME" Description="LOC_LEADER_UNIT_GEN_ALCHEMIST_DESCRIPTION" PurchaseYield="YIELD_GOLD" PromotionClass="PROMOTION_CLASS_MELEE" Maintenance="1" Combat="5"  PrereqTech="TECH_ALCHEMY" WMDCapable="true" CostProgressionModel="COST_PROGRESSION_PREVIOUS_COPIES" CostProgressionParam1="300" StrategicResource="RESOURCE_SCROLLS" />
+		<Row UnitType="UNIT_GEN_ALCHEMIST" BaseMoves="2" Cost="180" AdvisorType="ADVISOR_CONQUEST" BaseSightRange="2" ZoneOfControl="true" Domain="DOMAIN_LAND" FormationClass="FORMATION_CLASS_LAND_COMBAT" Name="LOC_LEADER_UNIT_GEN_ALCHEMIST_NAME" Description="LOC_LEADER_UNIT_GEN_ALCHEMIST_DESCRIPTION" PurchaseYield="YIELD_GOLD" PromotionClass="PROMOTION_CLASS_MELEE" Maintenance="1" Combat="5" Range="1" PrereqTech="TECH_ALCHEMY" WMDCapable="true" CostProgressionModel="COST_PROGRESSION_PREVIOUS_COPIES" CostProgressionParam1="300" StrategicResource="RESOURCE_SCROLLS" />
 		<Row UnitType="UNIT_SCORPION" BaseMoves="2" Cost="400" AdvisorType="ADVISOR_CONQUEST" BaseSightRange="2" ZoneOfControl="false" Domain="DOMAIN_LAND" FormationClass="FORMATION_CLASS_LAND_COMBAT" Name="LOC_UNIT_SCORPION_NAME" Description="LOC_UNIT_SCORPION_DESCRIPTION" PurchaseYield="YIELD_GOLD" PromotionClass="PROMOTION_CLASS_SIEGE" Maintenance="7" Combat="45" Range="1" PrereqTech="TECH_HEAVY_SIEGE_TACTICS" Bombard="100"/>
 
 		<Row UnitType="UNIT_FLAYER" Cost="30" BaseMoves="3" BaseSightRange="2" ZoneOfControl="true" Domain="DOMAIN_LAND" Combat="15" FormationClass="FORMATION_CLASS_LAND_COMBAT" PromotionClass="PROMOTION_CLASS_RECON" AdvisorType="ADVISOR_GENERIC" Name="LOC_CIVILIZATION_UNIT_FLAYER_NAME" Description="LOC_CIVILIZATION_UNIT_FLAYER_DESCRIPTION" PurchaseYield="YIELD_GOLD" PseudoYieldType="PSEUDOYIELD_UNIT_EXPLORER" MandatoryObsoleteTech="TECH_APPRENTICESHIP"  TraitType="TRAIT_CIVILIZATION_UNIT_FLAYER"/>
@@ -1071,6 +1095,8 @@
 	</Units>
 	<UnitReplaces>
 		<Row CivUniqueUnitType="UNIT_BANNERMAN" ReplacesUnitType="UNIT_WARRIOR" />
+		<Row CivUniqueUnitType="UNIT_DIREWOLF" ReplacesUnitType="UNIT_HORSEMAN"/>
+		<Row CivUniqueUnitType="UNIT_DIREWOLF_II" ReplacesUnitType="UNIT_KNIGHT_II"/>
 		<Row CivUniqueUnitType="UNIT_RED_CLOAK" ReplacesUnitType="UNIT_SWORDSMAN" />
 		<Row CivUniqueUnitType="UNIT_RED_CLOAK_II" ReplacesUnitType="UNIT_SWORDSMAN_II" />
 		<Row CivUniqueUnitType="UNIT_KINGSGUARD" ReplacesUnitType="UNIT_SWORDSMAN" />
@@ -1115,9 +1141,11 @@
 		<Row Unit="UNIT_GALLEY" UpgradeUnit="UNIT_GALLEY_II"/>
 		<Row Unit="UNIT_QUADRIREME" UpgradeUnit="UNIT_QUADRIREME_II"/>
 		<Row Unit="UNIT_CROSSBOWMAN" UpgradeUnit="UNIT_CROSSBOWMAN_II"/>
-		<Replace Unit="UNIT_CATAPULT" UpgradeUnit="UNIT_CATAPULT_II"/>
+		<Row Unit="UNIT_TREBUCHET" UpgradeUnit="UNIT_CATAPULT_II"/>
+		<!-- <Replace Unit="UNIT_CATAPULT" UpgradeUnit="UNIT_CATAPULT_II"/> -->
 
 		<Row Unit="UNIT_BANNERMAN" UpgradeUnit="UNIT_BANNERMAN_II"/>
+		<Row Unit="UNIT_DIREWOLF" UpgradeUnit="UNIT_DIREWOLF_II"/>
 		<Row Unit="UNIT_RED_CLOAK" UpgradeUnit="UNIT_RED_CLOAK_II"/>
 		<Row Unit="UNIT_KINGSGUARD" UpgradeUnit="UNIT_KINGSGUARD_II"/>
 		<Row Unit="UNIT_BRUTE" UpgradeUnit="UNIT_BRUTE_II"/>

@@ -3,6 +3,7 @@
 	<Types>
 		<Row Type="RESOURCE_GOLD" Kind="KIND_RESOURCE"/>
 		<Row Type="RESOURCE_MADNESS" Kind="KIND_RESOURCE"/>
+		<Row Type="RESOURCE_TYRANNY" Kind="KIND_RESOURCE"/>
 		<Row Type="RESOURCE_SCROLLS" Kind="KIND_RESOURCE"/>
 		<Row Type="RESOURCE_DRAGONGLASS" Kind="KIND_RESOURCE"/>
 	</Types>
@@ -15,6 +16,7 @@
 	<Resources>
 		<Row ResourceType="RESOURCE_GOLD" Name="LOC_RESOURCE_GOLD_NAME" ResourceClassType="RESOURCECLASS_LUXURY" Happiness="4" Frequency="100"/>
 		<Row ResourceType="RESOURCE_MADNESS" Name="LOC_RESOURCE_MADNESS_NAME" ResourceClassType="RESOURCECLASS_BONUS" Frequency="0"/>
+		<Row ResourceType="RESOURCE_TYRANNY" Name="LOC_RESOURCE_TYRANNY_NAME" ResourceClassType="RESOURCECLASS_BONUS" Frequency="0"/>
 		<Row ResourceType="RESOURCE_SCROLLS" Name="LOC_RESOURCE_SCROLLS_NAME" ResourceClassType="RESOURCECLASS_STRATEGIC" Frequency="0"/>
 		<Row ResourceType="RESOURCE_DRAGONGLASS" Name="LOC_RESOURCE_DRAGONGLASS_NAME" ResourceClassType="RESOURCECLASS_STRATEGIC" NoRiver="true" Frequency="10" PrereqTech="TECH_DRACONOLOGY"/>
 	</Resources>

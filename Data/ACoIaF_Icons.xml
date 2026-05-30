@@ -115,6 +115,22 @@
 
 	</IconTextureAtlases>
 
+	<!-- <IconTextureAtlases>
+		<Row Name="ICON_ATLAS_UNITS_PREDATORS" IconSize="256" IconsPerRow="16" IconsPerColumn="8" Filename="UnitsPredators256.dds"/>
+		<Row Name="ICON_ATLAS_UNITS_PREDATORS" IconSize="80" IconsPerRow="16" IconsPerColumn="8" Filename="UnitsPredators80.dds"/>
+		<Row Name="ICON_ATLAS_UNITS_PREDATORS" IconSize="50" IconsPerRow="16" IconsPerColumn="8" Filename="UnitsPredators50.dds"/>
+		<Row Name="ICON_ATLAS_UNITS_PREDATORS" IconSize="38" IconsPerRow="16" IconsPerColumn="8" Filename="UnitsPredators38.dds"/>
+		<Row Name="ICON_ATLAS_UNITS_PREDATORS" IconSize="32" IconsPerRow="16" IconsPerColumn="8" Filename="UnitsPredators32.dds"/>
+		<Row Name="ICON_ATLAS_UNITS_PREDATORS" IconSize="22" IconsPerRow="16" IconsPerColumn="8" Filename="UnitsPredators22.dds"/>
+		
+		<Row Name="ICON_ATLAS_UNIT_PREDATORS_PORTRAITS"   IconSize="256" IconsPerRow="8" IconsPerColumn="8" Filename="UnitPortraitsPredators256"/>
+		<Row Name="ICON_ATLAS_UNIT_PREDATORS_PORTRAITS"   IconSize="200" IconsPerRow="8" IconsPerColumn="8" Filename="UnitPortraitsPredators200"/>
+		<Row Name="ICON_ATLAS_UNIT_PREDATORS_PORTRAITS"   IconSize="95" IconsPerRow="8" IconsPerColumn="8" Filename="UnitPortraitsPredators95"/>
+		<Row Name="ICON_ATLAS_UNIT_PREDATORS_PORTRAITS"   IconSize="70" IconsPerRow="8" IconsPerColumn="8" Filename="UnitPortraitsPredators70"/>
+		<Row Name="ICON_ATLAS_UNIT_PREDATORS_PORTRAITS"   IconSize="50" IconsPerRow="8" IconsPerColumn="8" Filename="UnitPortraitsPredators50"/>
+		<Row Name="ICON_ATLAS_UNIT_PREDATORS_PORTRAITS"   IconSize="38" IconsPerRow="8" IconsPerColumn="8" Filename="UnitPortraitsPredators38"/>
+  </IconTextureAtlases> -->
+
 	<IconDefinitions>
 		<Row Name="ICON_DISTRICT_IRON_HARBOR"     Atlas="ICON_ATLAS_DISTRICTS" Index="4"/>
 		<Row Name="ICON_DISTRICT_IRON_HARBOR_FOW"   Atlas="ICON_ATLAS_DISTRICTS_FOW" Index="4"/>
@@ -132,6 +148,8 @@
 		<Row Name="ICON_BUILDING_BROTHEL" Atlas="ICON_ATLAS_BUILDINGS_ACOIAF_A" Index="3"/>
 		<Row Name="ICON_BUILDING_WATER_GARDEN" Atlas="ICON_ATLAS_BUILDINGS_ACOIAF_A" Index="15"/>
 		<Row Name="ICON_BUILDING_TULLY_WATER_MILL" Atlas="ICON_ATLAS_BUILDINGS_ACOIAF_A" Index="34"/>
+		<Row Name="ICON_BUILDING_HOUSE_LEGACY_HALL" Atlas="ICON_ATLAS_BUILDINGS" Index="25"/>
+		<Row Name="ICON_BUILDING_TAVERN" Atlas="ICON_ATLAS_EXPANSION_1_DISTRICT_BUILDINGS" Index="1"/>
 
 		<Row Name="ICON_CIVILIZATION_STARK" Atlas="ICON_ATLAS_CIVILIZATIONS_ACOIAF" Index="0"/>
 		<Row Name="ICON_CIVILIZATION_LANNISTER" Atlas="ICON_ATLAS_CIVILIZATIONS_ACOIAF" Index="9"/>
@@ -292,6 +310,28 @@
 		<Row Name="ICON_UNIT_BANNERMAN_II_FOW" Atlas="ICON_ATLAS_UNITS_ACOIAF" Index="4"/>
 		<Row Name="ICON_UNIT_BANNERMAN_II_WHITE"  Atlas="ICON_ATLAS_UNITS_ACOIAF" Index="4"/>
 		<Row Name="ICON_UNIT_BANNERMAN_II_BLACK" Atlas="ICON_ATLAS_UNITS_ACOIAF" Index="4"/>
+
+		<Row Name="ICON_UNIT_DIREWOLF_PORTRAIT" Atlas="ICON_ATLAS_CIVILIZATIONS_ACOIAF" Index="0"/>
+		<Row Name="ICON_UNIT_DIREWOLF" Atlas="ICON_ATLAS_CIVILIZATIONS_ACOIAF" Index="0"/>
+		<Row Name="ICON_UNIT_DIREWOLF_FOW" Atlas="ICON_ATLAS_CIVILIZATIONS_ACOIAF" Index="0"/>
+		<Row Name="ICON_UNIT_DIREWOLF_WHITE"  Atlas="ICON_ATLAS_CIVILIZATIONS_ACOIAF" Index="0"/>
+		<Row Name="ICON_UNIT_DIREWOLF_BLACK" Atlas="ICON_ATLAS_CIVILIZATIONS_ACOIAF" Index="0"/>
+		<Row Name="ICON_UNIT_DIREWOLF_II_PORTRAIT" Atlas="ICON_ATLAS_CIVILIZATIONS_ACOIAF" Index="0"/>
+		<Row Name="ICON_UNIT_DIREWOLF_II" Atlas="ICON_ATLAS_CIVILIZATIONS_ACOIAF" Index="0"/>
+		<Row Name="ICON_UNIT_DIREWOLF_II_FOW" Atlas="ICON_ATLAS_CIVILIZATIONS_ACOIAF" Index="0"/>
+		<Row Name="ICON_UNIT_DIREWOLF_II_WHITE"  Atlas="ICON_ATLAS_CIVILIZATIONS_ACOIAF" Index="0"/>
+		<Row Name="ICON_UNIT_DIREWOLF_II_BLACK" Atlas="ICON_ATLAS_CIVILIZATIONS_ACOIAF" Index="0"/>
+
+		<!-- <Row Name="ICON_UNIT_DIREWOLF_PORTRAIT" Atlas="ICON_ATLAS_UNITS_PREDATORS" Index="4"/>
+		<Row Name="ICON_UNIT_DIREWOLF" Atlas="ICON_ATLAS_UNITS_PREDATORS" Index="4"/>
+		<Row Name="ICON_UNIT_DIREWOLF_FOW" Atlas="ICON_ATLAS_UNITS_PREDATORS" Index="4"/>
+		<Row Name="ICON_UNIT_DIREWOLF_WHITE"  Atlas="ICON_ATLAS_UNITS_PREDATORS" Index="4"/>
+		<Row Name="ICON_UNIT_DIREWOLF_BLACK" Atlas="ICON_ATLAS_UNITS_PREDATORS" Index="4"/>
+		<Row Name="ICON_UNIT_DIREWOLF_II_PORTRAIT" Atlas="ICON_ATLAS_UNITS_PREDATORS" Index="4"/>
+		<Row Name="ICON_UNIT_DIREWOLF_II" Atlas="ICON_ATLAS_UNITS_PREDATORS" Index="4"/>
+		<Row Name="ICON_UNIT_DIREWOLF_II_FOW" Atlas="ICON_ATLAS_UNITS_PREDATORS" Index="4"/>
+		<Row Name="ICON_UNIT_DIREWOLF_II_WHITE"  Atlas="ICON_ATLAS_UNITS_PREDATORS" Index="4"/>
+		<Row Name="ICON_UNIT_DIREWOLF_II_BLACK" Atlas="ICON_ATLAS_UNITS_PREDATORS" Index="4"/> -->
 
 		<Row Name="ICON_UNIT_RED_CLOAK_PORTRAIT" Atlas="ICON_ATLAS_UNIT_PORTRAITS_ACOIAF" Index="2"/>
 		<Row Name="ICON_UNIT_RED_CLOAK" Atlas="ICON_ATLAS_UNITS_ACOIAF" Index="2"/>
@@ -486,8 +526,17 @@
 		<Row Name="ICON_UNIT_WARLOCK_WHITE"  Atlas="ICON_ATLAS_UNITS_ACOIAF" Index="19"/>
 		<Row Name="ICON_UNIT_WARLOCK_BLACK" Atlas="ICON_ATLAS_UNITS_ACOIAF" Index="19"/>
 
-		<Row Name="ICON_UNIT_CATAPULT_II"                 Atlas="ICON_ATLAS_UNITS" Index="39"/>
-		<Row Name="ICON_UNIT_CATAPULT_II_FOW"                 Atlas="ICON_ATLAS_UNITS_FOW" Index="39"/>
+
+    	<Row Name="ICON_UNIT_CATAPULT_II_PORTRAIT"                     Atlas="ICON_ATLAS_UNIT_PORTRAITS_3" Index="0"/>
+		<Row Name="ICON_UNIT_CATAPULT_II"                 Atlas="ICON_ATLAS_UNITS" Index="99"/>
+		<Row Name="ICON_UNIT_CATAPULT_II_FOW"                 Atlas="ICON_ATLAS_UNITS" Index="99"/>
+
+		<Row Name="ICON_UNIT_WW_ASSASSIN_PORTRAIT"                     Atlas="ICON_ATLAS_UNITS_ACOIAF" Index="20"/>
+		<Row Name="ICON_UNIT_WW_ASSASSIN"                 Atlas="ICON_ATLAS_UNITS_ACOIAF" Index="20"/>
+		<Row Name="ICON_UNIT_WW_ASSASSIN_FOW"                 Atlas="ICON_ATLAS_UNITS_ACOIAF" Index="20"/>
+
+    	<Row Name="ICON_UNIT_WANDERING_MINSTREL_PORTRAIT"               Atlas="ICON_ATLAS_EXPANSION_2_UNITS"   Index="20"/>
+    	<Row Name="ICON_UNIT_WANDERING_MINSTREL"               Atlas="ICON_ATLAS_EXPANSION_2_UNITS"   Index="20"/>
 
 		<Row Name="ICON_UNIT_CLEGANE_CORPS_PORTRAIT" Atlas="ICON_ATLAS_MINOR_CIVILIZATIONS_ACOIAF" Index="24"/>
 		<Row Name="ICON_UNIT_CLEGANE_CORPS" Atlas="ICON_ATLAS_MINOR_CIVILIZATIONS_ACOIAF" Index="24"/>

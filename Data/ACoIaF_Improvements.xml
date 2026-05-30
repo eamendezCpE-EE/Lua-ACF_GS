@@ -5,7 +5,6 @@
 	</Types>
 	<Improvements>
 		<Row ImprovementType="IMPROVEMENT_WILDLING_CAMP" Name="LOC_IMPROVEMENT_WILDLING_CAMP_NAME" Description="LOC_IMPROVEMENT_WILDLING_CAMP_DESCRIPTION" Icon="ICON_IMPROVEMENT_WILDLING_CAMP" PlunderType="PLUNDER_GOLD" PlunderAmount="50" Buildable="true" PrereqTech="TECH_ANIMAL_HUSBANDRY" Housing="1" TilesRequired="2" TraitType="TRAIT_CIVILIZATION_IMPROVEMENT_WILDLING_CAMP"/>
-
 	</Improvements>
 	<Improvement_Adjacencies>
 	</Improvement_Adjacencies>
@@ -16,6 +15,14 @@
 		<Row ImprovementType="IMPROVEMENT_WILDLING_CAMP" TerrainType="TERRAIN_SNOW"/>
 		<Row ImprovementType="IMPROVEMENT_WILDLING_CAMP" TerrainType="TERRAIN_TUNDRA_HILLS"/>
 		<Row ImprovementType="IMPROVEMENT_WILDLING_CAMP" TerrainType="TERRAIN_SNOW_HILLS"/>
+		<Update>
+			<Where ImprovementType="IMPROVEMENT_FARM" TerrainType="TERRAIN_PLAINS_HILLS" />
+			<Set PrereqCivic="CIVIC_CODE_OF_LAWS" PrereqTech="TECH_STIRRUPS"/>
+		</Update>
+		<Update>
+			<Where ImprovementType="IMPROVEMENT_FARM" TerrainType="TERRAIN_GRASS_HILLS" />
+			<Set PrereqCivic="CIVIC_CODE_OF_LAWS" PrereqTech="TECH_STIRRUPS"/>
+		</Update>
 	</Improvement_ValidTerrains>
 	<Improvement_ValidResources>
 	</Improvement_ValidResources>

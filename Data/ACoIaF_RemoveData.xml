@@ -461,7 +461,7 @@
 		<Delete Type="POLICY_COLLECTIVIZATION" />
 		<Delete Type="POLICY_PATRIOTIC_WAR" />
 		<Delete Type="POLICY_DEFENSE_OF_MOTHERLAND" />
-		<Delete Type="POLICY_CRYPTOGRAPHY" />
+		<!-- <Delete Type="POLICY_CRYPTOGRAPHY" /> -->
 		<Delete Type="POLICY_INTERNATIONAL_WATERS" />
 		<Delete Type="POLICY_CONTAINMENT" />
 		<Delete Type="POLICY_HERITAGE_TOURISM" />
@@ -579,7 +579,7 @@
 		<Delete Type="RELIGION_SIKHISM"/>
 		<Delete Type="RELIGION_TAOISM"/>
 		<Delete Type="RELIGION_ZOROASTRIANISM"/>
-		<Delete Type="RELIGION_CUSTOM_1" />
+		<!-- <Delete Type="RELIGION_CUSTOM_1" />
 		<Delete Type="RELIGION_CUSTOM_2" />
 		<Delete Type="RELIGION_CUSTOM_3" />
 		<Delete Type="RELIGION_CUSTOM_4" />
@@ -590,7 +590,7 @@
 		<Delete Type="RELIGION_CUSTOM_9" />
 		<Delete Type="RELIGION_CUSTOM_10" />
 		<Delete Type="RELIGION_CUSTOM_11" />
-		<Delete Type="RELIGION_CUSTOM_12" />
+		<Delete Type="RELIGION_CUSTOM_12" /> -->
 
 		<!-- Techs-->
 		<Delete Type="TECH_MASS_PRODUCTION"/>

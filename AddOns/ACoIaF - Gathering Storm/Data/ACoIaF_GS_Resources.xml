@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameInfo>
+	<Types>
+	</Types>
+	<TypeTags>
+	</TypeTags>
+	<Resources>
+	</Resources>
+	<Resource_ValidTerrains>
+	</Resource_ValidTerrains>
+	<Resource_Harvests>
+	</Resource_Harvests>
+	<Resource_Consumption>
+		<!--Strategic-->
+		<Row ResourceType="RESOURCE_DRAGONGLASS" Accumulate="true" BaseExtractionRate="0" ImprovedExtractionRate="2" StockpileCap="50"/>
+	</Resource_Consumption>
+	<Resource_YieldChanges>
+	</Resource_YieldChanges>
+	<Improvement_ValidResources>
+	</Improvement_ValidResources>
+</GameInfo>

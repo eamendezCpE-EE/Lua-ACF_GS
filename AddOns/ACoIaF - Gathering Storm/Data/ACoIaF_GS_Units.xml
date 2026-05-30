@@ -1,48 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
 <GameInfo>
 	<Types>
+		<Row Type="UNIT_WW_ASSASSIN" Kind="KIND_UNIT"/> <!-- -->
+		<Row Type="ABILITY_WW_ASSASSIN" Kind="KIND_ABILITY"/> <!-- <Row Type="ABILITY_ANTI_CAVALRY" Kind="KIND_ABILITY"/> X -->
+		
+		<Row Type="UNIT_WANDERING_MINSTREL" Kind="KIND_UNIT"/> <!-- <Row Type="UNIT_ROCK_BAND" Kind="KIND_UNIT"/> --> 
 	</Types>
 	
 	<Tags>
+		<Row Tag="CLASS_WW_ASSASSIN" Vocabulary="ABILITY_CLASS"/> <!-- <Row Tag="CLASS_ANTI_CAVALRY" Vocabulary="ABILITY_CLASS"/> X -->
 	</Tags>
 	
 	<TypeTags>
+		<Row Type="ABILITY_WW_ASSASSIN" Tag="CLASS_WW_ASSASSIN"/> <!-- <Row Type="ABILITY_ANTI_CAVALRY" Tag="CLASS_ANTI_CAVALRY"/> -->
+		<Row Type="UNIT_WW_ASSASSIN" Tag="CLASS_WW_ASSASSIN"/> <!-- <Row Type="UNIT_SPEARMAN" Tag="CLASS_ANTI_CAVALRY"/> -->
+		<Row Type="UNIT_WW_ASSASSIN" Tag="CLASS_RECON"/>
+		<Row Type="UNIT_WW_ASSASSIN" Tag="CLASS_REVEAL_STEALTH"/>
+		
+		<Row Type="UNIT_WANDERING_MINSTREL" Tag="CLASS_LANDCIVILIAN"/> <!-- <Row Type="UNIT_ROCK_BAND" Tag="CLASS_LANDCIVILIAN"/> -->
+		<Row Type="UNIT_WANDERING_MINSTREL" Tag="CLASS_ROCK_BAND"/> <!-- <Row Type="UNIT_ROCK_BAND" Tag="CLASS_ROCK_BAND"/> -->
 	</TypeTags>
 	
 	<UnitAbilities>
+		<Row UnitAbilityType="ABILITY_WW_ASSASSIN" Name="LOC_ABILITY_WW_ASSASSIN_NAME" Description="LOC_ABILITY_WW_ASSASSIN_DESCRIPTION"/> <!-- <Row UnitAbilityType="ABILITY_ANTI_CAVALRY" Name="LOC_ABILITY_ANTI_CAVALRY_NAME" Description="LOC_ABILITY_ANTI_CAVALRY_DESCRIPTION"/> -->
 	</UnitAbilities>
 
 	<UnitAbilityModifiers>
+		<Row>
+			<UnitAbilityType>ABILITY_WW_ASSASSIN</UnitAbilityType> <!-- <UnitAbilityType>ABILITY_ANTI_CAVALRY</UnitAbilityType> -->
+			<ModifierId>ANTI_WW_COMBAT_BONUS</ModifierId> <!-- <ModifierId>ANTI_CAVALRY_COMBAT_BONUS</ModifierId> -->
+		</Row>
 	</UnitAbilityModifiers>
 	
 	<Modifiers>
+		<Row>
+			<ModifierId>ANTI_WW_COMBAT_BONUS</ModifierId> <!-- <ModifierId>ANTI_CAVALRY_COMBAT_BONUS</ModifierId> -->
+			<ModifierType>MODIFIER_UNIT_ADJUST_COMBAT_STRENGTH</ModifierType> <!-- <ModifierType>MODIFIER_UNIT_ADJUST_COMBAT_STRENGTH</ModifierType> -->
+			<SubjectRequirementSetId>ANTI_WW_OPPONENT_REQUIREMENTS</SubjectRequirementSetId> <!-- <SubjectRequirementSetId>ANTI_CAVALRY_OPPONENT_REQUIREMENTS</SubjectRequirementSetId> -->
+		</Row>
 	</Modifiers>
 	
 	<ModifierArguments>
+		<Row>
+			<ModifierId>ANTI_WW_COMBAT_BONUS</ModifierId> <!-- <ModifierId>ANTI_CAVALRY_COMBAT_BONUS</ModifierId> -->
+			<Name>Amount</Name> <!-- <Name>Amount</Name> --> 
+			<Value>100</Value> <!-- <Value>10</Value> -->
+		</Row>
 	</ModifierArguments>
 	
 	<ModifierStrings>
+		<Row ModifierId="ANTI_WW_COMBAT_BONUS" Context="Preview" Text="LOC_ABILITY_ANTI_WW_COMBAT_MODIFIER_DESCRIPTION"/> <!-- <Row ModifierId="ANTI_CAVALRY_COMBAT_BONUS" Context="Preview" Text="LOC_ABILITY_ANTI_CAVALRY_MODIFIER_DESCRIPTION"/> -->
 	</ModifierStrings>
 
 	<RequirementSets>
+		<Row>
+			<RequirementSetId>ANTI_WW_OPPONENT_REQUIREMENTS</RequirementSetId> <!-- <RequirementSetId>ANTI_CAVALRY_OPPONENT_REQUIREMENTS</RequirementSetId> -->
+			<RequirementSetType>REQUIREMENTSET_TEST_ANY</RequirementSetType> <!-- <RequirementSetType>REQUIREMENTSET_TEST_ANY</RequirementSetType> -->
+		</Row>
 	</RequirementSets>
 
 	<RequirementSetRequirements>
+		<Row>
+			<RequirementSetId>ANTI_WW_OPPONENT_REQUIREMENTS</RequirementSetId> <!-- <RequirementSetId>ANTI_CAVALRY_OPPONENT_REQUIREMENTS</RequirementSetId> -->
+			<RequirementId>ANTI_WW_OPPONENT_REQUIREMENT</RequirementId> <!-- <RequirementId>ANTI_CAVALRY_OPPONENT_REQUIREMENT_LC</RequirementId> -->
+		</Row>
 	</RequirementSetRequirements>
 
 	<Requirements>
+		<Row>
+			<RequirementId>ANTI_WW_OPPONENT_REQUIREMENT</RequirementId> <!-- <RequirementId>ANTI_CAVALRY_OPPONENT_REQUIREMENT_LC</RequirementId> -->
+			<RequirementType>REQUIREMENT_OPPONENT_UNIT_TAG_MATCHES</RequirementType> <!-- <RequirementType>REQUIREMENT_OPPONENT_UNIT_TAG_MATCHES</RequirementType> -->
+		</Row>
 	</Requirements>
 	
 	<RequirementArguments>
+		<Row>
+			<RequirementId>ANTI_WW_OPPONENT_REQUIREMENT</RequirementId> <!-- <RequirementId>ANTI_CAVALRY_OPPONENT_REQUIREMENT_LC</RequirementId> -->
+			<Name>Tag</Name> <!-- <Name>Tag</Name> -->
+			<Value>CLASS_WHITE_WALKER</Value> <!-- <Value>CLASS_LIGHT_CAVALRY</Value> -->
+		</Row>
 	</RequirementArguments>
 	
 	<Unit_BuildingPrereqs>
 	</Unit_BuildingPrereqs>
 	
 	<UnitAiInfos>
+		<Row UnitType="UNIT_WW_ASSASSIN" AiType="UNITAI_EXPLORE"/>
+		<Row UnitType="UNIT_WW_ASSASSIN" AiType="UNITTYPE_LAND_COMBAT"/>
 	</UnitAiInfos>
 	
 	<Units>
+		<Row UnitType="UNIT_WW_ASSASSIN" Cost="150" BaseMoves="4" BaseSightRange="3" ZoneOfControl="true" Domain="DOMAIN_LAND" Combat="20" FormationClass="FORMATION_CLASS_LAND_COMBAT" PromotionClass="PROMOTION_CLASS_RECON" AdvisorType="ADVISOR_GENERIC" Name="LOC_UNIT_WW_ASSASSIN_NAME" Description="LOC_UNIT_WW_ASSASSIN_DESCRIPTION" PurchaseYield="YIELD_GOLD" PseudoYieldType="PSEUDOYIELD_UNIT_EXPLORER" PrereqTech="TECH_DRACONOLOGY" StrategicResource="RESOURCE_DRAGONGLASS"/>
+		
+		<Row UnitType="UNIT_WANDERING_MINSTREL" Cost="300" BaseMoves="4" BaseSightRange="2" ZoneOfControl="false" Domain="DOMAIN_LAND" FormationClass="FORMATION_CLASS_CIVILIAN" Name="LOC_UNIT_WANDERING_MINSTREL_NAME" Description="LOC_UNIT_WANDERING_MINSTREL_DESCRIPTION" PurchaseYield="YIELD_FAITH" PrereqCivic="CIVIC_MEDIEVAL_FAIRES" MustPurchase="TRUE" CostProgressionModel="COST_PROGRESSION_PREVIOUS_COPIES" CostProgressionParam1="50" CanRetreatWhenCaptured="True" InitialLevel="2" NumRandomChoices="3" PromotionClass="PROMOTION_CLASS_ROCK_BAND" PseudoYieldType="PSEUDOYIELD_UNIT_RELIGIOUS"/>
+		<!-- <Row UnitType="UNIT_ROCK_BAND" Cost="300" BaseMoves="4" BaseSightRange="2" ZoneOfControl="false" Domain="DOMAIN_LAND" FormationClass="FORMATION_CLASS_CIVILIAN" Name="LOC_UNIT_ROCK_BAND_NAME" Description="LOC_UNIT_ROCK_BAND_DESCRIPTION" PurchaseYield="YIELD_FAITH" PrereqCivic="CIVIC_COLD_WAR" MustPurchase="TRUE" CostProgressionModel="COST_PROGRESSION_PREVIOUS_COPIES" CostProgressionParam1="50" CanRetreatWhenCaptured="True" InitialLevel="2" NumRandomChoices="3" PromotionClass="PROMOTION_CLASS_ROCK_BAND" PseudoYieldType="PSEUDOYIELD_UNIT_RELIGIOUS"/>
+		 -->
+		
 		<Update>
 			<Where UnitType="UNIT_RED_CLOAK"/>
 			<Set>
@@ -147,6 +200,18 @@
 			</Set>
 		</Update>
 		<Update>
+			<Where UnitType="UNIT_REACH_KNIGHT"/>
+			<Set>
+				<StrategicResource>RESOURCE_IRON</StrategicResource>
+			</Set>
+		</Update>
+		<Update>
+			<Where UnitType="UNIT_REACH_KNIGHT_II"/>
+			<Set>
+				<StrategicResource>RESOURCE_IRON</StrategicResource>
+			</Set>
+		</Update>
+		<Update>
 			<Where UnitType="UNIT_BLOOD_RIDER"/>
 			<Set>
 				<StrategicResource>RESOURCE_HORSES</StrategicResource>
@@ -177,6 +242,8 @@
 		<Row UnitType="UNIT_RED_CLOAK_II" ResourceCost="20"/>
 		<Row UnitType="UNIT_VALE_KNIGHT" ResourceCost="10"/>
 		<Row UnitType="UNIT_VALE_KNIGHT_II" ResourceCost="20"/>
+		<Row UnitType="UNIT_REACH_KNIGHT" ResourceCost="10"/>
+		<Row UnitType="UNIT_REACH_KNIGHT_II" ResourceCost="30"/>
 		<Row UnitType="UNIT_RAINBOW_GUARD" ResourceCost="10"/>
 		<Row UnitType="UNIT_RAINBOW_GUARD_II" ResourceCost="20"/>
 		<Row UnitType="UNIT_KINGSGUARD" ResourceCost="10"/>
@@ -195,6 +262,9 @@
 		<Row UnitType="UNIT_PIKEMAN_II" ResourceCost="30"/>
 		<Row UnitType="UNIT_SWORDSMAN_II" ResourceCost="30"/>
 		<Row UnitType="UNIT_KNIGHT_II" ResourceCost="30"/>
+		<Row UnitType="UNIT_WW_ASSASSIN" ResourceCost="10"/>
+
+		<Row UnitType="UNIT_WANDERING_MINSTREL" TourismBombPossible="true" CanEarnExperience="false"/> <!-- <Row UnitType="UNIT_ROCK_BAND" TourismBombPossible="true" CanEarnExperience="false"/> -->
 		
 		<Row UnitType="UNIT_ROBERT_SETTLER" CanEarnExperience="false" CanFormMilitaryFormation="false"/>
 		<Row UnitType="UNIT_WARLOCK" CanEarnExperience="false" CanFormMilitaryFormation="false"/>

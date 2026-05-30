@@ -89,6 +89,22 @@
 		</Row>
 		<Row>
 			<Domain>ACoIaF_GS_Ruleset_Players</Domain>
+			<CivilizationType>CIVILIZATION_STARK</CivilizationType>
+			<LeaderType>LEADER_ROBB</LeaderType>
+			<CivilizationName>LOC_CIVILIZATION_STARK_NAME</CivilizationName>
+			<CivilizationIcon>ICON_CIVILIZATION_STARK_ROBB</CivilizationIcon>
+			<LeaderName>LOC_LEADER_ROBB_NAME</LeaderName>
+			<LeaderIcon>ICON_LEADER_ROBB</LeaderIcon>
+			<CivilizationAbilityName>LOC_TRAIT_CIVILIZATION_STARK_NAME</CivilizationAbilityName>
+			<CivilizationAbilityDescription>LOC_TRAIT_CIVILIZATION_WINTER_IS_COMING_EXPANSION2_DESCRIPTION</CivilizationAbilityDescription>
+			<CivilizationAbilityIcon>ICON_CIVILIZATION_STARK_ROBB</CivilizationAbilityIcon>
+			<LeaderAbilityName>LOC_TRAIT_LEADER_YOUNG_WOLF_NAME</LeaderAbilityName>
+			<LeaderAbilityDescription>LOC_TRAIT_LEADER_YOUNG_WOLF_DESCRIPTION</LeaderAbilityDescription>
+			<LeaderAbilityIcon>ICON_LEADER_ROBB</LeaderAbilityIcon>
+			<Portrait>ROBB_4</Portrait>
+		</Row>
+		<Row>
+			<Domain>ACoIaF_GS_Ruleset_Players</Domain>
 			<CivilizationType>CIVILIZATION_LANNISTER</CivilizationType>
 			<LeaderType>LEADER_TYWIN</LeaderType>
 			<CivilizationName>LOC_CIVILIZATION_LANNISTER_NAME</CivilizationName>
@@ -336,7 +352,7 @@
 			<LeaderName>LOC_LEADER_DROGO_NAME</LeaderName>
 			<LeaderIcon>ICON_LEADER_DROGO</LeaderIcon>
 			<CivilizationAbilityName>LOC_TRAIT_CIVILIZATION_DOTHRAKI_NAME</CivilizationAbilityName>
-			<CivilizationAbilityDescription>LOC_TRAIT_CIVILIZATION_DOTHRAKI_DESCRIPTION</CivilizationAbilityDescription>
+			<CivilizationAbilityDescription>LOC_TRAIT_CIVILIZATION_DOTHRAKI_EXPANSION2_DESCRIPTION</CivilizationAbilityDescription>
 			<CivilizationAbilityIcon>ICON_CIVILIZATION_DOTHRAKI</CivilizationAbilityIcon>
 			<LeaderAbilityName>LOC_TRAIT_LEADER_KHAL_OF_KHALS_NAME</LeaderAbilityName>
 			<LeaderAbilityDescription>LOC_TRAIT_LEADER_KHAL_OF_KHALS_DESCRIPTION</LeaderAbilityDescription>
@@ -412,6 +428,36 @@
 			<Description>LOC_TRAIT_CIVILIZATION_UNIT_BANNERMAN_DESCRIPTION</Description>
 			<Icon>ICON_UNIT_BANNERMAN</Icon>
 			<SortIndex>20</SortIndex>
+		</Row>
+		<Row>
+			<Domain>ACoIaF_GS_Ruleset_Players</Domain>
+			<CivilizationType>CIVILIZATION_STARK</CivilizationType>
+			<LeaderType>LEADER_ROBB</LeaderType>
+			<Type>BUILDING_WEIRWOOD_TREE</Type>
+			<Name>LOC_TRAIT_CIVILIZATION_BUILDING_WEIRWOOD_TREE_NAME</Name>
+			<Description>LOC_TRAIT_CIVILIZATION_BUILDING_WEIRWOOD_TREE_DESCRIPTION</Description>
+			<Icon>ICON_BUILDING_WEIRWOOD_TREE</Icon>
+			<SortIndex>10</SortIndex>
+		</Row>
+		<Row>
+			<Domain>ACoIaF_GS_Ruleset_Players</Domain>
+			<CivilizationType>CIVILIZATION_STARK</CivilizationType>
+			<LeaderType>LEADER_ROBB</LeaderType>
+			<Type>UNIT_BANNERMAN</Type>
+			<Name>LOC_TRAIT_CIVILIZATION_UNIT_BANNERMAN_NAME</Name>
+			<Description>LOC_TRAIT_CIVILIZATION_UNIT_BANNERMAN_DESCRIPTION</Description>
+			<Icon>ICON_UNIT_BANNERMAN</Icon>
+			<SortIndex>20</SortIndex>
+		</Row>
+		<Row>
+			<Domain>ACoIaF_GS_Ruleset_Players</Domain>
+			<CivilizationType>CIVILIZATION_STARK</CivilizationType>
+			<LeaderType>LEADER_ROBB</LeaderType>
+			<Type>UNIT_DIREWOLF</Type>
+			<Name>LOC_TRAIT_LEADER_UNIT_DIREWOLF_NAME</Name>
+			<Description>LOC_TRAIT_LEADER_UNIT_DIREWOLF_DESCRIPTION</Description>
+			<Icon>ICON_UNIT_DIREWOLF</Icon>
+			<SortIndex>30</SortIndex>
 		</Row>
 		<Row>
 			<Domain>ACoIaF_GS_Ruleset_Players</Domain>

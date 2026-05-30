@@ -558,6 +558,8 @@
 				<Element text="units/ballista.blp"/>
 				<Element text="units/fire_dragon.blp"/>
 				<Element text="units/units.blp"/>
+				<!-- <Element text="units/wolf.blp"/> -->
+				<!-- <Element text="units/animals.blp"/> -->
 			</PackageDependencies>
 		</Element>
 		<Element>
@@ -577,6 +579,7 @@
 			<PackageDependencies>
 				<Element text="UI/UILeaders.blp"/>
 				<Element text="UI/Icons.blp"/>
+				<!-- <Element text="UI/WildPredators_Icons.blp"/> -->
 			</PackageDependencies>
 		</Element>
 		<Element>

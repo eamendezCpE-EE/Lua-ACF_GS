@@ -58,7 +58,7 @@
 	<District_CitizenYieldChanges>
 		<Row DistrictType="DISTRICT_IRON_HARBOR" YieldType="YIELD_GOLD" YieldChange="2"/>
 		<Row DistrictType="DISTRICT_IRON_HARBOR" YieldType="YIELD_SCIENCE" YieldChange="1"/>
-		<Row DistrictType="DISTRICT_WATER_GARDEN" YieldType="YIELD_CULTURE" YieldChange="2"/>
+		<!-- <Row DistrictType="DISTRICT_WATER_GARDEN" YieldType="YIELD_CULTURE" YieldChange="2"/> -->
 	</District_CitizenYieldChanges>
 	<Adjacency_YieldChanges>
 		<Row ID="IronHarbor_Gold" Description="LOC_DISTRICT_IRON_HARBOR_GOLD" YieldType="YIELD_GOLD" YieldChange="2" TilesRequired="1" AdjacentDistrict="DISTRICT_IRON_HARBOR"/>
@@ -79,11 +79,19 @@
 			<DistrictType>DISTRICT_IRON_HARBOR</DistrictType>
 			<ModifierId>ROYAL_NAVY_DOCKYARD_GOLD_FROM_FOREIGN_CONTINENT</ModifierId>
 		</Row>
+		<Row>
+			<DistrictType>DISTRICT_WATER_GARDEN</DistrictType>
+			<ModifierId>WATER_GARDEN_CITIZEN_CULTURE</ModifierId>
+		</Row>
 	</DistrictModifiers>
 	<Modifiers>
 		<Row>
 			<ModifierId>IRON_HARBOR_TRADE_ROUTE_CAPACITY</ModifierId>
 			<ModifierType>MODIFIER_PLAYER_ADJUST_TRADE_ROUTE_CAPACITY</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>WATER_GARDEN_CITIZEN_CULTURE</ModifierId>
+			<ModifierType>MODIFIER_SINGLE_CITY_ADJUST_CITY_YIELD_PER_POPULATION</ModifierType>
 		</Row>
 	</Modifiers>
 	<ModifierArguments>
@@ -91,6 +99,16 @@
 			<ModifierId>IRON_HARBOR_TRADE_ROUTE_CAPACITY</ModifierId>
 			<Name>Amount</Name>
 			<Value>1</Value>
+		</Row>
+		<Row>
+			<ModifierId>WATER_GARDEN_CITIZEN_CULTURE</ModifierId>
+			<Name>Amount</Name>
+			<Value>2</Value>
+		</Row>
+		<Row>
+			<ModifierId>WATER_GARDEN_CITIZEN_CULTURE</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_CULTURE</Value>
 		</Row>
 	</ModifierArguments>
 </GameData>

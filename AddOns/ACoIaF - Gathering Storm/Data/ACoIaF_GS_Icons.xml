@@ -95,6 +95,9 @@
 		<Row Name="ICON_BUILDING_UNIVERSITY_SANKORE2" Atlas="ICON_ATLAS_EXPANSION_2_WONDERS" Index="4"/>
 		<Row Name="ICON_BUILDING_THE_TWINS"  Atlas="ICON_ATLAS_EXPANSION_2_WONDERS" Index="5"/>
 
+		
+    	<!-- <Row Name="ICON_UNIT_WANDERING_MINSTREL"               Atlas="ICON_ATLAS_EXPANSION_2_UNITS"   Index="20"/> -->
+
 	</IconDefinitions>
 	<IconAliases>
 	</IconAliases>

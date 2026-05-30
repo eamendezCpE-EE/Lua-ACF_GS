@@ -168,6 +168,7 @@
       <File>Data/WW_GameplayData.xml</File>
     </UpdateDatabase>
     <UpdateText id="ACoIaF" criteria="ACoIaF">
+      <File>SQL/Farms_Text.sql</File>
       <File>Data/ACoIaF_ConfigText.xml</File>
       <File>Data/ACoIaF_Text.xml</File>
     </UpdateText>
@@ -378,6 +379,7 @@
     <File>Data/ACoIaF_Units.xml</File>
     <File>Data/ACoIaF_WMDs.xml</File>
     <File>Data/WW_GameplayData.xml</File>
+    <File>SQL/Farms_Text.sql</File>
     <File>Maps/WesterosEssosHuge.Civ6Map</File>
     <File>Maps/WesterosStandard.Civ6Map</File>
     <File>Materials/NWON_Isle_O_Faces_Trees.mtl</File>
@@ -419,10 +421,27 @@
     <File>Platforms/Windows/BLPs/terrain/TerrainAssetSet_Base.blp</File>
     <File>Platforms/Windows/BLPs/terrain/TerrainElementSet_Base.blp</File>
     <File>Platforms/Windows/BLPs/UI/Icons.blp</File>
+    <!-- <File>Platforms/Windows/BLPs/UI/WildPredators_Icons.blp</File> -->
     <File>Platforms/Windows/BLPs/units/ballista.blp</File>
     <File>Platforms/Windows/BLPs/units/fire_dragon.blp</File>
     <File>Platforms/Windows/BLPs/units/units.blp</File>
+    <!-- <File>Platforms/Windows/BLPs/units/wolf.blp</File>
+    <File>Platforms/Windows/BLPs/units/animals.blp</File> -->
     <File>Platforms/Windows/BLPs/VFX.blp</File>
+    <!-- <File>Platforms/Windows/BLPs/SHARED_DATA/TEXTURE_DiffuseTint_WolfBlack_a_null</File>
+    <File>Platforms/Windows/BLPs/SHARED_DATA/TEXTURE_DiffuseTint_WolfGrey_a_null</File>
+    <File>Platforms/Windows/BLPs/SHARED_DATA/TEXTURE_DiffuseTint_Wolf_a_null</File>
+    <File>Platforms/Windows/BLPs/SHARED_DATA/ANIMATION_wolf_die_anim</File>
+    <File>Platforms/Windows/BLPs/SHARED_DATA/ANIMATION_wolf_fight_anim</File>
+    <File>Platforms/Windows/BLPs/SHARED_DATA/ANIMATION_wolf_hurt_anim</File>
+    <File>Platforms/Windows/BLPs/SHARED_DATA/ANIMATION_wolf_run_anim</File>
+    <File>Platforms/Windows/BLPs/SHARED_DATA/ANIMATION_wolf_stand_anim</File>
+    <File>Platforms/Windows/BLPs/SHARED_DATA/TEXTURE_WolfBlack_n0</File>
+    <File>Platforms/Windows/BLPs/SHARED_DATA/TEXTURE_WolfBlack_n1</File>
+    <File>Platforms/Windows/BLPs/SHARED_DATA/TEXTURE_WolfGrey_n0</File>
+    <File>Platforms/Windows/BLPs/SHARED_DATA/TEXTURE_WolfGrey_n1</File>
+    <File>Platforms/Windows/BLPs/SHARED_DATA/TEXTURE_Wolf_n0</File>
+    <File>Platforms/Windows/BLPs/SHARED_DATA/TEXTURE_Wolf_n1</File> -->
     <File>Scenarios/WotFK/ACoIaF_WotFK.modinfo</File>
     <File>Scenarios/WotFK/Data/WotFK_Agendas.xml</File>
     <File>Scenarios/WotFK/Data/WotFK_Beliefs.xml</File>

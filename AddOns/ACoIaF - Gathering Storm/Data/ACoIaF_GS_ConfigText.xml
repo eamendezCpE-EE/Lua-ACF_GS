@@ -37,6 +37,10 @@
 			<Text>Receive a second Iron Fleet or Iron Reaver each time you train one. Gain the Iron Reaver Unique Unit when they unlock the Shipbuilding Technology. Civilizations who are at war with Euron receive +100% unit damage from Hurricanes while in Euron's territory.</Text>
 		</Row>
 		
+		<Row Tag="LOC_TRAIT_CIVILIZATION_DOTHRAKI_EXPANSION2_DESCRIPTION" Language="en_US">
+			<Text>Start with the Animal Husbandry techology unlocked. Pastures over [ICON_RESOURCE_Horses] Horses provide an extra +2 [ICON_CULTURE] Culture and +1 [ICON_Production] Production. Receive a [ICON_GreatWork_Relic] Relic upon city conquest, +2 [ICON_Food] Food, +2 [ICON_Production] Production, and +4 [ICON_Gold] Gold from each [ICON_GreatWork_Relic] Relic, and the Palace has slots for 5 Great Works.</Text>
+		</Row>
+
 		<Row Tag="LOC_TRAIT_CIVILIZATION_IMPROVEMENT_MOON_DOOR_NAME" Language="en_US">
 			<Text>Moon Door</Text>
 		</Row>

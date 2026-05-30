@@ -599,12 +599,28 @@
 		<Row Tag="LOC_DIPLO_ACCEPT_MAKE_DEAL_FROM_AI_LEADER_ROBB_ANY" Language="en_US">
 			<Text>I will honor the terms of this deal.</Text>
 		</Row>
-
+		<!-- Leader Ability -->
+		<Row Tag="LOC_ABILITY_ROBB_FLANKING_UNITS_DESCRIPTION" Language="en_US">
+			<Text>2x Flanking Bonus.</Text>
+		</Row>
 		<!-- Leader Buildings -->
 
 		<!-- Leader Units -->
 		<Row Tag="LOC_PROMOTION_COMBAT_OTHER_CONTINENT_DESCRIPTION" Language="en_US">
 			<Text>+5 Combat on foreign continent.</Text>
+		</Row>
+
+		<Row Tag="LOC_LEADER_UNIT_DIREWOLF_NAME" Language="en-US">
+			<Text>Direwolf</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_UNIT_DIREWOLF_DESCRIPTION" Language="en-US">
+			<Text>House Stark unique Classical era cavalry unit. Does not suffer combat penalties when damaged.</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_UNIT_DIREWOLF_II_NAME" Language="en-US">
+			<Text>Direwolf II</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_UNIT_DIREWOLF_II_DESCRIPTION" Language="en-US">
+			<Text>House Stark unique Medieval era light cavalry unit. Does not suffer combat penalties when damaged.</Text>
 		</Row>
 
 		<!-- Agenda -->
@@ -1007,7 +1023,7 @@
 			<Text>Alchemist</Text>
 		</Row>
 		<Row Tag="LOC_LEADER_UNIT_ALCHEMIST_DESCRIPTION" Language="en_US">
-			<Text>House Lannister unique Medieval era melee unit when led by Cersei, very weak, but the first nuclear capable unit in the game.</Text>
+			<Text>House Lannister unique Medieval era melee unit when led by Cersei, very weak, but the first nuclear capable unit in the game. Created only by Build Wildfire Project.</Text>
 		</Row>
 
 		<!-- Agenda -->
@@ -4712,7 +4728,7 @@
 			<Text>Burn Them All!</Text>
 		</Row>
 		<Row Tag="LOC_PROJECT_BURN_THEM_ALL_DESCRIPTION" Language="en_US">
-			<Text>Allows for the creation of Wildfire. Requires Madness.</Text>
+			<Text>Allows for the creation of Wildfire. Requires Madness - Cersei exclusive.</Text>
 		</Row>
 		<Row Tag="LOC_PROJECT_BUILD_M_WILDFIRE_NAME" Language="en_US">
 			<Text>Build Wildfire</Text>
@@ -4751,7 +4767,7 @@
 		</Row>
 		<Row Tag="LOC_PROJECT_BRING_THEM_TO_ME_DESCRIPTION" Language="en_US">
 			<!-- <Text>Execute 1 ungrateful subject to grant the city +1[ICON_Amenities] Amenity.</Text> -->
-			<Text>Gather subjects for a reminder why they should never turn against the King. All cities gain +1[ICON_Amenities] Amenity.</Text>
+			<Text>Gather subjects for a reminder why they should never turn against the King. All cities gain +1[ICON_Amenities] Amenity. Joffrey exclusive.</Text>
 		</Row>
 
 		<Row Tag="LOC_PROJECT_CONVERSION_CEREMONY_NAME" Language="en_US">
@@ -4840,6 +4856,10 @@
 			<Text>Madness</Text>
 		</Row>
 
+		<Row Tag="LOC_RESOURCE_TYRANNY_NAME" Language="en_US">
+			<Text>Tyranny</Text>
+		</Row>
+
 		<Row Tag="LOC_RESOURCE_ICE_NAME" Language="en_US">
 			<Text>Ice</Text>
 		</Row>
@@ -4861,6 +4881,27 @@
 		</Row>
 		<Row Tag="LOC_POLICY_STEWARDS_DESCRIPTION" Language="en_US">
 			<Text>Newly trained builders get an extra build action.</Text>
+		</Row>
+
+		<Row Tag="LOC_POLICY_WANDERING_MINSTREL_CULTURE_NAME"  Language="en_US">
+			<Text>Diverse Story Tellers</Text>
+		</Row>
+		<Row Tag="LOC_POLICY_WANDERING_MINSTREL_CULTURE_DESCRIPTION" Language="en_US">
+			<Text>Wandering Minstrels may choose any promotion.</Text>
+		</Row>
+
+		<Row Tag="LOC_POLICY_DYNASTIC_CEREMONIES_NAME"  Language="en_US">
+			<Text>Dynastic Ceremonies</Text>
+		</Row>
+		<Row Tag="LOC_POLICY_DYNASTIC_CEREMONIES_DESCRIPTION" Language="en_US">
+			<Text>Great Works of Art and Artifacts [ICON_GreatWork_Artifact] generate 200% more tourism.</Text>
+		</Row>
+
+		<Row Tag="LOC_POLICY_MINSTREL_CENSORSHIP_NAME"  Language="en_US">
+			<Text>Minstrel Censorship</Text>
+		</Row>
+		<Row Tag="LOC_POLICY_MINSTREL_CENSORSHIP_DESCRIPTION" Language="en_US">
+			<Text>Wandering Minstrels may not enter your territory. -1 Amenity [ICON_Amenities] in all of your cities with 10 or more [ICON_Citizen] Population.</Text>
 		</Row>
 		
 		<!-- Civics -->
@@ -5301,7 +5342,7 @@
 			<Text>Alchemist</Text>
 		</Row>
 		<Row Tag="LOC_LEADER_UNIT_GEN_ALCHEMIST_DESCRIPTION" Language="en_US">
-			<Text>Late Medieval era melee unit, very weak, but the first nuclear capable unit in the game other than Cersei's Alchemists.</Text>
+			<Text>Late Medieval era melee unit, very weak, but the first nuclear capable unit in the game other than Cersei's Alchemists. Created only by Build Wildfire Project.</Text>
 		</Row>
 
 		<Row Tag="LOC_UNIT_SCORPION_NAME" Language="en_US">
@@ -5348,10 +5389,32 @@
 			<Text>Late Medieval era ranged unit.</Text>
 		</Row>
 		<Row Tag="LOC_UNIT_CATAPULT_II_NAME" Language="en-US">
-			<Text>Catapult II</Text>
+			<Text>Trebuchet II</Text>
 		</Row>
 		<Row Tag="LOC_UNIT_CATAPULT_II_DESCRIPTION" Language="en-US">
 			<Text>Late Medieval era bombard unit, ideal for attacking cities. Cannot move and attack on the same turn unless they've earned the Expert Crew promotion.</Text>
+		</Row>
+		<Row Tag="LOC_UNIT_WW_ASSASSIN_NAME" Language="en-US">
+			<Text>White Walker Assassin</Text>
+		</Row>
+		<Row Tag="LOC_UNIT_WW_ASSASSIN_DESCRIPTION" Language="en-US">
+			<Text>Late Medieval era recon-class unit. Weak against normal units and Wights, but highly effective against White Walkers.</Text>
+		</Row>
+		<Row Tag="LOC_ABILITY_ANTI_WW_COMBAT_MODIFIER_DESCRIPTION" Language="en-US">
+			<Text>+100 Combat [ICON_Strength] when attacking a White Walker Class Unit.</Text>
+		</Row>
+		<Row Tag="LOC_ABILITY_WW_ASSASSIN_NAME" Language="en-US">
+			<Text>DragonGlass Spear</Text>
+		</Row>
+		<Row Tag="LOC_ABILITY_WW_ASSASSIN_DESCRIPTION" Language="en-US">
+			<Text>+100 Combat [ICON_Strength] when attacking a White Walker Class Unit.</Text>
+		</Row>
+
+		<Row Tag="LOC_UNIT_WANDERING_MINSTREL_NAME" Language="en-US">
+			<Text>Wandering Minstrel</Text>
+		</Row>
+		<Row Tag="LOC_UNIT_WANDERING_MINSTREL_DESCRIPTION" Language="en-US">
+			<Text>Wandering Minstrels spread tales of glory in the name of your House and travel to distant lands to persuade the subjects of Westeros.</Text>
 		</Row>
 
 		<!-- WMDs -->
@@ -5388,6 +5451,23 @@
 		</Row>
 		<Row Tag="LOC_FEATURE_ISLE_O_FACES_QUOTE" Language="en_US">
 			<Text>To seal the Pact before the gods, the Children carved a face on every weirwood tree on the island, which came to be known as the Isle of Faces.</Text>
+		</Row>
+
+		<!-- Buildings -->
+		<Row Tag="LOC_BUILDING_HOUSE_LEGACY_HALL_NAME" Language="en_US">
+			<Text>House Legacy Hall</Text>
+		</Row>
+
+		<Row Tag="LOC_BUILDING_HOUSE_LEGACY_HALL_DESCRIPTION" Language="en_US">
+			<Text>A building to display the glory of your House. Provides 3 slots to display artwork.</Text>
+		</Row>
+
+		<Row Tag="LOC_BUILDING_TAVERN_NAME" Language="en_US">
+			<Text>Tavern</Text>
+		</Row>
+
+		<Row Tag="LOC_BUILDING_TAVERN_DESCRIPTION" Language="en_US">
+			<Text>A building to allow live performances from bards to spread musical manuscripts.. Provides 2 slots for musical great works.</Text>
 		</Row>
 
 		<!-- Wonders -->

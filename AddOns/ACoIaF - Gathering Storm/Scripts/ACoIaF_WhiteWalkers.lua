@@ -103,6 +103,52 @@ end
 
 Events.ImprovementAddedToMap.Add(WhiteWalker_BringWinter);
 
+-- Events.CityProjectCompleted.Add(City_Mine_The_Wall); -- Function call not working
+
+-- function City_Mine_The_Wall(PlayerID, CityID, ProjectID, BuildingIndex, iX, iY, Unknown)
+-- 	-- Validate player
+-- 	if(not silent) then
+-- 		print("City Project Completed");
+-- 		print("City Name : ", CityID:GetName());
+-- 	end
+--     if (PlayerID==eWhiteWalkerPID) then
+-- 		-- Get city object
+-- 		--local Xity = player:GetCities():FindID(CityID);
+-- 		-- Get project type name
+-- 		local projectType = GameInfo.Projects[ProjectID].ProjectType;
+
+-- 		if (projectType == "PROJECT_MINE_THE_WALL") then
+-- 			if(not silent) then
+-- 				print("Mine The Wall Project completed in ", CityID:GetName());
+-- 			end
+-- 			local cityPlots = CityID:GetPlots();
+-- 			local FEATURE_ICE = GameInfo.Features["FEATURE_ICE"].Index
+
+-- 			for loop, plot in ipairs(cityPlots) do
+-- 				if plot ~= nil then
+-- 					local terrainTypeIndex = plot:GetFeatureType();
+-- 					-- local terrainName = TerrainBuilder.GetTerrainType(terrainTypeIndex);
+-- 					local plotX = plot:GetX();
+-- 					local plotY = plot:GetY();
+-- 					if (not silent) then
+-- 						--print(string.format("Plot (%d, %d): %s", plotX, plotY, terrainName));
+-- 						print(string.format("Plot (%d, %d): %s", plotX, plotY, terrainTypeIndex));
+-- 					end
+-- 					-- if (terrainName == "LOC_FEATURE_ICE_NAME") then
+-- 					-- 	TerrainBuilder.SetTerrainType(plot, g_TERRAIN_TYPE_SNOW);
+-- 					-- end
+-- 					if (terrainTypeIndex == FEATURE_ICE) then
+-- 						TerrainBuilder.SetFeatureType(FeatureTypes.NO_FEATURE);
+-- 					end
+-- 				end
+-- 			end
+-- 		end
+-- 	end
+-- 	if(not silent) then
+-- 		print("Function Completed");
+-- 	end
+-- end
+
 function IsTargetCavalry(unitType)
 	local isCavalry = {false, false};
 	if(unitType=="LOC_UNIT_BARBARIAN_HORSE_ARCHER_NAME" or unitType=="LOC_UNIT_BARBARIAN_HORSEMAN_NAME" or unitType=="LOC_UNIT_HORSEMAN_NAME" or unitType=="LOC_UNIT_KNIGHT_NAME" or unitType=="LOC_UNIT_KNIGHT_II_NAME" or unitType=="LOC_CIVILIZATION_UNIT_VALE_KNIGHT_NAME" or unitType=="LOC_CIVILIZATION_UNIT_VALE_KNIGHT_II_NAME" or unitType=="LOC_CIVILIZATION_UNIT_REACH_KNIGHT_NAME" or unitType=="LOC_CIVILIZATION_UNIT_REACH_KNIGHT_II_NAME" or unitType=="LOC_CIVILIZATION_UNIT_SCREAMER_NAME" or unitType=="LOC_CIVILIZATION_UNIT_SCREAMER_II_NAME" or unitType=="LOC_CIVILIZATION_UNIT_BLOOD_RIDER_NAME" or unitType=="LOC_CIVILIZATION_UNIT_BLOOD_RIDER_II_NAME") then

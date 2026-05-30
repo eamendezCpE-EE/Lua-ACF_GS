@@ -37,6 +37,7 @@
 		<Row Type="TRAIT_LEADER_LANNISTER_DEBTS" Kind="KIND_TRAIT"/>
 		<Row Type="TRAIT_LEADER_AZHOR_AHAI_REBORN" Kind="KIND_TRAIT"/>
 		<Row Type="TRAIT_LEADER_UNIT_RED_PRIEST" Kind="KIND_TRAIT"/>
+		<Row Type="TRAIT_LEADER_UNIT_DIREWOLF" Kind="KIND_TRAIT"/>
 		<Row Type="TRAIT_LEADER_BUILDING_PYRE_OF_RHLLOR" Kind="KIND_TRAIT"/>
 		<Row Type="TRAIT_LEADER_SEVEN_KINGDOMS" Kind="KIND_TRAIT"/>
 		<Row Type="TRAIT_LEADER_UNIT_KINGS_LANDING_SETTLER" Kind="KIND_TRAIT"/>
@@ -180,8 +181,13 @@
 		<Row Type="MINOR_CIV_LHAZAR_TRAIT" Kind="KIND_TRAIT"/>
 		<Row Type="MINOR_CIV_MANTARYS_TRAIT" Kind="KIND_TRAIT"/>
 		<Row Type="MINOR_CIV_TOLOS_TRAIT" Kind="KIND_TRAIT"/>
-	</Types>
 
+		<!-- Ability Modifier -->
+		<Row Type="ABILITY_ROBB_FLANKING_UNITS" Kind="KIND_ABILITY"/>
+	</Types>
+	<TypeTags>
+		<Row Type="ABILITY_ROBB_FLANKING_UNITS" Tag="CLASS_ALL_UNITS"/>
+	</TypeTags>
 	<Leaders>
 		<Row>
 			<LeaderType>LEADER_EDDARD</LeaderType>
@@ -364,6 +370,7 @@
 
 		<Row LeaderType="LEADER_ROBB" TraitType="TRAIT_LEADER_YOUNG_WOLF"/>
 		<Row LeaderType="LEADER_ROBB" TraitType="TRAIT_LEADER_RELIGIOUS_MAJOR_CIV"/>
+		<Row LeaderType="LEADER_ROBB" TraitType="TRAIT_LEADER_UNIT_DIREWOLF"/>
 		<Row LeaderType="LEADER_JOFFERY" TraitType="TRAIT_LEADER_JOFF"/>
 		<Row LeaderType="LEADER_JOFFERY" TraitType="TRAIT_LEADER_UNIT_KINGSGUARD"/>
 		<Row LeaderType="LEADER_JOFFERY" TraitType="TRAIT_LEADER_BUILDING_EXECUTION_GROUNDS"/>
@@ -426,6 +433,7 @@
 		<!-- Base -->
 		<!-- Leaders -->
 		<Row TraitType="TRAIT_LEADER_OURS_IS_THE_OLD_WAY" Name="LOC_TRAIT_LEADER_OURS_IS_THE_OLD_WAY_NAME" Description="LOC_TRAIT_LEADER_OURS_IS_THE_OLD_WAY_DESCRIPTION"/>
+		<Row TraitType="TRAIT_LEADER_UNIT_DIREWOLF" Name="LOC_TRAIT_LEADER_UNIT_DIREWOLF_NAME" Description="LOC_TRAIT_LEADER_UNIT_DIREWOLF_DESCRIPTION"/>
 		<Row TraitType="TRAIT_LEADER_LANNISTER_DEBTS" Name="LOC_TRAIT_LEADER_LANNISTER_DEBTS_NAME" Description="LOC_TRAIT_LEADER_LANNISTER_DEBTS_DESCRIPTION"/>
 		<Row TraitType="TRAIT_LEADER_AZHOR_AHAI_REBORN" Name="LOC_TRAIT_LEADER_AZHOR_AHAI_REBORN_NAME" Description="LOC_TRAIT_LEADER_AZHOR_AHAI_REBORN_DESCRIPTION"/>
 		<Row TraitType="TRAIT_LEADER_UNIT_RED_PRIEST" Name="LOC_TRAIT_LEADER_UNIT_RED_PRIEST_NAME" Description="LOC_TRAIT_LEADER_UNIT_RED_PRIEST_DESCRIPTION"/>
@@ -562,11 +570,13 @@
 		<Row TraitType="TRAIT_LEADER_THE_STORM" ModifierId="TRAIT_EXTRA_IRON_REAVER"/>
 
 		<Row TraitType="TRAIT_LEADER_YOUNG_WOLF" ModifierId="TRAIT_COMBAT_BONUS_OTHER_CONTINENT"/>
-		<Row TraitType="TRAIT_LEADER_YOUNG_WOLF" ModifierId="TRAIT_COMBAT_BONUS_OTHER_RELIGION"/>
+		<!-- <Row TraitType="TRAIT_LEADER_YOUNG_WOLF" ModifierId="TRAIT_COMBAT_BONUS_OTHER_RELIGION"/> -->
+		<Row TraitType="TRAIT_LEADER_YOUNG_WOLF" ModifierId="TRAIT_ROBB_FLANKING_ABILITY"/>
 		<Row TraitType="TRAIT_LEADER_GOOD_KING" ModifierId="TRAIT_RENLY_CORPS_EARLY"/>
 		<Row TraitType="TRAIT_LEADER_GOOD_KING" ModifierId="TRAIT_RENLY_ARMIES_EARLY"/>
 		<Row TraitType="TRAIT_LEADER_GOOD_KING" ModifierId="TRAIT_WILDCARD_GOVERNMENT_SLOT"/>
 		<Row TraitType="TRAIT_LEADER_JOFF" ModifierId="TRAIT_FEARFUL_LOYALTY"/>
+		<Row TraitType="TRAIT_LEADER_JOFF" ModifierId="TRAIT_LEADER_GRANT_TYRANNY"/>
 
 		<Row TraitType="TRAIT_LEADER_KHAL_OF_KHALS" ModifierId="TRAIT_DROGO_CAVALRY"/>
 		<Row TraitType="TRAIT_LEADER_KING_BEYOND" ModifierId="TRAIT_FREE_FOLK_CAMP_DISTRICT_PRODUCTION_MODIFIER"/>
@@ -669,7 +679,18 @@
 			<ModifierType>MODIFIER_UNIT_ADJUST_COMBAT_STRENGTH</ModifierType>
 			<SubjectRequirementSetId>REQUIREMENTS_UNIT_ON_OTHER_CONTINENT</SubjectRequirementSetId>
 		</Row>
-
+		<Row>
+			<ModifierId>TRAIT_ROBB_FLANKING_ABILITY</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNITS_GRANT_ABILITY</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>ROBB_FLANKING_BONUS_UNITS</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNIT_ADJUST_FLANKING_BONUS_MODIFIER</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>ROBB_SUPPORT_BONUS_UNITS</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNIT_ADJUST_SUPPORT_BONUS_MODIFIER</ModifierType>
+		</Row>
 		<!-- HOUSE LANNISTER -->
 		<!-- Tywin -->
 		<Row>
@@ -759,6 +780,10 @@
 		<Row>
 			<ModifierId>TRAIT_FEARFUL_LOYALTY</ModifierId>
 			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_ALWAYS_LOYAL</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_LEADER_GRANT_TYRANNY</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_FREE_RESOURCE_IMPORT</ModifierType>
 		</Row>
 
 		<!-- HOUSE GREYJOY -->
@@ -1423,6 +1448,21 @@
 			<Value>5</Value>
 		</Row>
 		<Row>
+			<ModifierId>TRAIT_ROBB_FLANKING_ABILITY</ModifierId>
+			<Name>AbilityType</Name>
+			<Value>ABILITY_ROBB_FLANKING_UNITS</Value>
+		</Row>
+		<Row>
+			<ModifierId>ROBB_FLANKING_BONUS_UNITS</ModifierId>
+			<Name>Percent</Name>
+			<Value>100</Value>
+		</Row>
+		<Row>
+			<ModifierId>ROBB_SUPPORT_BONUS_UNITS</ModifierId>
+			<Name>Percent</Name>
+			<Value>100</Value>
+		</Row>
+		<Row>
 			<ModifierId>TRAIT_LANNISTER_BONUS_GOLD</ModifierId>
 			<Name>YieldType</Name>
 			<Value>YIELD_GOLD</Value>
@@ -1449,6 +1489,16 @@
 		</Row>
 		<Row>
 			<ModifierId>TRAIT_LEADER_GRANT_MADNESS</ModifierId>
+			<Name>Amount</Name>
+			<Value>1</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_LEADER_GRANT_TYRANNY</ModifierId>
+			<Name>ResourceType</Name>
+			<Value>RESOURCE_TYRANNY</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_LEADER_GRANT_TYRANNY</ModifierId>
 			<Name>Amount</Name>
 			<Value>1</Value>
 		</Row>
@@ -2590,6 +2640,20 @@
 			<RequirementId>REQUIRES_PLOT_HAS_FISHINGBOATS</RequirementId>
 		</Row>
 	</RequirementSetRequirements>
+	
+	<UnitAbilities>
+		<Row UnitAbilityType="ABILITY_ROBB_FLANKING_UNITS" Name="LOC_TRAIT_LEADER_YOUNG_WOLF_NAME" Description="LOC_ABILITY_ROBB_FLANKING_UNITS_DESCRIPTION" Inactive="true"/>
+	</UnitAbilities>
+	<UnitAbilityModifiers>
+		<Row>
+			<UnitAbilityType>ABILITY_ROBB_FLANKING_UNITS</UnitAbilityType>
+			<ModifierId>ROBB_FLANKING_BONUS_UNITS</ModifierId>
+		</Row>
+		<Row>
+			<UnitAbilityType>ABILITY_ROBB_FLANKING_UNITS</UnitAbilityType>
+			<ModifierId>ROBB_SUPPORT_BONUS_UNITS</ModifierId>
+		</Row>
+	</UnitAbilityModifiers>
 
 	<Requirements>
 		<Row>

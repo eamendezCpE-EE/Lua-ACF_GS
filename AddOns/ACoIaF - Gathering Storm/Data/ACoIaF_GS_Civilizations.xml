@@ -56,6 +56,10 @@
 			<Set Description="LOC_TRAIT_CIVILIZATION_WE_DO_NOT_SOW_EXPANSION2_DESCRIPTION"/>
 			<Where TraitType="TRAIT_CIVILIZATION_WE_DO_NOT_SOW"/>
 		</Update>
+		<Update>
+			<Set Description="LOC_TRAIT_CIVILIZATION_DOTHRAKI_EXPANSION2_DESCRIPTION"/>
+			<Where TraitType="TRAIT_CIVILIZATION_HORSELORDS"/>
+		</Update>
 	</Traits>
 
 	<DynamicModifiers>
@@ -107,6 +111,11 @@
 		</Row>
 		<Row>
 			<ModifierId>TRAIT_WE_DO_NOT_SOW_BUFF_SAILING</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_GRANT_SPECIFIC_TECHNOLOGY</ModifierType>
+		</Row>
+
+		<Row>
+			<ModifierId>TRAIT_DOTHRAKI_HORSE_TAMERS</ModifierId>
 			<ModifierType>MODIFIER_PLAYER_GRANT_SPECIFIC_TECHNOLOGY</ModifierType>
 		</Row>
 		
@@ -213,6 +222,12 @@
 			<Name>TechType</Name>
 			<Value>TECH_SAILING</Value>
 		</Row>
+
+		<Row>
+			<ModifierId>TRAIT_DOTHRAKI_HORSE_TAMERS</ModifierId>
+			<Name>TechType</Name>
+			<Value>TECH_ANIMAL_HUSBANDRY</Value>
+		</Row>
 	</ModifierArguments>
 
 	<RequirementSets>
@@ -261,6 +276,9 @@
 		<Row TraitType="TRAIT_CIVILIZATION_WE_DO_NOT_SOW" ModifierId="TRAIT_WE_DO_NOT_SOW_BUFF_SAILING"/>
 		<Row TraitType="TRAIT_CIVILIZATION_WE_DO_NOT_SOW" ModifierId="TRAIT_HURRICANE_PREVENTION_CAT_4"/>
 		<Row TraitType="TRAIT_CIVILIZATION_WE_DO_NOT_SOW" ModifierId="TRAIT_HURRICANE_PREVENTION_CAT_5"/>
+
+		
+		<Row TraitType="TRAIT_CIVILIZATION_HORSELORDS" ModifierId="TRAIT_DOTHRAKI_HORSE_TAMERS"/>
 		
 	</TraitModifiers>
 	

@@ -1,18 +1,163 @@
 <?xml version="1.0" encoding="utf-8"?>
 <GameInfo>
 	<Types>
+		<Row Type="POLICY_WANDERING_MINSTREL_CULTURE" Kind="KIND_POLICY"/>
+		<Row Type="POLICY_DYNASTIC_CEREMONIES" Kind="KIND_POLICY"/>
+		<Row Type="POLICY_MINSTREL_CENSORSHIP" Kind="KIND_POLICY"/> <!-- Remove Musical Censorship -->
 	</Types>
 
 	<Policies>
+		<Row PolicyType="POLICY_WANDERING_MINSTREL_CULTURE" Name="LOC_POLICY_WANDERING_MINSTREL_CULTURE_NAME" Description="LOC_POLICY_WANDERING_MINSTREL_CULTURE_DESCRIPTION" PrereqCivic="CIVIC_MONARCHY" GovernmentSlotType="SLOT_WILDCARD"/>
+		<Row PolicyType="POLICY_DYNASTIC_CEREMONIES" Name="LOC_POLICY_DYNASTIC_CEREMONIES_NAME" Description="LOC_POLICY_DYNASTIC_CEREMONIES_DESCRIPTION" PrereqCivic="CIVIC_MONARCHY" GovernmentSlotType="SLOT_ECONOMIC"/>
+		<Row PolicyType="POLICY_MINSTREL_CENSORSHIP" Name="LOC_POLICY_MINSTREL_CENSORSHIP_NAME" Description="LOC_POLICY_MINSTREL_CENSORSHIP_DESCRIPTION" PrereqCivic="CIVIC_MONARCHY" GovernmentSlotType="SLOT_DIPLOMATIC"/>
+		<Update>
+			<Where PolicyType="POLICY_CRYPTOGRAPHY" />
+			<Set PrereqCivic="CIVIC_NATIONALISM"/>
+		</Update>
+		<Update>
+			<Where PolicyType="POLICY_FUTURE_COUNTER_SCIENCE" />
+			<Set PrereqCivic="CIVIC_NATIONALISM"/>
+		</Update>
 	</Policies>
 
 	<PolicyModifiers>
+		<Row>
+			<PolicyType>POLICY_WANDERING_MINSTREL_CULTURE</PolicyType>
+			<ModifierId>FUTURE_VICTORY_CULTURE_WANDERING_MINSTREL_PROMOTIONS</ModifierId>
+		</Row>
+
+		<Row>
+			<PolicyType>POLICY_MINSTREL_CENSORSHIP</PolicyType>
+			<ModifierId>MUSIC_CENSORSHIP_BLOCK_MINSTREL_ENTRY</ModifierId>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_MINSTREL_CENSORSHIP</PolicyType>
+			<ModifierId>MUSIC_CENSORSHIP_AMENITY_LOSS</ModifierId>
+		</Row>
+
+		<Row>
+			<PolicyType>POLICY_DYNASTIC_CEREMONIES</PolicyType>
+			<ModifierId>DYNASTY_SCULPTURETOURISM</ModifierId>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_DYNASTIC_CEREMONIES</PolicyType>
+			<ModifierId>DYNASTY_PORTRAITTOURISM</ModifierId>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_DYNASTIC_CEREMONIES</PolicyType>
+			<ModifierId>DYNASTY_LANDSCAPETOURISM</ModifierId>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_DYNASTIC_CEREMONIES</PolicyType>
+			<ModifierId>DYNASTY_RELIGIOUSTOURISM</ModifierId>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_DYNASTIC_CEREMONIES</PolicyType>
+			<ModifierId>DYNASTY_ARTIFACTTOURISM</ModifierId>
+		</Row>
 	</PolicyModifiers>
 
 	<Modifiers>
+		<Row>
+			<ModifierId>FUTURE_VICTORY_CULTURE_WANDERING_MINSTREL_PROMOTIONS</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_UNIT_GRANT_UNLIMITED_PROMOTION_CHOICES</ModifierType>
+		</Row>
+
+		<Row>
+			<ModifierId>MUSIC_CENSORSHIP_BLOCK_MINSTREL_ENTRY</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_BLOCK_UNIT_ENTRY</ModifierType>
+		</Row>
+		<!-- <Row>
+			<ModifierId>MUSIC_CENSORSHIP_AMENITY_LOSS</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_POLICY_AMENITY</ModifierType>
+			<SubjectRequirementSetId>MUSIC_CENSORSHIP_10_POPULATION_REQUIREMENT</SubjectRequirementSetId>
+		</Row> -->
+
+		<Row>
+			<ModifierId>DYNASTY_SCULPTURETOURISM</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_TOURISM</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>DYNASTY_PORTRAITTOURISM</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_TOURISM</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>DYNASTY_LANDSCAPETOURISM</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_TOURISM</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>DYNASTY_RELIGIOUSTOURISM</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_TOURISM</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>DYNASTY_ARTIFACTTOURISM</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_TOURISM</ModifierType>
+		</Row>
 	</Modifiers>
 
 	<ModifierArguments>
+		<Row>
+			<ModifierId>FUTURE_VICTORY_CULTURE_WANDERING_MINSTREL_PROMOTIONS</ModifierId>
+			<Name>UnitType</Name>
+			<Value>UNIT_WANDERING_MINSTREL</Value>
+		</Row>
+
+		<Row>
+			<ModifierId>MUSIC_CENSORSHIP_BLOCK_MINSTREL_ENTRY</ModifierId>
+			<Name>UnitType</Name>
+			<Value>UNIT_WANDERING_MINSTREL</Value>
+		</Row>
+
+		<Row>
+			<ModifierId>DYNASTY_SCULPTURETOURISM</ModifierId>
+			<Name>GreatWorkObjectType</Name>
+			<Value>GREATWORKOBJECT_SCULPTURE</Value>
+		</Row>
+		<Row>
+			<ModifierId>DYNASTY_SCULPTURETOURISM</ModifierId>
+			<Name>ScalingFactor</Name>
+			<Value>300</Value>
+		</Row>
+		<Row>
+			<ModifierId>DYNASTY_PORTRAITTOURISM</ModifierId>
+			<Name>GreatWorkObjectType</Name>
+			<Value>GREATWORKOBJECT_PORTRAIT</Value>
+		</Row>
+		<Row>
+			<ModifierId>DYNASTY_PORTRAITTOURISM</ModifierId>
+			<Name>ScalingFactor</Name>
+			<Value>300</Value>
+		</Row>
+		<Row>
+			<ModifierId>DYNASTY_LANDSCAPETOURISM</ModifierId>
+			<Name>GreatWorkObjectType</Name>
+			<Value>GREATWORKOBJECT_LANDSCAPE</Value>
+		</Row>
+		<Row>
+			<ModifierId>DYNASTY_LANDSCAPETOURISM</ModifierId>
+			<Name>ScalingFactor</Name>
+			<Value>300</Value>
+		</Row>
+		<Row>
+			<ModifierId>DYNASTY_RELIGIOUSTOURISM</ModifierId>
+			<Name>GreatWorkObjectType</Name>
+			<Value>GREATWORKOBJECT_RELIGIOUS</Value>
+		</Row>
+		<Row>
+			<ModifierId>DYNASTY_RELIGIOUSTOURISM</ModifierId>
+			<Name>ScalingFactor</Name>
+			<Value>300</Value>
+		</Row>
+		<Row>
+			<ModifierId>DYNASTY_ARTIFACTTOURISM</ModifierId>
+			<Name>GreatWorkObjectType</Name>
+			<Value>GREATWORKOBJECT_ARTIFACT</Value>
+		</Row>
+		<Row>
+			<ModifierId>DYNASTY_ARTIFACTTOURISM</ModifierId>
+			<Name>ScalingFactor</Name>
+			<Value>300</Value>
+		</Row>
 	</ModifierArguments>
 
 	<RequirementSets>
