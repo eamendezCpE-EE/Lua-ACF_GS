@@ -37,6 +37,14 @@
 
 		<Row>
 			<PolicyType>POLICY_DYNASTIC_CEREMONIES</PolicyType>
+			<ModifierId>DYNASTY_WRITINGTOURISM</ModifierId>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_DYNASTIC_CEREMONIES</PolicyType>
+			<ModifierId>DYNASTY_MUSICTOURISM</ModifierId>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_DYNASTIC_CEREMONIES</PolicyType>
 			<ModifierId>DYNASTY_SCULPTURETOURISM</ModifierId>
 		</Row>
 		<Row>
@@ -74,6 +82,14 @@
 		</Row> -->
 
 		<Row>
+			<ModifierId>DYNASTY_WRITINGTOURISM</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_TOURISM</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>DYNASTY_MUSICTOURISM</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_TOURISM</ModifierType>
+		</Row>
+		<Row>
 			<ModifierId>DYNASTY_SCULPTURETOURISM</ModifierId>
 			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_TOURISM</ModifierType>
 		</Row>
@@ -109,6 +125,27 @@
 		</Row>
 
 		<Row>
+			<ModifierId>DYNASTY_WRITINGTOURISM</ModifierId>
+			<Name>GreatWorkObjectType</Name>
+			<Value>GREATWORKOBJECT_WRITING</Value>
+		</Row>
+		<Row>
+			<ModifierId>DYNASTY_WRITINGTOURISM</ModifierId>
+			<Name>ScalingFactor</Name>
+			<Value>400</Value>
+		</Row>
+		<Row>
+			<ModifierId>DYNASTY_MUSICTOURISM</ModifierId>
+			<Name>GreatWorkObjectType</Name>
+			<Value>GREATWORKOBJECT_MUSIC</Value>
+		</Row>
+		<Row>
+			<ModifierId>DYNASTY_MUSICTOURISM</ModifierId>
+			<Name>ScalingFactor</Name>
+			<Value>400</Value>
+		</Row>
+
+		<Row>
 			<ModifierId>DYNASTY_SCULPTURETOURISM</ModifierId>
 			<Name>GreatWorkObjectType</Name>
 			<Value>GREATWORKOBJECT_SCULPTURE</Value>
@@ -116,7 +153,7 @@
 		<Row>
 			<ModifierId>DYNASTY_SCULPTURETOURISM</ModifierId>
 			<Name>ScalingFactor</Name>
-			<Value>300</Value>
+			<Value>400</Value>
 		</Row>
 		<Row>
 			<ModifierId>DYNASTY_PORTRAITTOURISM</ModifierId>
@@ -126,7 +163,7 @@
 		<Row>
 			<ModifierId>DYNASTY_PORTRAITTOURISM</ModifierId>
 			<Name>ScalingFactor</Name>
-			<Value>300</Value>
+			<Value>400</Value>
 		</Row>
 		<Row>
 			<ModifierId>DYNASTY_LANDSCAPETOURISM</ModifierId>
@@ -136,7 +173,7 @@
 		<Row>
 			<ModifierId>DYNASTY_LANDSCAPETOURISM</ModifierId>
 			<Name>ScalingFactor</Name>
-			<Value>300</Value>
+			<Value>400</Value>
 		</Row>
 		<Row>
 			<ModifierId>DYNASTY_RELIGIOUSTOURISM</ModifierId>
@@ -146,7 +183,7 @@
 		<Row>
 			<ModifierId>DYNASTY_RELIGIOUSTOURISM</ModifierId>
 			<Name>ScalingFactor</Name>
-			<Value>300</Value>
+			<Value>400</Value>
 		</Row>
 		<Row>
 			<ModifierId>DYNASTY_ARTIFACTTOURISM</ModifierId>
@@ -156,7 +193,7 @@
 		<Row>
 			<ModifierId>DYNASTY_ARTIFACTTOURISM</ModifierId>
 			<Name>ScalingFactor</Name>
-			<Value>300</Value>
+			<Value>400</Value>
 		</Row>
 	</ModifierArguments>
 

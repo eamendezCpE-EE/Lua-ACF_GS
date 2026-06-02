@@ -4894,7 +4894,7 @@
 			<Text>Dynastic Ceremonies</Text>
 		</Row>
 		<Row Tag="LOC_POLICY_DYNASTIC_CEREMONIES_DESCRIPTION" Language="en_US">
-			<Text>Great Works of Art and Artifacts [ICON_GreatWork_Artifact] generate 200% more tourism.</Text>
+			<Text>Great Works of Writing, Music and Art generate 200% more [ICON_Tourism] tourism.</Text>
 		</Row>
 
 		<Row Tag="LOC_POLICY_MINSTREL_CENSORSHIP_NAME"  Language="en_US">
